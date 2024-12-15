@@ -1,0 +1,28 @@
+.sidebar {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80px; /* Sidebar width */
+    height: 100%; /* Sidebar height */
+    padding: 10px 0;
+    border-right: 1px solid #ddd;
+  }
+  
+  .sidebar .nav-link {
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar .nav-link:hover,
+  .sidebar .nav-link.active {
+    color: #28a745;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+  }
+  
+  /* Main Content */
+  .main-content {
+    padding: 20px;
+    margin-left: 20px;
+  }
