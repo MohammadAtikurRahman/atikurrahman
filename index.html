@@ -108,52 +108,75 @@
 
 
 
-
   <section class="d-flex">
-    <!-- Sidebar Section (Two Sidebars - Up and Down) -->
+    <!-- Sidebar Section -->
     <div class="sidebar-container d-flex flex-column" style="width: 80px; padding: 10px 20px; background-color: #ffffff;">
       <!-- Top Sidebar -->
       <div class="sidebar d-flex flex-column align-items-center mb-4" style="padding-top: 20px; padding-bottom: 20px;">
-        <a href="#" class="nav-link text-center" style="color: #6c757d;">
+        <a href="#" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div1')">
           <i class="bi bi-person-circle" style="font-size: 1.2rem;"></i>
-          <small style="font-size: 0.6rem;"></small>
         </a>
-        <a href="#" class="nav-link text-center" style="color: #6c757d;">
+        <a href="#" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div2')">
           <i class="bi bi-envelope-fill" style="font-size: 1.2rem;"></i>
-          <small style="font-size: 0.6rem;"></small>
         </a>
       </div>
   
       <!-- Bottom Sidebar -->
       <div class="sidebar d-flex flex-column align-items-center mt-auto" style="padding-top: 20px; padding-bottom: 20px;">
-        <a href="#" class="nav-link text-center" style="color: #6c757d;">
+        <a href="#" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div3')">
           <i class="bi bi-briefcase-fill" style="font-size: 1.2rem;"></i>
-          <small style="font-size: 0.6rem;"></small>
         </a>
-        <a href="#" class="nav-link text-center" style="color: #6c757d;">
+        <a href="#" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div4')">
           <i class="bi bi-code-slash" style="font-size: 1.2rem;"></i>
-          <small style="font-size: 0.6rem;"></small>
         </a>
-        <a href="#" class="nav-link text-center" style="color: #6c757d;">
+        <a href="#" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div5')">
           <i class="bi bi-box-seam" style="font-size: 1.2rem;"></i>
-          <small style="font-size: 0.6rem;"></small>
         </a>
-        <a href="#" class="nav-link text-center" style="color: #6c757d;">
+        <a href="#" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div6')">
           <i class="bi bi-lightbulb-fill" style="font-size: 1.2rem;"></i>
-          <small style="font-size: 0.6rem;"></small>
         </a>
-        <a href="#" class="nav-link text-center" style="color: #6c757d;">
+        <a href="#" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div7')">
           <i class="bi bi-pen-fill" style="font-size: 1.2rem;"></i>
-          <small style="font-size: 0.6rem;"></small>
         </a>
       </div>
     </div>
   
     <!-- Main Content -->
     <div class="main-content flex-grow-1 px-3">
-      <div class="row mb-5">
-        <div class="col-12">
-        </div>
+      <!-- Div 1 -->
+      <div id="div1" class="content-div" style="display: none;">
+        <h3>Content for Div 1</h3>
+        <p>This is the content for Div 1.</p>
+      </div>
+      <!-- Div 2 -->
+      <div id="div2" class="content-div" style="display: none;">
+        <h3>Content for Div 2</h3>
+        <p>This is the content for Div 2.</p>
+      </div>
+      <!-- Div 3 -->
+      <div id="div3" class="content-div" style="display: none;">
+        <h3>Content for Div 3</h3>
+        <p>This is the content for Div 3.</p>
+      </div>
+      <!-- Div 4 -->
+      <div id="div4" class="content-div" style="display: none;">
+        <h3>Content for Div 4</h3>
+        <p>This is the content for Div 4.</p>
+      </div>
+      <!-- Div 5 -->
+      <div id="div5" class="content-div" style="display: none;">
+        <h3>Content for Div 5</h3>
+        <p>This is the content for Div 5.</p>
+      </div>
+      <!-- Div 6 -->
+      <div id="div6" class="content-div" style="display: none;">
+        <h3>Content for Div 6</h3>
+        <p>This is the content for Div 6.</p>
+      </div>
+      <!-- Div 7 -->
+      <div id="div7" class="content-div" style="display: none;">
+        <h3>Content for Div 7</h3>
+        <p>This is the content for Div 7.</p>
       </div>
     </div>
   </section>
@@ -173,7 +196,21 @@
     crossorigin="anonymous"></script>
 
 
+<script>
 
+function showDiv(divId) {
+  // Hide all content divs
+  const contentDivs = document.querySelectorAll('.content-div');
+  contentDivs.forEach(div => div.style.display = 'none');
+
+  // Show the selected content div
+  const selectedDiv = document.getElementById(divId);
+  if (selectedDiv) {
+    selectedDiv.style.display = 'block';
+  }
+}
+
+</script>
 </body>
 
 </html>
