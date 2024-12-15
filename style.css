@@ -1,0 +1,13 @@
+:root {
+    --bs-primary: #ffd700;
+    --bs-secondary: #2e2e2e;
+    --bs-dark: #000000;
+    --bs-light: #f5f5f5;
+    --bs-body-bg: #1a1a1a;
+}
+
+
+.primary {
+    background-color: var(--bs-primary);
+}
+
