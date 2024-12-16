@@ -26,7 +26,7 @@ footer {
 }
 
 .content-div {
-    min-height: 65vh; /* Ensures all content-divs have the same height */
+    min-height: 70vh; /* Ensures all content-divs have the same height */
     display: none; /* Initially hide all content */
     background-color: #ffffff; /* Ensures background consistency */
     padding: 20px; /* Adjust padding for spacing */
