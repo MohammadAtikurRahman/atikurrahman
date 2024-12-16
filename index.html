@@ -95,6 +95,9 @@
             <a href="mailto:contact.atikurrahman@gmail.com" class="btn btn-warning btn-md">
               <i class="bi bi-envelope"></i> Contact With Me
             </a>
+            <a href="mailto:contact.atikurrahman@gmail.com" class="btn btn-primary btn-md">
+              <i class="bi bi-clipboard2-check-fill"></i> Download Resume
+            </a>
           </div>
         </div>
       </div>
@@ -105,563 +108,318 @@
 
 
 
+  <div class="d-flex" style="height: 100vh;">
+    <!-- Left Side: 5% -->
+    <div style="width: 7%; background-color: #ffffff; padding: 10px; padding-top: 70px;">
+      <section>
+        <div class="sidebar-container d-flex flex-column"
+          style="width: 80px; padding: 50px 20px; background-color: #ffffff;">
+          <!-- Top Sidebar -->
 
-  <section class="d-flex">
-    <!-- Sidebar Section -->
-    <div class="sidebar-container d-flex flex-column"
-      style="width: 80px; padding: 50px 20px; background-color: #ffffff;">
-      <!-- Top Sidebar -->
 
+          <!-- Bottom Sidebar -->
+          <div class="sidebar d-flex flex-column align-items-center mt-auto"
+            style="padding-top: 40px; padding-bottom: 40px;">
+            <a href="#div1" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div1')">
+              <i class="bi bi-terminal-fill" style="font-size: 1.2rem;"></i>
+            </a>
+            <a href="#div2" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div2')">
+              <i class="bi bi-person-workspace" style="font-size: 1.2rem;"></i>
+            </a>
+            <a href="#div3" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div3')">
+              <i class="bi bi-view-list" style="font-size: 1.2rem;"></i>
+            </a>
+            <a href="#div4" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div4')">
+              <i class="bi bi-code-slash" style="font-size: 1.2rem;"></i>
+            </a>
+            <a href="#div5" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div5')">
+              <i class="bi bi-book" style="font-size: 1.2rem;"></i>
+            </a>
+            <a href="#div6" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div6')">
+              <i class="bi bi-lightbulb-fill" style="font-size: 1.2rem;"></i>
+            </a>
 
-      <!-- Bottom Sidebar -->
-      <div class="sidebar d-flex flex-column align-items-center mt-auto"
-        style="padding-top: 40px; padding-bottom: 40px;">
-        <a href="#div1" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div1')">
-          <i class="bi bi-terminal-fill" style="font-size: 1.2rem;"></i>
-        </a>
-        <a href="#div2" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div2')">
-          <i class="bi bi-person-workspace" style="font-size: 1.2rem;"></i>
-        </a>
-        <a href="#div3" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div3')">
-          <i class="bi bi-view-list" style="font-size: 1.2rem;"></i>
-        </a>
-        <a href="#div4" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div4')">
-          <i class="bi bi-code-slash" style="font-size: 1.2rem;"></i>
-        </a>
-        <a href="#div5" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div5')">
-          <i class="bi bi-book" style="font-size: 1.2rem;"></i>
-        </a>
-        <a href="#div6" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div6')">
-          <i class="bi bi-lightbulb-fill" style="font-size: 1.2rem;"></i>
-        </a>
+            <!-- <a href="#div7" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div7')">
+            <i class="bi bi-pen-fill" style="font-size: 1.2rem;"></i>
+          </a>
+          <a href="#div8" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div7')">
+            <i class="bi bi-server" style="font-size: 1.2rem;"></i>
+          </a>
+          <a href="#div9" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div7')">
+            <i class="bi bi-snow" style="font-size: 1.2rem;"></i>
+          </a>
+          <a href="#div10" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div7')">
+            <i class="bi bi-ui-checks-grid" style="font-size: 1.2rem;"></i>
+          </a> -->
 
-        <a href="#div7" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div7')">
-          <i class="bi bi-pen-fill" style="font-size: 1.2rem;"></i>
-        </a>
-        <a href="#div8" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div7')">
-          <i class="bi bi-server" style="font-size: 1.2rem;"></i>
-        </a>
-        <a href="#div9" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div7')">
-          <i class="bi bi-snow" style="font-size: 1.2rem;"></i>
-        </a>
-        <a href="#div10" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div7')">
-          <i class="bi bi-ui-checks-grid" style="font-size: 1.2rem;"></i>
-        </a>
-
-      </div>
+          </div>
+        </div>
+      </section>
     </div>
 
-    <!-- Main Content -->
-    <div class="main-content flex-grow-1 px-3">
-      <!-- Div 1 (Initially Visible) -->
-      <div id="div1" class="content-div" style="display: block;">
+    <!-- Right Side: 95% -->
+    <div style="width: 93%; background-color: #ffffff; padding: 10px; z-index: -99999;">
+      <section class="d-flex">
+        <div class="main-content flex-grow-1 px-3">
+          <!-- Div 1 (Initially Visible) -->
+          <div id="div1" class="content-div" style="display: block;">
 
-        <section style="padding: 64.5px; background-color: #ffffff;">
+            <section style="padding: 50px; background-color: #ffffff;">
 
 
-          <h3 class="text-center mb-4" style="color: #333; font-size: 1.5rem; font-weight: bold;">
-            Technology <span style="color: #198754;">Expertise</span>
-          </h3>
-          <div class="">
-            <div class="row">
-              <!-- Left Column (Empty) -->
-              <div class="col-4">
-                <div class="p-3"
-                  style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);">
-                  <h4 class="text-center mb-4" style="font-size: 1.2rem; color: #333;">
-                    <i class="bi bi-code-slash" style="color: #007bff;"></i> Programming Skills
-                  </h4>
+              <h3 class="text-center mb-3" style="color: #333; font-size: 1.5rem; font-weight: bold;">
+                Technology <span style="color: #198754;">Expertise</span>
+              </h3>
+              <div class="">
+                <div class="row">
+                  <!-- Left Column (Empty) -->
+                  <div class="col-4">
+                    <div class="p-3"
+                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);">
+                      <h4 class="text-center mb-4" style="font-size: 1.2rem; color: #333;">
+                        <i class="bi bi-code-slash" style="color: #007bff;"></i> Programming Skills
+                      </h4>
 
-                  <!-- JavaScript Skill -->
-                  <div class="mb-2">
-                    <div class="d-flex align-items-center mb-2">
-                      <i class="bi bi-file-code-fill" style="font-size: 1.2rem; color: #f7df1e;"></i> <!-- Yellow -->
-                      <span class="ms-2" style="font-size: 0.9rem; color: #333;">JavaScript</span>
-                      <span class="ms-auto" style="font-size: 0.8rem; color: #666;">80%</span>
-                    </div>
-                    <div class="progress" style="height: 8px;">
-                      <div class="progress-bar bg-warning" role="progressbar" style="width: 80%;" aria-valuenow="80"
-                        aria-valuemin="0" aria-valuemax="100"></div>
+                      <!-- JavaScript Skill -->
+                      <div class="mb-2">
+                        <div class="d-flex align-items-center mb-2">
+                          <i class="bi bi-file-code-fill" style="font-size: 1.2rem; color: #f7df1e;"></i>
+                          <!-- Yellow -->
+                          <span class="ms-2" style="font-size: 0.9rem; color: #333;">JavaScript</span>
+                          <span class="ms-auto" style="font-size: 0.8rem; color: #666;">80%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                          <div class="progress-bar bg-warning" role="progressbar" style="width: 80%;" aria-valuenow="80"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+
+                      <!-- Node.js Skill -->
+                      <div class="mb-2">
+                        <div class="d-flex align-items-center mb-2">
+                          <i class="bi bi-back" style="font-size: 1.2rem; color: #68a063;"></i> <!-- Green -->
+                          <span class="ms-2" style="font-size: 0.9rem; color: #333;">Node.js</span>
+                          <span class="ms-auto" style="font-size: 0.8rem; color: #666;">75%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                          <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+
+                      <!-- React.js Skill -->
+                      <div class="mb-2">
+                        <div class="d-flex align-items-center mb-2">
+                          <i class="bi bi-lightbulb-fill" style="font-size: 1.2rem; color: #61dafb;"></i>
+                          <!-- Light Blue -->
+                          <span class="ms-2" style="font-size: 0.9rem; color: #333;">React.js</span>
+                          <span class="ms-auto" style="font-size: 0.8rem; color: #666;">85%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                          <div class="progress-bar bg-info" role="progressbar" style="width: 85%;" aria-valuenow="85"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+
+                      <!-- Express.js Skill -->
+                      <div class="mb-2">
+                        <div class="d-flex align-items-center mb-2">
+                          <i class="bi bi-terminal-fill" style="font-size: 1.2rem; color: #333;"></i> <!-- Dark Grey -->
+                          <span class="ms-2" style="font-size: 0.9rem; color: #333;">Express.js</span>
+                          <span class="ms-auto" style="font-size: 0.8rem; color: #666;">70%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                          <div class="progress-bar bg-secondary" role="progressbar" style="width: 70%;"
+                            aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+
+                      <!-- MongoDB Skill -->
+                      <div class="mb-2">
+                        <div class="d-flex align-items-center mb-2">
+                          <i class="bi bi-database-fill" style="font-size: 1.2rem; color: #4db33d;"></i> <!-- Green -->
+                          <span class="ms-2" style="font-size: 0.9rem; color: #333;">MongoDB</span>
+                          <span class="ms-auto" style="font-size: 0.8rem; color: #666;">70%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                          <div class="progress-bar bg-success" role="progressbar" style="width: 70%;" aria-valuenow="70"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+
+                      <!-- MySQL Skill -->
+                      <div class="mb-4">
+                        <div class="d-flex align-items-center mb-2">
+                          <i class="bi bi-cup-hot-fill" style="font-size: 1.2rem; color: #0d6efd;"></i> <!-- Blue -->
+                          <span class="ms-2" style="font-size: 0.9rem; color: #333;">MySQL</span>
+                          <span class="ms-auto" style="font-size: 0.8rem; color: #666;">70%</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                          <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="70"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
-                  <!-- Node.js Skill -->
-                  <div class="mb-2">
-                    <div class="d-flex align-items-center mb-2">
-                      <i class="bi bi-back" style="font-size: 1.2rem; color: #68a063;"></i> <!-- Green -->
-                      <span class="ms-2" style="font-size: 0.9rem; color: #333;">Node.js</span>
-                      <span class="ms-auto" style="font-size: 0.8rem; color: #666;">75%</span>
-                    </div>
-                    <div class="progress" style="height: 8px;">
-                      <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
 
-                  <!-- React.js Skill -->
-                  <div class="mb-2">
-                    <div class="d-flex align-items-center mb-2">
-                      <i class="bi bi-lightbulb-fill" style="font-size: 1.2rem; color: #61dafb;"></i>
-                      <!-- Light Blue -->
-                      <span class="ms-2" style="font-size: 0.9rem; color: #333;">React.js</span>
-                      <span class="ms-auto" style="font-size: 0.8rem; color: #666;">85%</span>
-                    </div>
-                    <div class="progress" style="height: 8px;">
-                      <div class="progress-bar bg-info" role="progressbar" style="width: 85%;" aria-valuenow="85"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
 
-                  <!-- Express.js Skill -->
-                  <div class="mb-2">
-                    <div class="d-flex align-items-center mb-2">
-                      <i class="bi bi-terminal-fill" style="font-size: 1.2rem; color: #333;"></i> <!-- Dark Grey -->
-                      <span class="ms-2" style="font-size: 0.9rem; color: #333;">Express.js</span>
-                      <span class="ms-auto" style="font-size: 0.8rem; color: #666;">70%</span>
-                    </div>
-                    <div class="progress" style="height: 8px;">
-                      <div class="progress-bar bg-secondary" role="progressbar" style="width: 70%;" aria-valuenow="70"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
 
-                  <!-- MongoDB Skill -->
-                  <div class="mb-2">
-                    <div class="d-flex align-items-center mb-2">
-                      <i class="bi bi-database-fill" style="font-size: 1.2rem; color: #4db33d;"></i> <!-- Green -->
-                      <span class="ms-2" style="font-size: 0.9rem; color: #333;">MongoDB</span>
-                      <span class="ms-auto" style="font-size: 0.8rem; color: #666;">70%</span>
-                    </div>
-                    <div class="progress" style="height: 8px;">
-                      <div class="progress-bar bg-success" role="progressbar" style="width: 70%;" aria-valuenow="70"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
+                  <!-- Right Column with Skills Cards -->
+                  <div class="col-8">
+                    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+                      <!-- Card 1 -->
+                      <div
+                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
+                        <i class="bi bi-code-slash" style="font-size: 2rem; color: #007bff;"></i>
+                        <div>
+                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Frontend Development</h4>
+                          <p style="font-size: 0.9rem; color: #666; margin: 0;">React, React Electron</p>
+                        </div>
+                      </div>
 
-                  <!-- MySQL Skill -->
-                  <div class="mb-4">
-                    <div class="d-flex align-items-center mb-2">
-                      <i class="bi bi-cup-hot-fill" style="font-size: 1.2rem; color: #0d6efd;"></i> <!-- Blue -->
-                      <span class="ms-2" style="font-size: 0.9rem; color: #333;">MySQL</span>
-                      <span class="ms-auto" style="font-size: 0.8rem; color: #666;">70%</span>
-                    </div>
-                    <div class="progress" style="height: 8px;">
-                      <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="70"
-                        aria-valuemin="0" aria-valuemax="100"></div>
+                      <!-- Card 2 -->
+                      <div
+                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
+                        <i class="bi bi-server" style="font-size: 2rem; color: #28a745;"></i>
+                        <div>
+                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Backend Development</h4>
+                          <p style="font-size: 0.9rem; color: #666; margin: 0;">Express (Node.js)</p>
+                        </div>
+                      </div>
+
+                      <!-- Card 3 -->
+                      <div
+                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
+                        <i class="bi bi-shield-lock" style="font-size: 2rem; color: #e74c3c;"></i>
+                        <div>
+                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Authentication & Security</h4>
+                          <p style="font-size: 0.9rem; color: #666; margin: 0;">JWT, Passport</p>
+                        </div>
+                      </div>
+
+                      <!-- Card 4 -->
+                      <div
+                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
+                        <i class="bi bi-git" style="font-size: 2rem; color: #f39c12;"></i>
+                        <div>
+                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Version Control & Tools</h4>
+                          <p style="font-size: 0.9rem; color: #666; margin: 0;">Git, GitHub, Docker</p>
+                        </div>
+                      </div>
+
+                      <!-- Card 5 -->
+                      <div
+                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
+                        <i class="bi bi-clipboard-check" style="font-size: 2rem; color: #17a2b8;"></i>
+                        <div>
+                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Project Management</h4>
+                          <p style="font-size: 0.9rem; color: #666; margin: 0;">Clickup, Trello, Agile</p>
+                        </div>
+                      </div>
+
+                      <!-- Card 6 -->
+                      <div
+                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
+                        <i class="bi bi-database-fill" style="font-size: 2rem; color: #9b59b6;"></i>
+                        <div>
+                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Database Knowledge</h4>
+                          <p style="font-size: 0.9rem; color: #666; margin: 0;">MongoDB, MySQL</p>
+                        </div>
+                      </div>
+                      <div
+                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
+                        <i class="bi bi-database-fill" style="font-size: 2rem; color: #9b59b6;"></i>
+                        <div>
+                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Database Knowledge</h4>
+                          <p style="font-size: 0.9rem; color: #666; margin: 0;">MongoDB, MySQL</p>
+                        </div>
+                      </div>
+
+                      <div
+                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
+                        <i class="bi bi-clipboard-check" style="font-size: 2rem; color: #17a2b8;"></i>
+                        <div>
+                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Project Management</h4>
+                          <p style="font-size: 0.9rem; color: #666; margin: 0;">Clickup, Trello, Agile</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-
-
-
-
-              <!-- Right Column with Skills Cards -->
-              <div class="col-8">
-                <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-                  <!-- Card 1 -->
-                  <div
-                    style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                    <i class="bi bi-code-slash" style="font-size: 2rem; color: #007bff;"></i>
-                    <div>
-                      <h4 style="font-size: 1rem; color: #333; margin: 0;">Frontend Development</h4>
-                      <p style="font-size: 0.9rem; color: #666; margin: 0;">React, React Electron</p>
-                    </div>
-                  </div>
-
-                  <!-- Card 2 -->
-                  <div
-                    style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                    <i class="bi bi-server" style="font-size: 2rem; color: #28a745;"></i>
-                    <div>
-                      <h4 style="font-size: 1rem; color: #333; margin: 0;">Backend Development</h4>
-                      <p style="font-size: 0.9rem; color: #666; margin: 0;">Express (Node.js)</p>
-                    </div>
-                  </div>
-
-                  <!-- Card 3 -->
-                  <div
-                    style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                    <i class="bi bi-shield-lock" style="font-size: 2rem; color: #e74c3c;"></i>
-                    <div>
-                      <h4 style="font-size: 1rem; color: #333; margin: 0;">Authentication & Security</h4>
-                      <p style="font-size: 0.9rem; color: #666; margin: 0;">JWT, Passport</p>
-                    </div>
-                  </div>
-
-                  <!-- Card 4 -->
-                  <div
-                    style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                    <i class="bi bi-git" style="font-size: 2rem; color: #f39c12;"></i>
-                    <div>
-                      <h4 style="font-size: 1rem; color: #333; margin: 0;">Version Control & Tools</h4>
-                      <p style="font-size: 0.9rem; color: #666; margin: 0;">Git, GitHub, Docker</p>
-                    </div>
-                  </div>
-
-                  <!-- Card 5 -->
-                  <div
-                    style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                    <i class="bi bi-clipboard-check" style="font-size: 2rem; color: #17a2b8;"></i>
-                    <div>
-                      <h4 style="font-size: 1rem; color: #333; margin: 0;">Project Management</h4>
-                      <p style="font-size: 0.9rem; color: #666; margin: 0;">Clickup, Trello, Agile</p>
-                    </div>
-                  </div>
-
-                  <!-- Card 6 -->
-                  <div
-                    style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                    <i class="bi bi-database-fill" style="font-size: 2rem; color: #9b59b6;"></i>
-                    <div>
-                      <h4 style="font-size: 1rem; color: #333; margin: 0;">Database Knowledge</h4>
-                      <p style="font-size: 0.9rem; color: #666; margin: 0;">MongoDB, MySQL</p>
-                    </div>
-                  </div>
-                  <div
-                    style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                    <i class="bi bi-database-fill" style="font-size: 2rem; color: #9b59b6;"></i>
-                    <div>
-                      <h4 style="font-size: 1rem; color: #333; margin: 0;">Database Knowledge</h4>
-                      <p style="font-size: 0.9rem; color: #666; margin: 0;">MongoDB, MySQL</p>
-                    </div>
-                  </div>
-
-                  <div
-                    style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                    <i class="bi bi-clipboard-check" style="font-size: 2rem; color: #17a2b8;"></i>
-                    <div>
-                      <h4 style="font-size: 1rem; color: #333; margin: 0;">Project Management</h4>
-                      <p style="font-size: 0.9rem; color: #666; margin: 0;">Clickup, Trello, Agile</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </section>
           </div>
-        </section>
-      </div>
 
 
 
+          <div id="div2" class="content-div" style="display: none;">
 
 
+            <section style="padding: 50px; background-color: #ffffff;">
+              <div class="container">
+                <h3 class="text-center mb-3" style="color: #333; font-size: 1.5rem; font-weight: bold;">
+                  Work <span style="color: #198754;">Experience</span>
+                </h3>
 
+                <div class="timeline position-relative" style="border-left: 3px solid #28a745; margin-left: 20px;">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!-- Div 2 -->
-      <div id="div2" class="content-div" style="display: none;">
-
-
-        <section style="padding: 50px; background-color: #ffffff;">
-          <div class="container">
-            <h3 class="text-center mb-3" style="color: #333; font-size: 1.5rem; font-weight: bold;">
-              Work <span style="color: #198754;">Experience</span>
-            </h3>
-
-            <div class="timeline position-relative" style="border-left: 3px solid #28a745; margin-left: 20px;">
-
-              <!-- Nexdecade Technology -->
-              <div class="timeline-item mb-2 position-relative" style="padding-left: 40px;">
-                <div
-                  style="position: absolute; top: 10px; left: -12px; width: 20px; height: 20px; background-color: #28a745; border: 3px solid #f9f9f9; border-radius: 50%;">
-                </div>
-                <h5 style="color: #333; font-weight: bold; margin: 0;">Nexdecade Technology (Pvt.) Ltd
-                  <hr> <small style="color: #888; float: right; font-size: 12px;">Oct 2023 - Present</small>
-                </h5>
-                <h6 style="font-size: 1.1rem; color: #198754; font-weight: bold; margin-top: 5px;">Software Developer
-                </h6>
-                <p style="margin-top: 10px; color: #555; font-size: 0.95rem;">
-                  Developed Vehicle Tracking Systems and Vehicle Management Systems with frontend, <br> backend,
-                  and mapping functionalities.
-                </p>
-              </div>
-
-              <!-- Metamorphosis -->
-              <div class="timeline-item mb-2 position-relative" style="padding-left: 40px;">
-                <div
-                  style="position: absolute; top: 10px; left: -12px; width: 20px; height: 20px; background-color: #007bff; border: 3px solid #f9f9f9; border-radius: 50%;">
-                </div>
-                <h5 style="color: #333; font-weight: bold; margin: 0;">Metamorphosis
-                  <hr> <small style="font-size: 12px; float: right; color: #888;">Oct
-                    2022 - Oct 2023</small>
-                </h5>
-                <h6 style="font-size: 1.1rem; color: #007bff; font-weight: bold; margin-top: 5px;">Software Engineer
-                </h6>
-                <p style="margin-top: 10px; color: #555; font-size: 0.95rem;">
-                  Led the development of admin panels, RESTful APIs, PC tracking application with <br> optimized
-                  security and performance.
-                </p>
-              </div>
-
-              <!-- Tesseract Technologies -->
-              <div class="timeline-item position-relative" style="padding-left: 40px;">
-                <div
-                  style="position: absolute; top: 10px; left: -12px; width: 20px; height: 20px; background-color: #f39c12; border: 3px solid #f9f9f9; border-radius: 50%;">
-                </div>
-                <h5 style="color: #333; font-weight: bold; margin: 0;">Tesseract Technologies
-                  <hr> <small style="color: #888; float: right; font-size: 12px;">Feb 2022 - Aug 2022</small>
-                </h5>
-                <h6 style="font-size: 1.1rem; color: #f39c12; font-weight: bold; margin-top: 5px;">Intern Software
-                  Engineer</h6>
-                <p style="margin-top: 10px; color: #555; font-size: 0.95rem;">
-                  Delivered web applications focusing on Human-Centric Design while engaging with <br>
-                  for clients
-                  tailor-made solutions.
-                </p>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <!-- Div 3 -->
-      <!-- <div id="div3" class="content-div" style="display: none;">
-        <section style="padding: 50px; background-color: #ffffff;">
-       
-        </section>
-      </div> -->
-
-
-
-
-      <!-- Div 3 -->
-      <div id="div3" class="content-div" style="display: none;">
-        <section style="padding: 48.5px; background-color: #ffffff;">
-          <div class="container">
-            <h3 class="text-center mb-3" style="color: #333; font-size: 1.5rem; font-weight: bold;">
-              Personal <span style="color: #198754;">Project</span>
-            </h3>
-            <div class="row g-3">
-
-              <!-- Project 1 -->
-              <div class="col-md-6">
-                <div
-                  style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 140px;">
-                  <div class="d-flex align-items-center mb-1">
-                    <i class="bi bi-database" style="font-size: 1.5rem; color: #007bff;"></i>
-                    <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Portable-MongoDB</h5>
-                  </div>
-                  <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
-                    Without MongoDB installed and use a MongoDB database.
-                  </p>
-                  <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>ExpressJs,
-                      MongoDB-Binary</strong></small>
-                  <a href="#"
-                    style="color: #007bff; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
-                    <i class="bi bi-github"></i> GitHub
-                  </a>
-                </div>
-              </div>
-
-              <!-- Project 2 -->
-              <div class="col-md-6">
-                <div
-                  style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 140px;">
-                  <div class="d-flex align-items-center mb-1">
-                    <i class="bi bi-pc-display" style="font-size: 1.5rem; color: #28a745;"></i>
-                    <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Desktop Monitoring App
+                  <!-- Nexdecade Technology -->
+                  <div class="timeline-item mb-2 position-relative" style="padding-left: 40px;">
+                    <div
+                      style="position: absolute; top: 10px; left: -12px; width: 20px; height: 20px; background-color: #28a745; border: 3px solid #f9f9f9; border-radius: 50%;">
+                    </div>
+                    <h5 style="color: #333; font-weight: bold; margin: 0;">Nexdecade Technology (Pvt.) Ltd
+                      <hr> <small style="color: #888; float: right; font-size: 12px;">Oct 2023 - Present</small>
                     </h5>
+                    <h6 style="font-size: 1.1rem; color: #198754; font-weight: bold; margin-top: 5px;">Software
+                      Developer
+                    </h6>
+                    <p style="margin-top: 10px; color: #555; font-size: 0.95rem;">
+                      Developed Vehicle Tracking Systems and Vehicle Management Systems with frontend, <br> backend,
+                      and mapping functionalities.
+                    </p>
                   </div>
-                  <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
-                    Desktop Usages and Video Tracking Application.
-                  </p>
-                  <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>React ElectronJs,
-                      NodeJs</strong></small>
-                  <a href="#"
-                    style="color: #007bff; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
-                    <i class="bi bi-github"></i> GitHub
-                  </a>
+
+                  <!-- Metamorphosis -->
+                  <div class="timeline-item mb-2 position-relative" style="padding-left: 40px;">
+                    <div
+                      style="position: absolute; top: 10px; left: -12px; width: 20px; height: 20px; background-color: #007bff; border: 3px solid #f9f9f9; border-radius: 50%;">
+                    </div>
+                    <h5 style="color: #333; font-weight: bold; margin: 0;">Metamorphosis
+                      <hr> <small style="font-size: 12px; float: right; color: #888;">Oct
+                        2022 - Oct 2023</small>
+                    </h5>
+                    <h6 style="font-size: 1.1rem; color: #007bff; font-weight: bold; margin-top: 5px;">Software Engineer
+                    </h6>
+                    <p style="margin-top: 10px; color: #555; font-size: 0.95rem;">
+                      Led the development of admin panels, RESTful APIs, PC tracking application with <br> optimized
+                      security and performance.
+                    </p>
+                  </div>
+
+                  <!-- Tesseract Technologies -->
+                  <div class="timeline-item position-relative" style="padding-left: 40px;">
+                    <div
+                      style="position: absolute; top: 10px; left: -12px; width: 20px; height: 20px; background-color: #f39c12; border: 3px solid #f9f9f9; border-radius: 50%;">
+                    </div>
+                    <h5 style="color: #333; font-weight: bold; margin: 0;">Tesseract Technologies
+                      <hr> <small style="color: #888; float: right; font-size: 12px;">Feb 2022 - Aug 2022</small>
+                    </h5>
+                    <h6 style="font-size: 1.1rem; color: #f39c12; font-weight: bold; margin-top: 5px;">Intern Software
+                      Engineer</h6>
+                    <p style="margin-top: 10px; color: #555; font-size: 0.95rem;">
+                      Delivered web applications focusing on Human-Centric Design while engaging with <br>
+                      for clients
+                      tailor-made solutions.
+                    </p>
+                  </div>
+
                 </div>
               </div>
+            </section>
 
-              <!-- Project 3 -->
-              <div class="col-md-6">
-                <div
-                  style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 140px;">
-                  <div class="d-flex align-items-center mb-1">
-                    <i class="bi bi-server" style="font-size: 1.5rem; color: #17a2b8;"></i>
-                    <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Monitoring App Admin</h5>
-                  </div>
-                  <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
-                    PC Tracking Database for Admin Panel.
-                  </p>
-                  <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>ReactJs,
-                      MongoDB</strong></small>
-                  <a href="#"
-                    style="color: #007bff; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
-                    <i class="bi bi-github"></i> GitHub
-                  </a>
-                </div>
-              </div>
-
-              <!-- Project 4 -->
-              <div class="col-md-6">
-                <div
-                  style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 140px;">
-                  <div class="d-flex align-items-center mb-1">
-                    <i class="bi bi-robot" style="font-size: 1.5rem; color: #e74c3c;"></i>
-                    <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Custom ChatGPT BOT</h5>
-                  </div>
-                  <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
-                    OpenAI's language model with Custom Dataset.
-                  </p>
-                  <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>ReactJs, NodeJs</strong></small>
-                  <a href="#"
-                    style="color: #007bff; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
-                    <i class="bi bi-github"></i> GitHub
-                  </a>
-                </div>
-              </div>
-
-              <!-- Project 5 -->
-              <div class="col-md-6">
-                <div
-                  style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 140px;">
-                  <div class="d-flex align-items-center mb-1">
-                    <i class="bi bi-box-seam" style="font-size: 1.5rem; color: #9b59b6;"></i>
-                    <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Thrift Admin</h5>
-                  </div>
-                  <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
-                    Admin Panel for Thrift Mobile App.
-                  </p>
-                  <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>ReactJs,
-                      MongoDB</strong></small>
-                  <a href="#"
-                    style="color: #007bff; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
-                    <i class="bi bi-github"></i> GitHub
-                  </a>
-                </div>
-              </div>
-
-              <!-- Project 6 -->
-              <div class="col-md-6">
-                <div
-                  style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 140px;">
-                  <div class="d-flex align-items-center mb-1">
-                    <i class="bi bi-train-front" style="font-size: 1.5rem; color: #28a745;"></i>
-                    <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Smart Train Tracking</h5>
-                  </div>
-                  <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
-                    Train Monitoring and Tracking System.
-                  </p>
-                  <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>ReactJs, NodeJs</strong></small>
-                  <a href="#"
-                    style="color: #007bff; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
-                    <i class="bi bi-github"></i> GitHub
-                  </a>
-                </div>
-              </div>
-
-            </div>
           </div>
-        </section>
-      </div>
 
 
 
@@ -674,178 +432,465 @@
 
 
 
-      <!-- Div 4 -->
-      <div id="div4" class="content-div" style="display: none;">
-        <section style="padding: 50px; background-color: #ffffff;">
-          <div class="container">
-            <h3 class="text-center mb-3" style="color: #333; font-size: 1.5rem; font-weight: bold;">
-              NPM <span style="color: #198754;">Packages</span>
-            </h3>
-            <div class="row g-3 ">
 
-              <!-- Package 1 -->
-              <div class="col-md-6">
-                <div
-                  style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 145px;">
-                  <div class="d-flex align-items-center mb-1">
-                    <i class="bi bi-box-seam" style="font-size: 1.5rem; color: #007bff;"></i>
-                    <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Portable MongoDB</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div id="div3" class="content-div" style="display: none;">
+            <section style="padding: 48.5px; background-color: #ffffff;">
+              <div class="container">
+                <h3 class="text-center mb-3" style="color: #333; font-size: 1.5rem; font-weight: bold;">
+                  Personal <span style="color: #198754;">Project</span>
+                </h3>
+                <div class="row g-3">
+
+                  <!-- Project 1 -->
+                  <div class="col-md-6">
+                    <div
+                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 140px;">
+                      <div class="d-flex align-items-center mb-1">
+                        <i class="bi bi-database" style="font-size: 1.5rem; color: #007bff;"></i>
+                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Portable-MongoDB</h5>
+                      </div>
+                      <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
+                        Without MongoDB installed and use a MongoDB database.
+                      </p>
+                      <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>ExpressJs,
+                          MongoDB-Binary</strong></small>
+                      <a href="#"
+                        style="color: #007bff; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
+                        <i class="bi bi-github"></i> GitHub
+                      </a>
+                    </div>
                   </div>
-                  <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
-                    Use MongoDB without installation.
-                  </p>
-                  <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>MongoDB-Binary,
-                      Node-Binary</strong></small>
-                  <a href="https://www.npmjs.com/package/portable-mongodb" target="_blank"
-                    style="color: #28a745; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
-                    <i class="bi bi-box-arrow-up-right"></i> View on NPM
-                  </a>
+
+                  <!-- Project 2 -->
+                  <div class="col-md-6">
+                    <div
+                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 140px;">
+                      <div class="d-flex align-items-center mb-1">
+                        <i class="bi bi-pc-display" style="font-size: 1.5rem; color: #28a745;"></i>
+                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Desktop Monitoring App
+                        </h5>
+                      </div>
+                      <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
+                        Desktop Usages and Video Tracking Application.
+                      </p>
+                      <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>React ElectronJs,
+                          NodeJs</strong></small>
+                      <a href="#"
+                        style="color: #007bff; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
+                        <i class="bi bi-github"></i> GitHub
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Project 3 -->
+                  <div class="col-md-6">
+                    <div
+                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 140px;">
+                      <div class="d-flex align-items-center mb-1">
+                        <i class="bi bi-server" style="font-size: 1.5rem; color: #17a2b8;"></i>
+                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Monitoring App Admin
+                        </h5>
+                      </div>
+                      <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
+                        PC Tracking Database for Admin Panel.
+                      </p>
+                      <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>ReactJs,
+                          MongoDB</strong></small>
+                      <a href="#"
+                        style="color: #007bff; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
+                        <i class="bi bi-github"></i> GitHub
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Project 4 -->
+                  <div class="col-md-6">
+                    <div
+                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 140px;">
+                      <div class="d-flex align-items-center mb-1">
+                        <i class="bi bi-robot" style="font-size: 1.5rem; color: #e74c3c;"></i>
+                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Custom ChatGPT BOT
+                        </h5>
+                      </div>
+                      <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
+                        OpenAI's language model with Custom Dataset.
+                      </p>
+                      <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>ReactJs,
+                          NodeJs</strong></small>
+                      <a href="#"
+                        style="color: #007bff; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
+                        <i class="bi bi-github"></i> GitHub
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Project 5 -->
+                  <div class="col-md-6">
+                    <div
+                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 140px;">
+                      <div class="d-flex align-items-center mb-1">
+                        <i class="bi bi-box-seam" style="font-size: 1.5rem; color: #9b59b6;"></i>
+                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Thrift Admin</h5>
+                      </div>
+                      <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
+                        Admin Panel for Thrift Mobile App.
+                      </p>
+                      <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>ReactJs,
+                          MongoDB</strong></small>
+                      <a href="#"
+                        style="color: #007bff; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
+                        <i class="bi bi-github"></i> GitHub
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Project 6 -->
+                  <div class="col-md-6">
+                    <div
+                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 140px;">
+                      <div class="d-flex align-items-center mb-1">
+                        <i class="bi bi-train-front" style="font-size: 1.5rem; color: #28a745;"></i>
+                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Smart Train Tracking
+                        </h5>
+                      </div>
+                      <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
+                        Train Monitoring and Tracking System.
+                      </p>
+                      <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>ReactJs,
+                          NodeJs</strong></small>
+                      <a href="#"
+                        style="color: #007bff; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
+                        <i class="bi bi-github"></i> GitHub
+                      </a>
+                    </div>
+                  </div>
+
                 </div>
               </div>
-
-              <!-- Package 2 -->
-              <div class="col-md-6">
-                <div
-                  style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 145px;">
-                  <div class="d-flex align-items-center mb-1">
-                    <i class="bi bi-browser-chrome" style="font-size: 1.5rem; color: #e67e22;"></i>
-                    <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">BrowserTab</h5>
-                  </div>
-                  <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
-                    Manage browser tabs using Node.js.
-                  </p>
-                  <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>NodeJs, Child
-                      Process</strong></small>
-                  <a href="https://www.npmjs.com/package/browsertab" target="_blank"
-                    style="color: #28a745; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
-                    <i class="bi bi-box-arrow-up-right"></i> View on NPM
-                  </a>
-                </div>
-              </div>
-
-              <!-- Package 3 -->
-              <div class="col-md-6">
-                <div
-                  style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 145px;">
-                  <div class="d-flex align-items-center mb-1">
-                    <i class="bi bi-lightning" style="font-size: 1.5rem; color: #28a745;"></i>
-                    <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Electron MongoDB</h5>
-                  </div>
-                  <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
-                    MongoDB integration for Electron.
-                  </p>
-                  <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>ElectronJs,
-                      MongoDB-Binary</strong></small>
-                  <a href="https://www.npmjs.com/package/electron-mongodb" target="_blank"
-                    style="color: #28a745; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
-                    <i class="bi bi-box-arrow-up-right"></i> View on NPM
-                  </a>
-                </div>
-              </div>
-
-              <!-- Package 4 -->
-              <div class="col-md-6">
-                <div
-                  style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 145px;">
-                  <div class="d-flex align-items-center mb-1">
-                    <i class="bi bi-train-front" style="font-size: 1.5rem; color: #17a2b8;"></i>
-                    <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Trainmap-geo-bd</h5>
-                  </div>
-                  <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
-                    Map and monitor trains with OpenRailway-API.
-                  </p>
-                  <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>ExpressJs,
-                      OpenRailway-API</strong></small>
-                  <a href="https://www.npmjs.com/package/trainmap-geo-bd" target="_blank"
-                    style="color: #28a745; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
-                    <i class="bi bi-box-arrow-up-right"></i> View on NPM
-                  </a>
-                </div>
-              </div>
-
-
-            </div>
+            </section>
           </div>
-        </section>
-      </div>
-      <!-- Div 5 -->
-      <div id="div5" class="content-div" style="display: none;">
-        <section style="padding: 50px; background-color: #ffffff;">
-          <div class="container">
-            <h3 class="text-center mb-3" style="color: #333; font-size: 1.5rem; font-weight: bold;">
-              Education <span style="color: #198754;">& Achievements </span>
-            </h3>
-            
-            <!-- Education Section -->
-            <div class="mb-4">
-              <div class="d-flex align-items-start mb-3">
-                <i class="bi bi-mortarboard-fill" style="font-size: 2rem; color: #007bff; margin-right: 15px;"></i>
-                <div>
-                  <h5 style="font-size: 1.2rem; color: #333; font-weight: bold; margin: 0;">Bachelor of Science: Computer Science and Engineering (CSE)</h5>
-                  <hr>
-                  <p style="color: #555; margin: 0;">United International University, Dhaka, Bangladesh</p>
-                  <small style="color: #888;">Year of Passing: 2019</small>
-                </div>
-              </div>
-            </div>
 
-            
-        
-            <!-- Achievement Section -->
-            <div class="mb-4">
-              <div class="d-flex align-items-start mb-2">
-                <i class="bi bi-trophy-fill" style="font-size: 2rem; color: #ffc107; margin-right: 15px;"></i>
-                <div>
-                  <h5 style="font-size: 1.2rem; color: #333; font-weight: bold; margin: 0;">Achievements</h5>
-                  <hr>
-                  <ul style="padding-left: 1.5rem; margin-top: 10px;">
-                    <li style="color: #555; font-size: 1rem;">Champion - UIU CSE Fest Project Competition 2017</li>
-                    <li style="color: #555; font-size: 1rem;">Runner-Up - UIU Intra University Project Competition 2017</li>
-                  </ul>
+
+
+
+
+
+
+
+
+
+
+
+          <!-- Div 4 -->
+          <div id="div4" class="content-div" style="display: none;">
+            <section style="padding: 50px; background-color: #ffffff;">
+              <div class="container">
+                <h3 class="text-center mb-3" style="color: #333; font-size: 1.5rem; font-weight: bold;">
+                  NPM <span style="color: #198754;">Packages</span>
+                </h3>
+                <div class="row g-3 ">
+
+                  <!-- Package 1 -->
+                  <div class="col-md-6">
+                    <div
+                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 145px;">
+                      <div class="d-flex align-items-center mb-1">
+                        <i class="bi bi-box-seam" style="font-size: 1.5rem; color: #007bff;"></i>
+                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Portable MongoDB</h5>
+                      </div>
+                      <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
+                        Use MongoDB without installation.
+                      </p>
+                      <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>MongoDB-Binary,
+                          Node-Binary</strong></small>
+                      <a href="https://www.npmjs.com/package/portable-mongodb" target="_blank"
+                        style="color: #28a745; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
+                        <i class="bi bi-box-arrow-up-right"></i> View on NPM
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Package 2 -->
+                  <div class="col-md-6">
+                    <div
+                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 145px;">
+                      <div class="d-flex align-items-center mb-1">
+                        <i class="bi bi-browser-chrome" style="font-size: 1.5rem; color: #e67e22;"></i>
+                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">BrowserTab</h5>
+                      </div>
+                      <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
+                        Manage browser tabs using Node.js.
+                      </p>
+                      <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>NodeJs, Child
+                          Process</strong></small>
+                      <a href="https://www.npmjs.com/package/browsertab" target="_blank"
+                        style="color: #28a745; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
+                        <i class="bi bi-box-arrow-up-right"></i> View on NPM
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Package 3 -->
+                  <div class="col-md-6">
+                    <div
+                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 145px;">
+                      <div class="d-flex align-items-center mb-1">
+                        <i class="bi bi-lightning" style="font-size: 1.5rem; color: #28a745;"></i>
+                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Electron MongoDB</h5>
+                      </div>
+                      <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
+                        MongoDB integration for Electron.
+                      </p>
+                      <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>ElectronJs,
+                          MongoDB-Binary</strong></small>
+                      <a href="https://www.npmjs.com/package/electron-mongodb" target="_blank"
+                        style="color: #28a745; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
+                        <i class="bi bi-box-arrow-up-right"></i> View on NPM
+                      </a>
+                    </div>
+                  </div>
+
+                  <!-- Package 4 -->
+                  <div class="col-md-6">
+                    <div
+                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 145px;">
+                      <div class="d-flex align-items-center mb-1">
+                        <i class="bi bi-train-front" style="font-size: 1.5rem; color: #17a2b8;"></i>
+                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Trainmap-geo-bd</h5>
+                      </div>
+                      <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
+                        Map and monitor trains with OpenRailway-API.
+                      </p>
+                      <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>ExpressJs,
+                          OpenRailway-API</strong></small>
+                      <a href="https://www.npmjs.com/package/trainmap-geo-bd" target="_blank"
+                        style="color: #28a745; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
+                        <i class="bi bi-box-arrow-up-right"></i> View on NPM
+                      </a>
+                    </div>
+                  </div>
+
+
                 </div>
               </div>
-            </div>
-        
-            <!-- Certification Section -->
-            <div class="mb-4">
-              <div class="d-flex align-items-start mb-3">
-                <i class="bi bi-award-fill" style="font-size: 2rem; color: #17a2b8; margin-right: 15px;"></i>
-                <div>
-                  <h5 style="font-size: 1.2rem; color: #333; font-weight: bold; margin: 0;">Certification</h5>
-                  <hr>
-                  <p style="color: #555; margin: 0;">Six-Month Full Stack Web Development with MERN</p>
-                  <small style="color: #888;">Center for Development of IT Professionals (CDIP), United International University</small>
-                </div>
-              </div>
-            </div>
+            </section>
           </div>
-        </section>
-        
-      </div>
-      <!-- Div 6 --
-       
-      
-      
-      >
-      <div id="div6" class="content-div" style="display: none;">
-        <h3>Content for Div 6</h3>
-        <p>This is the content for Div 6.</p>
-      </div>
-      <!-- Div 7 -->
-      <div id="div7" class="content-div" style="display: none;">
-        <h3>Content for Div 7</h3>
-        <p>This is the content for Div 7.</p>
-      </div>
+          <!-- Div 5 -->
+          <div id="div5" class="content-div" style="display: none;">
+            <section style="padding: 50px; background-color: #ffffff;">
+              <div class="container">
+                <h3 class="text-center mb-3" style="color: #333; font-size: 1.5rem; font-weight: bold;">
+                  Education <span style="color: #198754;">& Achievements </span>
+                </h3>
+
+                <!-- Education Section -->
+                <div class="mb-4">
+                  <div class="d-flex align-items-start mb-3">
+                    <i class="bi bi-mortarboard-fill" style="font-size: 2rem; color: #007bff; margin-right: 15px;"></i>
+                    <div>
+                      <h5 style="font-size: 1.2rem; color: #333; font-weight: bold; margin: 0;">Bachelor of Science:
+                        Computer Science and Engineering (CSE)</h5>
+                      <hr>
+                      <p style="color: #555; margin: 0;">United International University, Dhaka, Bangladesh</p>
+                      <small style="color: #888;">Year of Passing: 2019</small>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <!-- Achievement Section -->
+                <div class="mb-4">
+                  <div class="d-flex align-items-start mb-2">
+                    <i class="bi bi-trophy-fill" style="font-size: 2rem; color: #ffc107; margin-right: 15px;"></i>
+                    <div>
+                      <h5 style="font-size: 1.2rem; color: #333; font-weight: bold; margin: 0;">Achievements</h5>
+                      <hr>
+                      <ul style="padding-left: 1.5rem; margin-top: 10px;">
+                        <li style="color: #555; font-size: 1rem;">Champion - UIU CSE Fest Project Competition 2017</li>
+                        <li style="color: #555; font-size: 1rem;">Runner-Up - UIU Intra University Project Competition
+                          2017
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Certification Section -->
+                <div class="mb-4">
+                  <div class="d-flex align-items-start mb-3">
+                    <i class="bi bi-award-fill" style="font-size: 2rem; color: #17a2b8; margin-right: 15px;"></i>
+                    <div>
+                      <h5 style="font-size: 1.2rem; color: #333; font-weight: bold; margin: 0;">Certification</h5>
+                      <hr>
+                      <p style="color: #555; margin: 0;">Six-Month Full Stack Web Development with MERN</p>
+                      <small style="color: #888;">Center for Development of IT Professionals (CDIP), United
+                        International
+                        University</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </div>
+
+
+
+
+          <div id="div6" class="content-div" style="display: none;">
+            <!-- Extracurricular Activity Section -->
+            <section style="padding: 50px; background-color: #ffffff;">
+              <div class="container">
+                <!-- Section Title -->
+                <h3 class="text-center mb-4" style="color: #333; font-size: 1.5rem; font-weight: bold;">
+                  Extracurricular <span style="color: #198754;">Activity</span>
+                </h3>
+                <!-- Activity List -->
+                <div class="row g-3 d-flex">
+                  <!-- Item 1: Internet of Things -->
+                  <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="d-flex align-items-center p-3 w-100"
+                      style="border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                      <i class="bi bi-lightbulb-fill" style="font-size: 2rem; color: #ffc107;"></i>
+                      <div class="ms-3">
+                        <h5 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: bold;">Internet of Things
+                        </h5>
+                        <p style="margin: 0; font-size: 0.9rem; color: #555;">Champion UIU Cse Fest Project Competition
+                          2017</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Item 2: Painting -->
+                  <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="d-flex align-items-center p-3 w-100"
+                      style="border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                      <i class="bi bi-brush-fill" style="font-size: 2rem; color: #28a745;"></i>
+                      <div class="ms-3">
+                        <h5 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: bold;">Painting</h5>
+                        <p style="margin: 0; font-size: 0.9rem; color: #555;">Champion in School and College levels
+                          (2010, 2011, 2012)</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Item 3: Writing -->
+                  <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="d-flex align-items-center p-3 w-100"
+                      style="border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                      <i class="bi bi-pencil-fill" style="font-size: 2rem; color: #17a2b8;"></i>
+                      <div class="ms-3">
+                        <h5 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: bold;">Writing</h5>
+                        <p style="margin: 0; font-size: 0.9rem; color: #555;">Published a book in Ishwardi Upazila
+                          Ekushey Boi Mela 2010</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Item 4: Short Film Making -->
+                  <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="d-flex align-items-center p-3 w-100"
+                      style="border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                      <i class="bi bi-camera-reels-fill" style="font-size: 2rem; color: #e74c3c;"></i>
+                      <div class="ms-3">
+                        <h5 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: bold;">Short Film Making</h5>
+                        <p style="margin: 0; font-size: 0.9rem; color: #555;">Attended 9th International Children Film
+                          Festival Bangladesh 2015</p>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <!-- Item 3: Writing -->
+                  <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="d-flex align-items-center p-3 w-100"
+                      style="border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                      <i class="bi bi-balloon" style="font-size: 2rem; color: #2717b8;"></i>
+                      <div class="ms-3">
+                        <h5 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: bold;">Sports</h5>
+                        <p style="margin: 0; font-size: 0.9rem; color: #555;">Attended Many sports events</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Item 4: Short Film Making -->
+                  <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="d-flex align-items-center p-3 w-100"
+                      style="border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                      <i class="bi bi-controller" style="font-size: 2rem; color: #7e3ce7;"></i>
+                      <div class="ms-3">
+                        <h5 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: bold;">Console Gaming</h5>
+                        <p style="margin: 0; font-size: 0.9rem; color: #555;">I play in my spare time if I have time.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Item 3: Writing -->
+                  <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="d-flex align-items-center p-3 w-100"
+                      style="border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                      <i class="bi bi-strava" style="font-size: 2rem; color: #24b817;"></i>
+                      <div class="ms-3">
+                        <h5 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: bold;">Traveling</h5>
+                        <p style="margin: 0; font-size: 0.9rem; color: #555;">I adore taking trips. I enjoy traveling to
+                          different places.
+
+
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Item 4: Short Film Making -->
+                  <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="d-flex align-items-center p-3 w-100"
+                      style="border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                      <i class="bi bi-camera" style="font-size: 2rem; color: #e73c9a;"></i>
+                      <div class="ms-3">
+                        <h5 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: bold;">Photography</h5>
+                        <p style="margin: 0; font-size: 0.9rem; color: #555;">Enjoy photographing the natural world.</p>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </section>
+
+          </div>
+          <div id="div7" class="content-div" style="display: none;">
+            <h3>Content for Div 7</h3>
+            <p>This is the content for Div 7.</p>
+          </div>
+        </div>
+      </section>
     </div>
-  </section>
+  </div>
 
 
   <section class="d-flex justify-content-center align-items-center" style="height: 100vh; background-color: #ffffff;">
-    <!-- Navbar -->
     <div class="navbar d-flex justify-content-center align-items-center"
       style="width: 30%; height: 80px; background-color: #ffffff; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); border-radius: 12px;">
 
-      <!-- Navigation Icons -->
       <a href="#" class="text-center mx-4" style="color: #6c757d; text-decoration: none;">
         <i class="bi bi-house-fill" style="font-size: 1.2rem;"></i>
       </a>
