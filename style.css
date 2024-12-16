@@ -24,3 +24,19 @@ main {
 footer {
     margin-top: auto;
 }
+
+.content-div {
+    min-height: 65vh; /* Ensures all content-divs have the same height */
+    display: none; /* Initially hide all content */
+    background-color: #ffffff; /* Ensures background consistency */
+    padding: 20px; /* Adjust padding for spacing */
+    overflow-y: auto; /* Add scrolling if content overflows */
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  }
+
+  .content-div.active {
+    display: block; /* Show only the active content */
+  }
+
+
+  
