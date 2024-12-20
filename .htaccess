@@ -1,4 +1,0 @@
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^(www\.)?atikurrahman.net$ [NC]
-RewriteCond %{REQUEST_URI} !^/atikurrahman.net/
-RewriteRule ^(.*)$ /atikurrahman.net/$1 [L]
