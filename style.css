@@ -3,36 +3,44 @@ body {
     height: 100%;
     margin: 0;
     font-family: 'Roboto Mono', monospace;
-    /* Apply Roboto Mono font */
-
 }
-
 body {
     display: flex;
     flex-direction: column;
 }
-
 main {
     flex: 1;
 }
-
-  
 footer {
     margin-top: auto;
 }
-
 .content-div {
-    min-height: 65vh; /* Ensures all content-divs have the same height */
-    display: none; /* Initially hide all content */
-    background-color: #ffffff; /* Ensures background consistency */
-    /* padding: 20px; */
-    overflow-y: auto; /* Add scrolling if content overflows */
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
-  }
-
-  .content-div.active {
-    display: block; /* Show only the active content */
-  }
-
-
-  
+    min-height: 65vh;
+    display: none;
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+.content-div.active {
+    display: block;
+}
+.sidebar {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 70px;
+    height: 100%;
+    padding: 10px 0;
+    border-right: 1px solid #ddd;
+    border-radius: 5px;
+}
+.sidebar .nav-link {
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    color: #28a745;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
