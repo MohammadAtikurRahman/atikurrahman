@@ -1073,40 +1073,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+  <script src="index.js"></script>
 
-
-  <script>
-
-    function showDiv(divId) {
-      // Hide all content divs
-      const contentDivs = document.querySelectorAll('.content-div');
-      contentDivs.forEach(div => div.style.display = 'none');
-
-      // Show the selected content div
-      const selectedDiv = document.getElementById(divId);
-      if (selectedDiv) {
-        selectedDiv.style.display = 'block';
-      }
-    }
-
-  </script>
-
-
-  <script>
-    // Add click listeners to navbar icons
-    document.querySelectorAll('.nav-icon').forEach(icon => {
-      icon.addEventListener('click', (event) => {
-        event.preventDefault();
-
-        // Hide all content divs
-        document.querySelectorAll('.content').forEach(div => div.style.display = 'none');
-
-        // Get target div and show it
-        const targetDiv = event.currentTarget.getAttribute('data-target');
-        document.getElementById(targetDiv).style.display = 'block';
-      });
-    });
-  </script>
 </body>
 
 </html>
