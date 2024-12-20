@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/atikurrahman.net
+RewriteRule ^(.*)$ /atikurrahman.net/$1 [L]
