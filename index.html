@@ -9,20 +9,20 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-  
+
   <title>Atikur Rahman | Full Stack Developer </title>
   <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-  
+
       <ul class="navbar-nav ms-auto d-flex flex-row align-items-center">
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/MohammadAtikurRahman" target="_blank" style="color: #000000;">
@@ -36,7 +36,7 @@
           </a>
         </li>
       </ul>
-  
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto align-items-center">
           <li class="nav-item d-flex align-items-center">
@@ -54,8 +54,48 @@
         </ul>
       </div>
     </div>
-  </nav>
-  
+  </nav> -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container d-flex justify-content-between align-items-center">
+    <!-- Navbar Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Search Input -->
+    <div class="d-flex align-items-center">
+      <div class="input-group">
+        <input type="text" class="form-control rounded-start" placeholder="Search..." aria-label="Search"
+          style="max-width: 250px; font-size: 0.85rem; outline: none;">
+        <button class="btn btn-primary" type="button" style="outline: none;">
+          <i class="bi bi-search text-white"></i>
+        </button>
+        <button class="btn btn-secondary" type="button" style="outline: none;">
+          <i class="bi bi-mic text-white"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Social Links -->
+    <ul class="navbar-nav d-flex flex-row align-items-center">
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/MohammadAtikurRahman" target="_blank" style="color: #000000;">
+          <i class="bi bi-github" style="font-size: 1.5rem;"></i>
+        </a>
+      </li>
+      <li class="nav-item ms-3">
+        <a class="nav-link" href="https://www.linkedin.com/in/md-atikur-rahman-4a755910b/" target="_blank"
+          style="color: #0a66c2;">
+          <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
 
   <header class="bg-success text-white text-center py-5">
     <div class="container">
@@ -72,7 +112,8 @@
               <i class="bi bi-envelope"></i> Contact With Me
             </a>
 
-            <a href="Resume-Md.%20Atikur%20Rahman.pdf" class="btn btn-primary btn-md" download="Resume-Md.-Atikur-Rahman.pdf">
+            <a href="Resume-Md.%20Atikur%20Rahman.pdf" class="btn btn-primary btn-md"
+              download="Resume-Md.-Atikur-Rahman.pdf">
               <i class="bi bi-clipboard2-check-fill"></i> Download Resume
             </a>
           </div>
@@ -115,7 +156,7 @@
       <section class="d-flex">
         <div class="main-content flex-grow-1 px-3">
           <div id="div1" class="content-div" style="display: block;">
-          
+
 
             <section style="padding: 50px; background-color: #ffffff;">
               <h3 class="text-center mb-3" style="color: #333; font-size: 1.5rem; font-weight: bold;">
@@ -170,8 +211,8 @@
                           <span class="ms-auto" style="font-size: 0.8rem; color: #666;">70%</span>
                         </div>
                         <div class="progress" style="height: 8px;">
-                          <div class="progress-bar bg-secondary" role="progressbar" style="width: 70%;" aria-valuenow="70"
-                            aria-valuemin="0" aria-valuemax="100"></div>
+                          <div class="progress-bar bg-secondary" role="progressbar" style="width: 70%;"
+                            aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                       </div>
                       <div class="mb-2">
@@ -198,9 +239,9 @@
                       </div>
                     </div>
                   </div>
-            
+
                   <!-- Technology Expertise Section -->
-                  <div class="col-12 col-lg-8">
+                  <div class="col-12 col-lg-8 desktop">
                     <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
                       <div
                         style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
@@ -227,56 +268,164 @@
                         </div>
                       </div>
                       <div
-                      style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                      <i class="bi bi-git" style="font-size: 2rem; color: #f39c12;"></i>
-                      <div>
-                        <h4 style="font-size: 1rem; color: #333; margin: 0;">Version Control & Tools</h4>
-                        <p style="font-size: 0.9rem; color: #666; margin: 0;">Git, GitHub, Docker</p>
+                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
+                        <i class="bi bi-git" style="font-size: 2rem; color: #f39c12;"></i>
+                        <div>
+                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Version Control & Tools</h4>
+                          <p style="font-size: 0.9rem; color: #666; margin: 0;">Git, GitHub, Docker</p>
+                        </div>
                       </div>
-                    </div>
-                    <div
-                      style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                      <i class="bi bi-clipboard-check" style="font-size: 2rem; color: #17a2b8;"></i>
-                      <div>
-                        <h4 style="font-size: 1rem; color: #333; margin: 0;">Project Management</h4>
-                        <p style="font-size: 0.9rem; color: #666; margin: 0;">Clickup, Trello, Agile</p>
+                      <div
+                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
+                        <i class="bi bi-clipboard-check" style="font-size: 2rem; color: #17a2b8;"></i>
+                        <div>
+                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Project Management</h4>
+                          <p style="font-size: 0.9rem; color: #666; margin: 0;">Clickup, Trello, Agile</p>
+                        </div>
                       </div>
-                    </div>
-                    <div
-                      style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                      <i class="bi bi-database-fill" style="font-size: 2rem; color: #9b59b6;"></i>
-                      <div>
-                        <h4 style="font-size: 1rem; color: #333; margin: 0;">Database Knowledge</h4>
-                        <p style="font-size: 0.9rem; color: #666; margin: 0;">MongoDB, MySQL</p>
+                      <div
+                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
+                        <i class="bi bi-database-fill" style="font-size: 2rem; color: #9b59b6;"></i>
+                        <div>
+                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Database Knowledge</h4>
+                          <p style="font-size: 0.9rem; color: #666; margin: 0;">MongoDB, MySQL</p>
+                        </div>
                       </div>
-                    </div>
-                    <div
-                      style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                      <i class="bi bi-database-fill" style="font-size: 2rem; color: #9b59b6;"></i>
-                      <div>
-                        <h4 style="font-size: 1rem; color: #333; margin: 0;">Database Knowledge</h4>
-                        <p style="font-size: 0.9rem; color: #666; margin: 0;">MongoDB, MySQL</p>
+                      <div
+                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
+                        <i class="bi bi-database-fill" style="font-size: 2rem; color: #9b59b6;"></i>
+                        <div>
+                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Database Knowledge</h4>
+                          <p style="font-size: 0.9rem; color: #666; margin: 0;">MongoDB, MySQL</p>
+                        </div>
                       </div>
-                    </div>
-                    <div
-                      style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                      <i class="bi bi-clipboard-check" style="font-size: 2rem; color: #17a2b8;"></i>
-                      <div>
-                        <h4 style="font-size: 1rem; color: #333; margin: 0;">Project Management</h4>
-                        <p style="font-size: 0.9rem; color: #666; margin: 0;">Clickup, Trello, Agile</p>
+                      <div
+                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
+                        <i class="bi bi-clipboard-check" style="font-size: 2rem; color: #17a2b8;"></i>
+                        <div>
+                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Project Management</h4>
+                          <p style="font-size: 0.9rem; color: #666; margin: 0;">Clickup, Trello, Agile</p>
+                        </div>
                       </div>
-                    </div>
 
 
                       <!-- Add more cards here if needed -->
                     </div>
                   </div>
+
+
+                  <div class="mobile">
+                    <div id="skillsCarousel" class="carousel slide" data-bs-ride="carousel"
+                      style="max-width: 600px; margin: 20px auto;">
+                      <div class="carousel-inner"
+                        style="box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);  border-radius: 12px; overflow: hidden; position: relative;">
+                        <!-- Frontend Development -->
+                        <div class="carousel-item active">
+                          <div class="card text-center"
+                            style="border-radius: 12px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: auto; width: 100%;">
+                            <div class="card-header d-flex align-items-center justify-content-center"
+                              style="font-size: 0.85rem; background-color: #f8f9fa; font-weight: bold;">
+                              <i class="bi bi-laptop" style="font-size: 1.2rem; margin-right: 8px; color: #007bff;"></i>
+                              Frontend Development
+                            </div>
+                            <div class="card-body" style="font-size: 0.8rem; padding: 20px;">
+                              <p class="card-text">React, React Electron</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Backend Development -->
+                        <div class="carousel-item">
+                          <div class="card text-center"
+                            style="border-radius: 12px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: auto; width: 100%;">
+                            <div class="card-header d-flex align-items-center justify-content-center"
+                              style="font-size: 0.85rem; background-color: #f8f9fa; font-weight: bold;">
+                              <i class="bi bi-server" style="font-size: 1.2rem; margin-right: 8px; color: #28a745;"></i>
+                              Backend Development
+                            </div>
+                            <div class="card-body" style="font-size: 0.8rem; padding: 20px;">
+                              <p class="card-text">Express (Node.js)</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Authentication & Security -->
+                        <div class="carousel-item">
+                          <div class="card text-center"
+                            style="border-radius: 12px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: auto; width: 100%;">
+                            <div class="card-header d-flex align-items-center justify-content-center"
+                              style="font-size: 0.85rem; background-color: #f8f9fa; font-weight: bold;">
+                              <i class="bi bi-shield-lock"
+                                style="font-size: 1.2rem; margin-right: 8px; color: #dc3545;"></i>
+                              Authentication & Security
+                            </div>
+                            <div class="card-body" style="font-size: 0.8rem; padding: 20px;">
+                              <p class="card-text">JWT, Passport</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Version Control & Tools -->
+                        <div class="carousel-item">
+                          <div class="card text-center"
+                            style="border-radius: 12px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: auto; width: 100%;">
+                            <div class="card-header d-flex align-items-center justify-content-center"
+                              style="font-size: 0.85rem; background-color: #f8f9fa; font-weight: bold;">
+                              <i class="bi bi-tools" style="font-size: 1.2rem; margin-right: 8px; color: #f39c12;"></i>
+                              Version Control & Tools
+                            </div>
+                            <div class="card-body" style="font-size: 0.8rem; padding: 20px;">
+                              <p class="card-text">Git, GitHub, Docker</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Project Management -->
+                        <div class="carousel-item">
+                          <div class="card text-center"
+                            style="border-radius: 12px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: auto; width: 100%;">
+                            <div class="card-header d-flex align-items-center justify-content-center"
+                              style="font-size: 0.85rem; background-color: #f8f9fa; font-weight: bold;">
+                              <i class="bi bi-kanban" style="font-size: 1.2rem; margin-right: 8px; color: #17a2b8;"></i>
+                              Project Management
+                            </div>
+                            <div class="card-body" style="font-size: 0.8rem; padding: 20px;">
+                              <p class="card-text">Clickup, Trello, Agile</p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Database Knowledge -->
+                        <div class="carousel-item">
+                          <div class="card text-center"
+                            style="border-radius: 12px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: auto; width: 100%;">
+                            <div class="card-header d-flex align-items-center justify-content-center"
+                              style="font-size: 0.85rem; background-color: #f8f9fa; font-weight: bold;">
+                              <i class="bi bi-database"
+                                style="font-size: 1.2rem; margin-right: 8px; color: #9b59b6;"></i>
+                              Database Knowledge
+                            </div>
+                            <div class="card-body" style="font-size: 0.8rem; padding: 20px;">
+                              <p class="card-text">MongoDB, MySQL</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+
+
+
+
+
                 </div>
               </div>
             </section>
-            
 
-   
+
+
 
 
 
@@ -473,7 +622,8 @@
                       style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 145px;">
                       <div class="d-flex align-items-center mb-1">
                         <i class="bi bi-box-seam" style="font-size: 1.5rem; color: #007bff;"></i>
-                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Portable MongoDB: <i style="color: #007bff;">npm install portable-mongodb</i></h5>
+                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Portable MongoDB: <i
+                            style="color: #007bff;">npm install portable-mongodb</i></h5>
                       </div>
                       <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
                         Use MongoDB without installation.
@@ -493,14 +643,15 @@
                         <i class="bi bi-browser-chrome" style="font-size: 1.5rem; color: #e67e22;"></i>
 
 
-                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">BrowserTab: <i style="color: #007bff;">npm install browsertab</i>
-                        
+                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">BrowserTab: <i
+                            style="color: #007bff;">npm install browsertab</i>
+
                         </h5>
 
 
 
 
-                        
+
                       </div>
                       <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
                         Manage browser tabs using Node.js.
@@ -518,7 +669,8 @@
                       style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 145px;">
                       <div class="d-flex align-items-center mb-1">
                         <i class="bi bi-lightning" style="font-size: 1.5rem; color: #28a745;"></i>
-                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Railway Geolocation: <i style="color: #007bff;">npm install railway-geolocation</i>
+                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Railway Geolocation:
+                          <i style="color: #007bff;">npm install railway-geolocation</i>
                         </h5>
                       </div>
                       <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
@@ -537,20 +689,21 @@
                       style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 145px;">
                       <div class="d-flex align-items-center mb-1">
                         <i class="bi bi-train-front" style="font-size: 1.5rem; color: #17a2b8;"></i>
-                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Reverse Geocoding: <i style="color: #007bff;">npm install rev-geocoding</i></h5>
+                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Reverse Geocoding: <i
+                            style="color: #007bff;">npm install rev-geocoding</i></h5>
                       </div>
                       <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
                         GPS coordinates wise location.
                       </p>
                       <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>nominatim api,
                           OpenRailway-API</strong></small>
-                   
-                   
-                          <a href="https://www.npmjs.com/package/rev-geocoding" target="_blank"
+
+
+                      <a href="https://www.npmjs.com/package/rev-geocoding" target="_blank"
                         style="color: #28a745; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px; z-index: 1000;">
                         <i class="bi bi-box-arrow-up-right"></i> View on NPM
                       </a>
-                      
+
                     </div>
                   </div>
                 </div>
@@ -716,27 +869,30 @@
   </div>
 
   
-  <section class="d-flex justify-content-center align-items-center" style="height: 100vh; background-color: #ffffff;">
-    <div class="navbar d-flex justify-content-center align-items-center"
-      style="width: 30%; height: 70px; background-color: #ffffff; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); border-radius: 12px;">
+  <section id="hide-on-mobile" class="d-flex justify-content-center align-items-center" 
+  style="height: 100vh; background-color: #ffffff;">
+  <div class="navbar d-flex justify-content-center align-items-center"
+    style="width: 30%; height: 70px; background-color: #ffffff; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); border-radius: 12px;">
+    <a href="#" class="text-center mx-4 nav-icon" data-target="div10" style="color: #6c757d; text-decoration: none;">
+      <i class="bi bi-house-fill" style="font-size: 1.2rem;"></i>
+    </a>
+    <a href="#" class="text-center mx-4 nav-icon" data-target="div11" style="color: #6c757d; text-decoration: none;">
+      <i class="bi bi-person-circle" style="font-size: 1.2rem;"></i>
+    </a>
+    <a href="#" class="text-center mx-4 nav-icon" data-target="div12" style="color: #6c757d; text-decoration: none;">
+      <i class="bi bi-envelope-fill" style="font-size: 1.2rem;"></i>
+    </a>
+    <a href="#" class="text-center mx-4 nav-icon" data-target="div13" style="color: #6c757d; text-decoration: none;">
+      <i class="bi bi-briefcase-fill" style="font-size: 1.2rem;"></i>
+    </a>
+    <a href="#" class="text-center mx-4 nav-icon" data-target="div14" style="color: #6c757d; text-decoration: none;">
+      <i class="bi bi-lightbulb-fill" style="font-size: 1.2rem;"></i>
+    </a>
+  </div>
+</section>
 
-      <a href="#" class="text-center mx-4 nav-icon" data-target="div10" style="color: #6c757d; text-decoration: none;">
-        <i class="bi bi-house-fill" style="font-size: 1.2rem;"></i>
-      </a>
-      <a href="#" class="text-center mx-4 nav-icon" data-target="div11" style="color: #6c757d; text-decoration: none;">
-        <i class="bi bi-person-circle" style="font-size: 1.2rem;"></i>
-      </a>
-      <a href="#" class="text-center mx-4 nav-icon" data-target="div12" style="color: #6c757d; text-decoration: none;">
-        <i class="bi bi-envelope-fill" style="font-size: 1.2rem;"></i>
-      </a>
-      <a href="#" class="text-center mx-4 nav-icon" data-target="div13" style="color: #6c757d; text-decoration: none;">
-        <i class="bi bi-briefcase-fill" style="font-size: 1.2rem;"></i>
-      </a>
-      <a href="#" class="text-center mx-4 nav-icon" data-target="div14" style="color: #6c757d; text-decoration: none;">
-        <i class="bi bi-lightbulb-fill" style="font-size: 1.2rem;"></i>
-      </a>
-    </div>
-  </section>
+
+
 
   <section id="bottom-panel" style=" background-color: #ffffff; padding: 20px; ">
 
@@ -761,6 +917,23 @@
       </div>
     </div>
   </section>
+
+
+  <style>
+    @media (max-width: 768px) {
+      #hide-on-mobile {
+        display: none !important; /* Ensure it overrides any other conflicting styles */
+      }
+    }
+
+    @media (max-width: 768px) {
+      #bottom-panel {
+        display: none !important; /* Ensure it overrides any other conflicting styles */
+      }
+    }
+  </style>
+
+
 
   <section class="pb-5" style="background-color: #ffffff;">
     <div class="container">
@@ -791,7 +964,8 @@
           <div class="p-4 d-flex align-items-start"
             style="background-color: #ffffff; border-radius: 20px; height: 100%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
             <div class="me-3">
-              <a href="https://medium.com/@contact.atikurrahman/introducing-railway-geolocation-a-node-js-package-for-global-railway-data-1a626af6e122" target="_blank">
+              <a href="https://medium.com/@contact.atikurrahman/introducing-railway-geolocation-a-node-js-package-for-global-railway-data-1a626af6e122"
+                target="_blank">
                 <i class="bi bi-medium" style="font-size: 3rem; color: #1e201f;"></i>
               </a>
             </div>

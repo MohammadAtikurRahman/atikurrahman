@@ -15,7 +15,7 @@ footer {
     margin-top: auto;
 }
 .content-div {
-    min-height: 65vh;
+    min-height: 50vh;
     display: none;
     background-color: #ffffff;
     overflow-y: auto;
@@ -44,3 +44,27 @@ footer {
     background-color: #f1f1f1;
     border-radius: 5px;
 }
+
+.desktop, .mobile {
+    display: none;
+}
+
+/* Show the desktop div for screens larger than 768px */
+@media (min-width: 769px) {
+    .desktop {
+        display: block;
+    }
+}
+
+/* Show the mobile div for screens smaller or equal to 768px */
+@media (max-width: 768px) {
+    .mobile {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    #hide-on-mobile {
+      display: none; /* Hide only this section */
+    }
+  }
