@@ -1,1021 +1,1080 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <title>Atikur Rahman — Full-Stack & AI Engineer</title>
+  <meta name="description" content="Atikur Rahman is a full-stack and AI engineer. Explore his company experience and projects: Portable MongoDB, Railway Network, Info-Scraper-v2 and Parent Lens.">
+  <meta name="theme-color" content="#f4f3eb">
+  <meta property="og:title" content="Atikur Rahman — Ideas into useful software">
+  <meta property="og:description" content="Full-stack engineering, thoughtful AI systems, and tools made to be used.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/images/profile_image.jpg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./assets/fonts/roboto-400.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+@font-face { font-family: 'Roboto'; font-style: normal; font-weight: 400; font-display: swap; src: url('./assets/fonts/roboto-400.woff2') format('woff2'); }
+@font-face { font-family: 'Roboto'; font-style: normal; font-weight: 500; font-display: swap; src: url('./assets/fonts/roboto-500.woff2') format('woff2'); }
+@font-face { font-family: 'Roboto'; font-style: normal; font-weight: 700; font-display: swap; src: url('./assets/fonts/roboto-700.woff2') format('woff2'); }
 
+/* Atikur Rahman — an editorial portfolio. No framework required. */
+:root {
+  --paper: #f4f3eb;
+  --ink: #171c17;
+  --muted: #63695f;
+  --line: #d6d9cd;
+  --lime: #d8f66b;
+  --dark-line: #3a443a;
+  --dark-muted: #b5bdb1;
+  --display: 'Roboto', Arial, sans-serif;
+  --body: 'Roboto', Arial, sans-serif;
+  --mono: 'Roboto', Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scrollbar-gutter: stable; scroll-behavior: smooth; scroll-padding-top: 110px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--lime); color: var(--ink); }
+a { color: inherit; text-decoration: none; }
+button { color: inherit; font: inherit; cursor: pointer; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { border: 0; }
+button:disabled { cursor: wait; }
+img { display: block; max-width: 100%; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { font-family: var(--display); font-weight: 500; }
+em { font-family: var(--display); font-style: normal; font-weight: 600; }
+svg { display: block; }
+.icon { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+.icon-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+:focus-visible { outline: 3px solid #6b8519; outline-offset: 5px; }
+.section-dark :focus-visible { outline-color: var(--lime); }
+.section-wrap { width: min(1280px, calc(100% - 112px)); margin-inline: auto; }
+.micro { font-family: var(--mono); font-size: 10px; line-height: 1.6; letter-spacing: .075em; font-weight: 500; }
+.status-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #628428; margin-right: 10px; box-shadow: 0 0 0 4px rgba(98,132,40,.08); }
+.skip-link { position: fixed; top: -100px; left: 20px; z-index: 100; background: var(--ink); color: white; padding: 15px 22px; }
+.skip-link:focus { top: 18px; }
+.scroll-progress { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: #80a829; transform: scaleX(0); transform-origin: left; z-index: 80; }
 
-  <title>Atikur Rahman | Full Stack Developer </title>
-  <link href="style.css" rel="stylesheet">
+/* Navigation */
+.site-header { width: 100%; min-height: 94px; padding: 0 max(56px, calc((100vw - 1280px) / 2)); display: flex; align-items: center; justify-content: space-between; gap: 28px; position: sticky; top: 0; z-index: 50; background: rgba(244,243,235,.94); backdrop-filter: blur(18px); border-bottom: 1px solid var(--line); }
+.wordmark { display: inline-flex; align-items: center; gap: 12px; }
+.wordmark-icon { font-family: var(--display); font-size: 40px; line-height: 1; letter-spacing: -.1em; font-weight: 700; }
+.wordmark-icon span { color: #78982e; }
+.wordmark > span:last-child { font-family: var(--mono); font-size: 9px; line-height: 1.5; letter-spacing: .15em; font-weight: 500; }
+.desktop-nav { display: flex; align-items: center; gap: 34px; margin-left: auto; margin-right: auto; }
+.desktop-nav a { font-size: 12px; position: relative; padding-block: 10px; }
+.desktop-nav a span { font-family: var(--mono); font-size: 8px; color: #787e72; margin-left: 5px; vertical-align: super; }
+.desktop-nav a::after { content: ''; position: absolute; bottom: 1px; left: 0; width: 100%; height: 1px; background: var(--ink); transform: scaleX(0); transform-origin: left; transition: transform .2s; }
+.desktop-nav a:hover::after, .desktop-nav a[aria-current]::after { transform: scaleX(1); }
+.header-contact { display: inline-flex; align-items: center; gap: 20px; border: 1px solid var(--ink); padding: 12px 17px; font-size: 12px; transition: background .2s, color .2s; }
+.header-contact .icon { width: 16px; height: 16px; }
+.header-contact:hover { background: var(--ink); color: var(--paper); }
+.menu-toggle { display: none; width: 42px; height: 42px; padding: 10px; background: transparent; }
+.menu-toggle span { height: 1px; background: var(--ink); display: block; margin: 6px 0; transition: transform .2s; }
+.menu-toggle[aria-expanded='true'] span:first-child { transform: translateY(3.5px) rotate(45deg); }
+.menu-toggle[aria-expanded='true'] span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
+.mobile-menu[hidden] { display: none; }
+.mobile-menu { position: absolute; top: 100%; left: 0; right: 0; background: var(--paper); border-bottom: 1px solid var(--line); padding: 12px 24px 24px; }
+.mobile-menu a { display: block; padding: 15px 0; font-family: var(--display); font-size: 24px; border-bottom: 1px solid var(--line); }
+
+/* The opening spread */
+.hero { padding-top: 38px; }
+.hero-topline { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.hero-topline > span:first-child { display: flex; align-items: center; }
+.hero-location { color: var(--muted); }
+.hero-grid { display: grid; grid-template-columns: minmax(0,1.7fr) minmax(0,1fr); gap: 76px; padding-top: 62px; padding-bottom: 56px; align-items: center; }
+.hero-copy { padding-bottom: 15px; }
+.hero h1 { font-size: clamp(58px, 6.25vw, 90px); line-height: 1.045; letter-spacing: -.065em; }
+.hero h1 em { letter-spacing: -.025em; }
+.accent-period { color: #7a9a25; }
+.hero-intro { max-width: 475px; font-size: 17px; line-height: 1.7; color: var(--muted); margin-top: 30px; }
+.hero-intro strong { color: var(--ink); font-weight: 600; }
+.hero-actions { display: flex; align-items: center; gap: 26px; margin-top: 30px; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 25px; min-height: 54px; padding: 17px 24px; font-size: 12px; font-weight: 600; transition: background .2s, transform .2s; }
+.button-dark { background: var(--ink); color: var(--paper); }
+.button .icon { width: 17px; height: 17px; }
+.button-dark:hover { background: #35452a; transform: translateY(-2px); }
+.hero-secondary { display: flex; align-items: center; gap: 10px; font-size: 12px; padding-block: 14px; border-bottom: 1px solid var(--line); }
+.hero-secondary .icon { width: 17px; height: 17px; }
+.hero-secondary:hover { border-color: var(--ink); }
+.hero-current { display: flex; align-items: center; gap: 16px; margin-top: 42px; }
+.current-line { width: 30px; height: 1px; background: var(--ink); flex-shrink: 0; }
+.hero-current p { font-size: 12px; color: var(--muted); line-height: 1.6; }
+.hero-current strong { color: var(--ink); font-weight: 600; }
+.hero-current small { display: block; font-family: var(--mono); font-size: 9px; margin-top: 4px; }
+.hero-portrait { width: 100%; max-width: 382px; justify-self: end; position: relative; transform: rotate(2deg); }
+.portrait-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 15px 18px; background: var(--ink); color: var(--paper); }
+.portrait-top .micro { font-size: 8px; letter-spacing: .07em; }
+.portrait-top .icon { color: var(--lime); width: 19px; height: 19px; }
+.portrait-photo { height: 348px; position: relative; background: #e6e7e0; overflow: hidden; }
+.portrait-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 22%; filter: grayscale(1); mix-blend-mode: multiply; }
+.portrait-name { position: absolute; bottom: 14px; left: 18px; padding: 7px 11px; background: var(--paper); font-family: var(--mono); font-size: 8px; letter-spacing: .13em; }
+.portrait-footer { padding: 19px 21px; background: var(--ink); color: var(--paper); display: flex; justify-content: space-between; align-items: center; }
+.portrait-footer > span:first-child { font-family: var(--mono); font-size: 9px; letter-spacing: .11em; line-height: 1.6; }
+.portrait-footer-arrow { font-size: 42px; line-height: .8; color: var(--lime); font-weight: 400; }
+.portrait-note { position: absolute; bottom: 83px; left: -51px; display: flex; flex-direction: column; width: 144px; height: 145px; padding: 17px 18px; background: var(--lime); transform: rotate(-7deg); box-shadow: 4px 5px 0 rgba(0,0,0,.08); }
+.note-number { font-family: var(--display); font-size: 49px; line-height: 1; letter-spacing: -.06em; }
+.note-number span { font-size: 31px; vertical-align: top; line-height: 1.4; }
+.portrait-note > span:last-child { font-size: 11px; line-height: 1.4; margin-top: 10px; }
+.hero-bottom { border-top: 1px solid var(--line); padding: 25px 0 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.scroll-note { display: inline-flex; align-items: center; gap: 16px; color: var(--muted); }
+.scroll-note .icon { width: 15px; height: 15px; transition: transform .2s; }
+.scroll-note:hover .icon { transform: translateY(4px); }
+.hero-bottom p { font-size: 12px; color: var(--muted); }
+.hero-bottom p strong { font-family: var(--display); font-size: 19px; font-weight: 500; color: var(--ink); margin-right: 6px; }
+.hero-bottom > div { display: flex; gap: 22px; font-size: 11px; }
+.hero-bottom > div a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.stack-strip { display: flex; align-items: center; justify-content: center; gap: 45px; padding: 28px 24px; border-top: 1px solid var(--line); background: #e9ebdf; }
+.stack-strip .micro { color: var(--muted); flex-shrink: 0; font-size: 8px; }
+.stack-strip p { font-family: var(--display); font-size: 21px; letter-spacing: -.03em; display: flex; align-items: center; gap: 23px; }
+.stack-strip b { font-size: 13px; font-weight: 400; color: #748167; }
+
+/* Work: one large story, followed by distinct project spreads */
+.section-dark { background: var(--ink); color: var(--paper); }
+.work-section { padding: 100px 0 92px; }
+.section-title { margin-bottom: 55px; }
+.section-title > .micro { color: var(--muted); display: block; margin-bottom: 31px; }
+.section-dark .section-title > .micro { color: var(--dark-muted); }
+.section-title > div { display: flex; align-items: flex-end; justify-content: space-between; gap: 50px; }
+h2 { font-size: clamp(42px, 4.4vw, 64px); line-height: 1.07; letter-spacing: -.055em; }
+h2 em { letter-spacing: -.02em; }
+.section-title p { font-size: 13px; line-height: 1.8; color: var(--muted); margin-bottom: 4px; max-width: 360px; }
+.section-dark .section-title p { color: var(--dark-muted); }
+.featured-project { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; border: 1px solid var(--dark-line); padding: 46px; background: #1c231c; }
+.project-index { display: block; color: var(--dark-muted); font-size: 9px; }
+.featured-copy h3 { font-size: clamp(45px, 4.4vw, 63px); letter-spacing: -.055em; line-height: 1.06; margin-top: 26px; position: relative; }
+.featured-copy h3 span { color: var(--lime); font-size: 48px; margin-left: 10px; }
+.featured-copy > p { max-width: 365px; font-size: 13px; line-height: 1.9; color: var(--dark-muted); margin-top: 23px; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; padding: 0; margin: 24px 0 0; list-style: none; }
+.tags li { border: 1px solid #495047; padding: 6px 9px; color: #c7cfc1; font-family: var(--mono); font-size: 8px; line-height: 1.5; }
+.project-actions { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-top: 30px; }
+.text-action { display: inline-flex; align-items: center; justify-content: space-between; gap: 25px; padding: 0 0 8px; background: transparent; border-bottom: 1px solid #69725f; font-size: 12px; line-height: 1.5; color: var(--lime); }
+.text-action .icon { width: 18px; height: 18px; transition: transform .2s; }
+.text-action:hover .icon { transform: translate(3px, -3px); }
+.text-action:hover { border-color: currentColor; }
+.project-repo { padding: 12px; border: 1px solid #475144; transition: color .2s, background .2s; }
+.project-repo:hover { background: var(--lime); color: var(--ink); }
+.project-repo .icon { width: 20px; height: 20px; }
+.portable-visual { min-width: 0; position: relative; border-radius: 7px; background: #0c110d; border: 1px solid #485241; align-self: center; box-shadow: 0 15px 25px rgba(0,0,0,.13); }
+.terminal-top { display: flex; align-items: center; gap: 15px; padding: 16px 19px; border-bottom: 1px solid #2d382c; color: #97a48e; font-family: var(--mono); font-size: 8px; }
+.terminal-top > span:first-child { display: flex; gap: 5px; }
+.terminal-top i { width: 6px; height: 6px; background: #40503b; border-radius: 50%; }
+.terminal-top > span:nth-child(2) { flex: 1; }
+.terminal-top .icon { width: 15px; height: 15px; }
+.terminal-body { padding: 26px 23px 30px; font-family: var(--mono); }
+.terminal-comment { color: #7e8e74; font-size: 10px; }
+.terminal-command { display: flex; align-items: center; justify-content: space-between; gap: 7px; margin-top: 11px; padding-bottom: 24px; border-bottom: 1px solid #283024; }
+.terminal-command code { font-family: var(--mono); font-size: 9px; line-height: 1.8; color: #d2dabf; }
+.terminal-command code span { color: var(--lime); margin-right: 5px; }
+.copy-command { display: flex; padding: 6px; background: transparent; color: #9ca88f; }
+.copy-command .icon { width: 14px; height: 14px; }
+.copy-command:hover { color: var(--lime); }
+.terminal-body pre { margin: 22px 0 26px; font-family: var(--mono); font-size: 11px; line-height: 1.85; color: #dae3d1; overflow-x: auto; }
+.terminal-body pre code { font-family: inherit; }
+.code-purple { color: #bc9bd5; }
+.code-blue { color: #91bdce; }
+.code-green { color: #d2f393; }
+.terminal-ready { font-size: 8px; color: #a2b193; display: flex; align-items: center; }
+.terminal-ready .status-dot { width: 5px; height: 5px; background: var(--lime); margin-right: 7px; }
+.portable-sticker { position: absolute; right: -17px; bottom: -21px; color: var(--ink); background: var(--lime); display: flex; gap: 12px; align-items: center; padding: 14px 18px; transform: rotate(-5deg); }
+.portable-sticker > span { font-family: var(--mono); font-size: 8px; line-height: 1.6; font-weight: 600; }
+.portable-sticker .icon { width: 23px; height: 23px; }
+.work-duo { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 30px; margin-top: 32px; }
+.work-card { border: 1px solid var(--dark-line); min-width: 0; }
+.project-visual { height: 310px; padding: 22px 25px; position: relative; overflow: hidden; }
+.visual-caption { display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+.visual-caption .micro { font-size: 8px; }
+.visual-bottom { border-top: 1px solid #52604c; padding-top: 13px; display: flex; justify-content: space-between; gap: 10px; font-family: var(--mono); font-size: 7px; color: #adb79f; }
+.work-card-copy { padding: 31px 34px 34px; }
+.work-card-copy h3 { font-size: 32px; line-height: 1.15; letter-spacing: -.045em; margin-top: 17px; }
+.work-card-copy > p { font-size: 13px; color: var(--dark-muted); line-height: 1.85; margin-top: 16px; max-width: 425px; min-height: 73px; }
+.work-card-copy .tags { margin-top: 20px; }
+.work-card-copy .text-action { margin-top: 29px; }
+.railway-card { display: grid; grid-template-columns: 1fr 1fr; margin-top: 32px; border: 1px solid var(--dark-line); background: #202a22; }
+.railway-copy { padding: 36px 40px; }
+.railway-copy h3 { font-size: 35px; letter-spacing: -.05em; line-height: 1.12; margin-top: 21px; }
+.railway-copy > p { font-size: 13px; color: var(--dark-muted); line-height: 1.85; margin-top: 17px; max-width: 385px; }
+.railway-copy .text-action { margin-top: 26px; }
+.railway-map { min-width: 0; position: relative; display: flex; flex-direction: column; justify-content: center; padding: 28px 25px; border-left: 1px solid var(--dark-line); overflow: hidden; }
+.map-label { color: #aebfa0; font-size: 8px; padding-left: 10px; }
+.railway-map > svg { width: 100%; max-height: 260px; margin-block: 5px; }
+.rail-route { fill: none; stroke-linejoin: round; stroke-linecap: round; }
+.route-back { stroke: #697b59; stroke-width: 2; }
+.route-front { stroke: var(--lime); stroke-width: 3; }
+.route-branch { stroke: #a3ae82; stroke-width: 2; }
+.rail-nodes circle { fill: #273427; stroke: var(--lime); stroke-width: 2; }
+.rail-labels text { fill: #a2b08f; font-family: var(--mono); font-size: 7px; letter-spacing: .1em; }
+.map-foot { font-size: 6px; color: #a5b19b; padding-left: 10px; }
+.more-work { margin-top: 57px; }
+.more-work > .micro { display: block; color: var(--dark-muted); margin-bottom: 20px; font-size: 8px; }
+.more-work > a { border-top: 1px solid var(--dark-line); padding: 21px 0; display: flex; justify-content: space-between; align-items: center; gap: 18px; transition: padding .25s; }
+.more-work > a:last-child { border-bottom: 1px solid var(--dark-line); }
+.more-work > a:hover { padding-inline: 13px; color: var(--lime); }
+.more-work > a span { font-family: var(--display); font-size: 22px; letter-spacing: -.025em; }
+.more-work small { display: block; font-family: var(--body); font-size: 11px; letter-spacing: 0; color: var(--dark-muted); margin-top: 6px; }
+.more-work .icon { width: 23px; height: 23px; }
+
+/* Career, craft, and the human behind it */
+.experience-section { padding-block: 100px 105px; }
+.career-item { border-top: 1px solid var(--line); }
+.career-item:last-child { border-bottom: 1px solid var(--line); }
+.career-item summary { display: grid; grid-template-columns: 54px minmax(0,1fr) 215px 26px; gap: 20px; align-items: center; list-style: none; padding: 28px 0; cursor: pointer; }
+.career-item summary::-webkit-details-marker { display: none; }
+.career-number { align-self: start; padding-top: 8px; font-family: var(--mono); font-size: 10px; color: var(--muted); }
+.career-item h3 { font-size: 28px; letter-spacing: -.035em; line-height: 1.3; }
+.career-item h3 span { color: var(--muted); font-family: var(--body); font-size: 13px; letter-spacing: 0; font-weight: 400; margin-left: 10px; }
+.career-item summary p { font-size: 12px; color: var(--muted); margin-top: 6px; }
+.career-meta { display: flex; flex-direction: column; gap: 8px; }
+.career-meta strong { font-family: var(--mono); font-size: 9px; font-weight: 500; }
+.career-meta span { font-size: 10px; color: var(--muted); }
+.career-expand { width: 25px; height: 25px; border: 1px solid var(--line); position: relative; }
+.career-expand::before, .career-expand::after { content: ''; width: 9px; height: 1px; position: absolute; top: 11px; left: 7px; background: var(--ink); }
+.career-expand::after { transform: rotate(90deg); transition: transform .2s; }
+.career-item[open] .career-expand { background: var(--lime); border-color: #bfd75d; }
+.career-item[open] .career-expand::after { transform: rotate(0); }
+.career-details { padding: 0 75px 33px; max-width: 875px; }
+.career-details > p { font-size: 14px; line-height: 1.8; }
+.career-details ul { padding: 0; margin: 14px 0 0; list-style: none; }
+.career-details li { font-size: 12px; color: var(--muted); line-height: 1.8; margin: 7px 0; padding-left: 15px; position: relative; }
+.career-details li::before { content: '↗'; position: absolute; left: 0; color: #718630; }
+.toolkit-section { background: #e9ebdf; padding-block: 84px 90px; }
+.toolkit-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 50px; }
+.toolkit-header .micro { color: var(--muted); display: block; margin-bottom: 30px; }
+.toolkit-header > p { font-size: 13px; color: var(--muted); line-height: 1.9; max-width: 305px; margin-bottom: 4px; }
+.toolkit-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 34px; margin-top: 55px; }
+.toolkit-grid > article { border-top: 1px solid #aeb5a2; padding-top: 21px; }
+.toolkit-number { font-family: var(--mono); font-size: 9px; color: #646f52; }
+.toolkit-grid h3 { font-size: 25px; letter-spacing: -.04em; margin-top: 21px; }
+.toolkit-grid p { font-size: 10px; color: #5e6955; line-height: 1.7; margin-top: 8px; }
+.toolkit-grid ul { padding: 0; margin: 25px 0 0; list-style: none; display: flex; flex-direction: column; gap: 11px; }
+.toolkit-grid li { font-size: 12px; }
+.about-section { padding-block: 102px 103px; }
+.about-grid { display: grid; grid-template-columns: 1.13fr 1fr; gap: 120px; }
+.about-copy .micro { color: var(--muted); display: block; margin-bottom: 30px; }
+.about-copy h2 { font-size: clamp(41px, 4vw, 59px); }
+.about-copy .about-lead { font-size: 21px; color: var(--ink); line-height: 1.55; margin-top: 33px; }
+.about-copy > p { font-size: 13px; color: var(--muted); line-height: 1.9; margin-top: 19px; max-width: 485px; }
+.dark-action { color: var(--ink); margin-top: 30px; border-color: #aeb3a4; }
+.about-records { padding-top: 4px; }
+.record-heading { display: block; color: var(--muted); font-size: 8px; margin-bottom: 27px; }
+.about-records article { display: flex; align-items: flex-start; gap: 22px; padding: 22px 0; border-top: 1px solid var(--line); }
+.record-mark { font-size: 24px; font-family: var(--display); line-height: 1; width: 23px; flex-shrink: 0; }
+.about-records h3 { font-size: 15px; line-height: 1.4; letter-spacing: -.02em; }
+.about-records article p { font-size: 11px; color: var(--muted); line-height: 1.6; margin-top: 5px; }
+.about-records article .micro { color: #777e6f; display: block; font-size: 8px; margin-top: 8px; }
+.about-note { margin-top: 26px; border: 1px solid #c5cfaf; background: #edf0df; padding: 22px 24px; display: flex; align-items: center; gap: 21px; transform: rotate(-2deg); max-width: 330px; }
+.about-note .icon { width: 38px; height: 38px; stroke-width: 1; color: #63753a; }
+.about-note p { font-family: var(--display); font-size: 27px; line-height: 1.1; }
+
+/* An invitation, rather than an empty form */
+.contact-section { background: var(--lime); padding-block: 35px 53px; }
+.contact-topline { display: flex; justify-content: space-between; gap: 24px; align-items: center; }
+.contact-topline > span:first-child { display: flex; align-items: center; }
+.contact-topline .micro { font-size: 8px; }
+.contact-topline .status-dot { background: #38510c; box-shadow: 0 0 0 4px #7c922217; }
+.contact-location { color: #4b5a2a; }
+.contact-section h2 { font-size: clamp(58px, 8vw, 112px); letter-spacing: -.065em; line-height: .98; margin-top: 47px; position: relative; padding-right: 160px; }
+.contact-section h2 em { letter-spacing: -.02em; }
+.contact-arrow { width: 125px; height: 125px; position: absolute; right: 20px; top: 45px; fill: none; stroke: var(--ink); stroke-width: .8; transition: transform .3s; }
+.contact-section:hover .contact-arrow { transform: translate(5px,-5px); }
+.contact-bottom { border-top: 1px solid #acc44f; margin-top: 52px; padding-top: 30px; display: flex; justify-content: space-between; gap: 40px; }
+.contact-bottom .micro { font-size: 8px; color: #53622e; display: block; }
+.email-link { font-family: var(--display); font-size: clamp(18px,2.2vw,30px); letter-spacing: -.035em; display: block; margin-top: 12px; overflow-wrap: anywhere; }
+.email-link:hover { text-decoration: underline; text-underline-offset: 6px; }
+.copy-email { background: transparent; padding: 0; font-size: 10px; display: flex; align-items: center; gap: 8px; margin-top: 18px; color: #435325; }
+.copy-email .icon { width: 13px; height: 13px; }
+.copy-email:hover { color: var(--ink); }
+.contact-links { display: flex; flex-direction: column; align-self: center; gap: 13px; width: 156px; flex-shrink: 0; }
+.contact-links > a { display: flex; justify-content: space-between; gap: 20px; font-size: 12px; }
+.contact-links .icon { width: 17px; height: 17px; }
+.contact-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.site-footer { padding-block: 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.footer-name { font-family: var(--display); font-size: 12px; font-weight: 600; letter-spacing: -.03em; }
+.footer-name span { color: #819c37; }
+.site-footer p { font-size: 9px; color: var(--muted); }
+.back-top { display: flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 8px; }
+.back-top .icon { width: 13px; height: 13px; }
+
+/* Detailed project stories */
+.case-dialog { overflow-y: auto; width: min(900px, calc(100% - 40px)); max-height: calc(100svh - 48px); margin: auto; border: 1px solid #4a5842; padding: 0; background: var(--paper); color: var(--ink); box-shadow: 0 25px 100px #0007; overscroll-behavior: contain; }
+.case-dialog::backdrop { background: #0d150ccc; backdrop-filter: blur(8px); }
+.case-dialog-top { padding: 19px 32px; position: sticky; top: 0; background: var(--paper); z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid var(--line); }
+.case-dialog-top .micro { font-size: 8px; color: var(--muted); }
+.dialog-close { display: flex; background: var(--ink); color: var(--paper); padding: 8px; }
+.dialog-close .icon { width: 19px; height: 19px; }
+#case-content { padding: 36px 42px 44px; }
+.case-title { font-size: 51px; letter-spacing: -.055em; line-height: 1.06; margin-bottom: 15px; }
+.case-subtitle { max-width: 680px; font-size: 16px; color: var(--muted); line-height: 1.75; }
+.case-tags { margin-top: 20px; }
+.case-tags li { color: #555e4e; border-color: #bcc5b0; }
+.case-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-top: 32px; border-top: 1px solid var(--line); padding-top: 27px; }
+.case-columns h3 { font-size: 18px; letter-spacing: -.025em; margin-bottom: 12px; }
+.case-columns p, .case-columns li { font-size: 12px; line-height: 1.8; color: var(--muted); }
+.case-columns ul { padding-left: 15px; margin: 0; }
+.case-columns li { margin-bottom: 8px; }
+.case-code { background: var(--ink); color: #dee8d6; padding: 23px 25px; margin-top: 28px; overflow-x: auto; }
+.case-code pre { margin: 0; font-family: var(--mono); font-size: 10px; line-height: 1.85; }
+.case-code code { font-family: inherit; }
+.case-note { font-size: 10px; color: var(--muted); line-height: 1.8; border-left: 2px solid #8aa445; padding-left: 12px; margin-top: 25px; }
+.case-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.case-links .button { background: var(--ink); color: var(--paper); font-size: 11px; min-height: 46px; padding: 13px 18px; gap: 18px; }
+.case-links .button:hover { background: #35452a; }
+.case-gallery { display: grid; gap: 20px; margin-top: 28px; }
+.case-gallery figure { margin: 0; border: 1px solid var(--line); }
+.case-gallery figcaption { font-family: var(--mono); font-size: 8px; padding: 12px 15px; color: var(--muted); }
+.toast { position: fixed; bottom: 25px; left: 50%; transform: translate(-50%,20px); z-index: 90; background: var(--ink); border: 1px solid #5e7050; color: var(--paper); padding: 14px 23px; font-size: 12px; opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; max-width: calc(100% - 40px); text-align: center; }
+.toast.is-visible { opacity: 1; transform: translate(-50%,0); }
+body.dialog-open { overflow: hidden; }
+
+/* Progressive enhancement: the content remains visible without JavaScript. */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-ready { opacity: 0; translate: 0 20px; transition: opacity .6s, translate .6s; }
+  .reveal-ready.is-visible { opacity: 1; translate: 0 0; }
+}
+
+@media (min-width: 1600px) {
+  .hero-grid { padding-top: 80px; padding-bottom: 70px; }
+  .hero-portrait { max-width: 402px; }
+  .portrait-photo { height: 374px; }
+}
+@media (max-width: 1199px) {
+  .section-wrap { width: calc(100% - 80px); }
+  .site-header { padding-inline: 40px; }
+  .desktop-nav { gap: 23px; }
+  .hero-grid { gap: 56px; grid-template-columns: minmax(0,1.6fr) minmax(0,1fr); }
+  .portrait-photo { height: 310px; }
+  .portrait-note { width: 127px; height: 132px; left: -30px; padding: 16px; }
+  .note-number { font-size: 42px; }
+  .portrait-note > span:last-child { font-size: 10px; }
+  .featured-project { padding: 34px; gap: 36px; grid-template-columns: 1fr 1.12fr; }
+  .terminal-command code { font-size: 8px; }
+  .work-card-copy { padding-inline: 28px; }
+  .project-visual { padding-inline: 20px; height: 290px; }
+  .stack-strip { gap: 30px; }
+  .stack-strip p { font-size: 18px; gap: 17px; }
+  .about-grid { gap: 70px; }
+  .career-item h3 span { display: block; margin: 3px 0 0; font-size: 11px; }
+}
+@media (max-width: 959px) {
+  .section-wrap { width: calc(100% - 56px); }
+  .site-header { padding-inline: 28px; min-height: 82px; }
+  .desktop-nav { gap: 17px; }
+  .desktop-nav a { font-size: 11px; }
+  .desktop-nav a span { display: none; }
+  .hero-grid { gap: 32px; padding-top: 45px; }
+  .hero h1 { font-size: clamp(51px,6.55vw,63px); }
+  .hero-intro { font-size: 14px; }
+  .hero-actions { gap: 18px; }
+  .button { padding: 14px 18px; font-size: 11px; gap: 15px; }
+  .hero-secondary { font-size: 10px; gap: 7px; }
+  .hero-current { margin-top: 31px; gap: 12px; }
+  .hero-current p { font-size: 10px; }
+  .hero-current small { font-size: 7px; }
+  .portrait-photo { height: 285px; }
+  .portrait-top { padding: 12px; }
+  .portrait-top .micro { font-size: 6px; }
+  .portrait-note { left: -17px; bottom: 70px; width: 115px; height: 120px; padding: 14px; }
+  .note-number { font-size: 36px; }
+  .note-number span { font-size: 23px; }
+  .portrait-note > span:last-child { font-size: 9px; }
+  .hero-location { font-size: 8px; }
+  .hero-bottom p { font-size: 10px; }
+  .hero-bottom p strong { font-size: 16px; }
+  .hero-bottom > div { gap: 15px; font-size: 10px; }
+  .scroll-note { font-size: 8px; gap: 10px; }
+  .stack-strip { gap: 23px; padding-block: 23px; }
+  .stack-strip p { font-size: 16px; gap: 13px; }
+  .stack-strip .micro { font-size: 6px; }
+  .section-title > div { gap: 30px; }
+  .section-title p { font-size: 11px; max-width: 265px; }
+  .work-section { padding-top: 78px; }
+  .featured-project { grid-template-columns: 1fr 1.08fr; padding: 29px; gap: 29px; }
+  .featured-copy h3 { font-size: 45px; }
+  .featured-copy h3 span { font-size: 32px; }
+  .featured-copy > p { font-size: 11px; }
+  .tags { gap: 5px; }
+  .tags li { font-size: 7px; padding: 5px 7px; }
+  .terminal-top { padding: 14px 12px; gap: 9px; font-size: 6px; }
+  .terminal-body { padding: 22px 15px 26px; }
+  .terminal-comment { font-size: 8px; }
+  .terminal-command code { font-size: 7px; }
+  .terminal-body pre { font-size: 9px; }
+  .terminal-ready { font-size: 6px; }
+  .portable-sticker { padding: 11px 14px; right: -11px; }
+  .portable-sticker > span { font-size: 6px; }
+  .work-duo { gap: 22px; }
+  .project-visual { height: 260px; padding: 18px; }
+  .visual-caption .micro { font-size: 6px; }
+  .visual-bottom { font-size: 5px; padding-top: 10px; }
+  .work-card-copy { padding: 25px; }
+  .work-card-copy h3 { font-size: 27px; }
+  .work-card-copy > p { font-size: 11px; min-height: 80px; }
+  .project-index { font-size: 7px; }
+  .railway-copy { padding: 30px; }
+  .railway-copy h3 { font-size: 30px; }
+  .railway-copy > p { font-size: 11px; }
+  .railway-map { padding-inline: 20px; }
+  .map-label { font-size: 6px; }
+  .career-item summary { grid-template-columns: 35px minmax(0,1fr) 165px 26px; gap: 16px; }
+  .career-item h3 { font-size: 24px; }
+  .career-meta strong { font-size: 8px; }
+  .career-details { padding-left: 51px; padding-right: 45px; }
+  .toolkit-grid { gap: 22px; }
+  .toolkit-grid h3 { font-size: 23px; }
+  .toolkit-grid p { font-size: 9px; min-height: 30px; }
+  .toolkit-header > p { font-size: 11px; max-width: 245px; }
+  .about-grid { gap: 50px; }
+  .about-copy .about-lead { font-size: 19px; }
+  .about-records article { gap: 17px; }
+  .contact-section h2 { padding-right: 110px; }
+  .contact-arrow { width: 95px; height: 95px; right: 0; top: 30px; }
+}
+@media (max-width: 759px) {
+  html { scroll-padding-top: 88px; }
+  .section-wrap { width: calc(100% - 48px); }
+  .site-header { min-height: 74px; padding-inline: 24px; gap: 20px; }
+  .wordmark-icon { font-size: 35px; }
+  .wordmark > span:last-child { font-size: 8px; }
+  .desktop-nav { display: none; }
+  .header-contact { margin-left: auto; padding: 10px 12px; font-size: 10px; gap: 13px; }
+  .menu-toggle { display: block; margin-right: -9px; }
+  .hero { padding-top: 27px; }
+  .hero-topline { align-items: flex-start; }
+  .hero-topline > span:first-child { font-size: 8px; }
+  .hero-location { font-size: 6px; text-align: right; max-width: 145px; }
+  .hero-grid { grid-template-columns: 1fr; padding-top: 41px; gap: 40px; padding-bottom: 40px; }
+  .hero h1 { font-size: clamp(52px, 11.3vw, 83px); line-height: 1.02; }
+  .hero-intro { font-size: 15px; max-width: 460px; margin-top: 24px; }
+  .hero-actions { margin-top: 25px; gap: 24px; }
+  .hero-actions .button { min-height: 51px; padding-inline: 21px; font-size: 12px; }
+  .hero-secondary { font-size: 11px; }
+  .hero-copy { padding: 0; }
+  .hero-current { margin-top: 26px; }
+  .hero-current p { font-size: 11px; }
+  .hero-current small { font-size: 8px; }
+  .hero-portrait { max-width: 360px; width: min(80%,360px); justify-self: center; }
+  .portrait-top { padding: 15px 17px; }
+  .portrait-top .micro { font-size: 7px; }
+  .portrait-photo { height: 330px; }
+  .portrait-footer { padding: 16px 18px; }
+  .portrait-note { width: 128px; height: 132px; left: -35px; bottom: 71px; padding: 16px; }
+  .note-number { font-size: 43px; }
+  .note-number span { font-size: 28px; }
+  .portrait-note > span:last-child { font-size: 10px; margin-top: 9px; }
+  .hero-bottom { display: grid; grid-template-columns: 1fr 1fr; padding-block: 22px; gap: 18px; }
+  .hero-bottom .scroll-note { grid-column: 1; }
+  .hero-bottom p { grid-column: 2; justify-self: end; font-size: 9px; }
+  .hero-bottom > div { grid-column: 1 / 3; justify-self: end; font-size: 10px; }
+  .stack-strip { display: block; text-align: center; padding: 23px 24px; }
+  .stack-strip .micro { font-size: 7px; }
+  .stack-strip p { flex-wrap: wrap; justify-content: center; font-size: 16px; gap: 11px; margin-top: 13px; line-height: 1.6; }
+  .stack-strip b { font-size: 10px; }
+  h2 { font-size: clamp(39px, 7.4vw, 53px); }
+  .section-title { margin-bottom: 35px; }
+  .section-title > .micro { font-size: 9px; margin-bottom: 25px; }
+  .section-title > div { display: block; }
+  .section-title p { font-size: 12px; margin-top: 22px; max-width: 390px; }
+  .section-title p br { display: none; }
+  .work-section { padding-block: 65px 60px; }
+  .featured-project { grid-template-columns: 1fr; gap: 39px; padding: 29px 27px 39px; }
+  .project-index { font-size: 8px; }
+  .featured-copy h3 { font-size: 55px; margin-top: 21px; }
+  .featured-copy h3 span { font-size: 44px; }
+  .featured-copy > p { font-size: 12px; margin-top: 20px; max-width: 460px; }
+  .tags li { font-size: 8px; padding: 5px 8px; }
+  .tags { margin-top: 20px; gap: 6px; }
+  .project-actions { margin-top: 25px; }
+  .portable-visual { width: 100%; }
+  .terminal-top { padding: 16px; font-size: 8px; gap: 12px; }
+  .terminal-body { padding: 24px 19px 29px; }
+  .terminal-comment { font-size: 9px; }
+  .terminal-command code { font-size: 8px; }
+  .terminal-body pre { font-size: 10px; }
+  .terminal-ready { font-size: 7px; }
+  .portable-sticker { right: -13px; padding: 12px 16px; }
+  .portable-sticker > span { font-size: 7px; }
+  .work-duo { grid-template-columns: 1fr; margin-top: 24px; gap: 24px; }
+  .project-visual { height: 306px; padding: 22px 24px; }
+  .visual-caption .micro { font-size: 8px; }
+  .visual-bottom { font-size: 6px; padding-top: 12px; }
+  .work-card-copy { padding: 28px; }
+  .work-card-copy h3 { font-size: 32px; }
+  .work-card-copy > p { font-size: 12px; min-height: 0; max-width: 460px; }
+  .work-card-copy .text-action { margin-top: 27px; }
+  .railway-card { grid-template-columns: 1fr; margin-top: 24px; }
+  .railway-copy { padding: 28px; }
+  .railway-copy h3 { font-size: 35px; }
+  .railway-copy > p { font-size: 12px; max-width: 460px; }
+  .railway-map { border-left: 0; border-top: 1px solid var(--dark-line); padding: 26px 20px; }
+  .railway-map > svg { max-height: 280px; }
+  .map-label { font-size: 8px; }
+  .map-foot { font-size: 7px; }
+  .more-work { margin-top: 39px; }
+  .more-work > a { padding-block: 20px; }
+  .more-work > a span { font-size: 20px; }
+  .more-work small { font-size: 10px; line-height: 1.8; max-width: 310px; }
+  .experience-section { padding-block: 65px 70px; }
+  .career-item summary { grid-template-columns: 23px minmax(0,1fr) 25px; gap: 13px; padding: 23px 0; }
+  .career-number { font-size: 8px; padding-top: 6px; }
+  .career-item h3 { font-size: 25px; }
+  .career-item h3 span { font-size: 10px; margin-top: 2px; }
+  .career-item summary p { font-size: 11px; }
+  .career-meta { grid-column: 2; grid-row: 2; flex-direction: row; flex-wrap: wrap; gap: 10px; }
+  .career-meta strong, .career-meta span { font-size: 7px; }
+  .career-expand { grid-column: 3; grid-row: 1; }
+  .career-details { padding: 0 0 26px 36px; }
+  .career-details > p { font-size: 13px; }
+  .career-details li { font-size: 11px; }
+  .toolkit-section { padding-block: 65px; }
+  .toolkit-header { display: block; }
+  .toolkit-header .micro { font-size: 9px; margin-bottom: 25px; }
+  .toolkit-header > p { margin-top: 22px; max-width: 440px; font-size: 12px; }
+  .toolkit-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 34px 27px; margin-top: 38px; }
+  .toolkit-grid > article { padding-top: 18px; }
+  .toolkit-grid h3 { font-size: 25px; margin-top: 15px; }
+  .toolkit-grid p { font-size: 10px; max-width: 200px; }
+  .toolkit-grid ul { gap: 10px; margin-top: 18px; }
+  .toolkit-grid li { font-size: 12px; }
+  .about-section { padding-block: 67px 70px; }
+  .about-grid { grid-template-columns: 1fr; gap: 45px; }
+  .about-copy h2 { font-size: clamp(40px,8vw,56px); }
+  .about-copy .micro { font-size: 9px; margin-bottom: 25px; }
+  .about-copy .about-lead { font-size: 21px; margin-top: 26px; max-width: 440px; }
+  .about-copy > p { font-size: 12px; max-width: 520px; }
+  .about-records { padding-top: 0; }
+  .about-records article { gap: 23px; }
+  .about-records h3 { font-size: 16px; }
+  .about-records article p { font-size: 12px; }
+  .about-note { margin-top: 20px; }
+  .contact-section { padding-block: 28px 35px; }
+  .contact-topline .micro { font-size: 7px; }
+  .contact-topline > span:first-child { max-width: 240px; }
+  .contact-topline .status-dot { flex-shrink: 0; }
+  .contact-location { text-align: right; max-width: 100px; }
+  .contact-section h2 { font-size: clamp(47px,8.8vw,68px); padding-right: 0; margin-top: 35px; }
+  .contact-arrow { display: none; }
+  .contact-bottom { margin-top: 35px; padding-top: 24px; gap: 30px; }
+  .email-link { font-size: 19px; max-width: 270px; line-height: 1.5; }
+  .contact-links { width: 118px; gap: 15px; }
+  .contact-links > a { font-size: 10px; gap: 10px; }
+  .contact-links .icon { width: 14px; height: 14px; }
+  .site-footer { padding-block: 23px; flex-wrap: wrap; gap: 16px; }
+  .footer-name { font-size: 11px; }
+  .site-footer p { order: 3; width: 100%; font-size: 8px; }
+  .back-top { margin-left: auto; }
+  .case-dialog { width: calc(100% - 24px); max-height: calc(100svh - 24px); }
+  .case-dialog-top { padding: 16px 23px; }
+  #case-content { padding: 28px 25px 33px; }
+  .case-title { font-size: 39px; }
+  .case-subtitle { font-size: 14px; }
+  .case-columns { grid-template-columns: 1fr; gap: 24px; margin-top: 25px; padding-top: 24px; }
+  .case-code { padding: 20px; margin-top: 25px; }
+  .case-code pre { font-size: 9px; }
+}
+@media (max-width: 389px) {
+  .section-wrap { width: calc(100% - 36px); }
+  .site-header { padding-inline: 18px; gap: 12px; }
+  .hero h1 { font-size: clamp(39px, 12vw, 47px); }
+  .hero-topline > span:first-child { font-size: 7px; }
+  .hero-location { max-width: 114px; font-size: 5px; }
+  .hero-actions { gap: 17px; }
+  .hero-actions .button { font-size: 10px; padding-inline: 16px; }
+  .hero-secondary { font-size: 9px; }
+  .hero-portrait { width: 83%; }
+  .portrait-photo { height: 283px; }
+  .portrait-note { left: -20px; width: 113px; height: 121px; padding: 14px; }
+  .note-number { font-size: 36px; }
+  .portrait-note > span:last-child { font-size: 9px; }
+  .featured-project { padding-inline: 20px; }
+  .featured-copy h3 { font-size: 49px; }
+  .terminal-top { padding-inline: 12px; font-size: 6px; }
+  .terminal-body { padding-inline: 12px; }
+  .terminal-command code { font-size: 6px; }
+  .terminal-body pre { font-size: 8px; }
+  .project-visual { padding-inline: 18px; height: 280px; }
+  .work-card-copy { padding-inline: 23px; }
+  .work-card-copy h3 { font-size: 28px; }
+  .railway-copy { padding-inline: 23px; }
+  .contact-section h2 { font-size: 42px; }
+  .contact-bottom { flex-direction: column; gap: 26px; }
+  .contact-links { align-self: start; width: 100%; flex-direction: row; justify-content: space-between; }
+  .email-link { max-width: 100%; font-size: 19px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Project visuals follow the same local, system-font design. */
+.work-duo .work-card { display: flex; flex-direction: column; }
+.work-card-copy { display: flex; flex-direction: column; flex: 1; }
+.work-card-copy .tags { margin-bottom: 27px; }
+.work-card-copy .text-action { margin-top: auto; align-self: flex-start; }
+.all-projects { margin-top: 36px; }
+.scraper-visual { background: #ddd9cf; color: #343832; }
+.scraper-badge, .parentlens-badge { font-family: var(--mono); font-size: 7px; padding: 5px 9px; background: #c5cebb; }
+.scraper-window { margin: 22px auto 0; width: 93%; max-width: 430px; background: #f5f2ea; border: 1px solid #8e9384; box-shadow: 7px 8px 0 #a8ab9d4d; }
+.scraper-window-top { display: flex; justify-content: space-between; gap: 20px; padding: 13px 16px; border-bottom: 1px solid #d5d9cd; font-family: var(--mono); font-size: 8px; }
+.scraper-inputs { display: flex; gap: 9px; padding: 15px 16px 0; }
+.scraper-inputs > span { font-size: 8px; padding: 8px 10px; border: 1px solid #cbd0c1; color: #59634e; flex: 1; }
+.scraper-pipeline { display: flex; align-items: center; justify-content: space-between; gap: 6px; padding: 17px 16px; }
+.scraper-pipeline > span { font-size: 10px; font-weight: 600; }
+.scraper-pipeline small { display: block; font-family: var(--mono); color: #7d886c; font-size: 6px; margin-bottom: 5px; }
+.scraper-pipeline b { font-size: 13px; font-weight: 400; color: #748b41; }
+.scraper-files { display: flex; gap: 12px; border-top: 1px solid #d5d9cd; padding: 12px 16px; background: #e7ecda; }
+.scraper-files > span { display: flex; align-items: center; gap: 7px; font-size: 8px; }
+.scraper-files b { font-family: var(--mono); font-size: 13px; color: #607932; font-weight: 400; }
+.scraper-visual-footer { margin-top: 20px; text-align: center; font-family: var(--mono); font-size: 6px; letter-spacing: .12em; color: #677357; }
+.parentlens-visual { background: #28353a; color: #dfe9e0; }
+.parentlens-badge { color: #d5e3c6; border: 1px solid #607666; background: transparent; }
+.parentlens-monitor { margin: 22px auto 0; max-width: 300px; width: 83%; border: 1px solid #899d8b; border-radius: 5px; background: #172621; box-shadow: 7px 8px 0 #101c1b40; position: relative; }
+.parentlens-monitor-top { display: flex; gap: 4px; padding: 9px 12px; border-bottom: 1px solid #3f5146; }
+.parentlens-monitor-top > span { width: 4px; height: 4px; background: #63836c; border-radius: 50%; }
+.parentlens-screen { display: flex; align-items: center; flex-direction: column; justify-content: center; padding: 16px 12px 24px; }
+.parentlens-eye { width: 67px; height: 39px; fill: none; stroke: var(--lime); stroke-width: 1.4; }
+.parentlens-screen strong { font-size: 20px; font-weight: 600; letter-spacing: -.025em; margin-top: 10px; }
+.parentlens-screen > span { font-family: var(--mono); font-size: 7px; color: #a3b6a2; margin-top: 7px; }
+.parentlens-monitor-base { width: 113px; height: 12px; border-bottom: 2px solid #829882; position: relative; margin: 0 auto; }
+.parentlens-monitor-base::before { content: ''; height: 12px; width: 22px; background: #687b6c; position: absolute; top: 0; left: 45px; }
+@media (max-width: 959px) {
+  .scraper-window { margin-top: 16px; width: 100%; }
+  .scraper-window-top { padding: 10px 13px; font-size: 7px; }
+  .scraper-inputs { padding: 11px 13px 0; gap: 7px; }
+  .scraper-inputs > span { font-size: 7px; padding: 7px; }
+  .scraper-pipeline { padding: 14px 13px; }
+  .scraper-pipeline > span { font-size: 9px; }
+  .scraper-files { padding: 10px 13px; }
+  .scraper-visual-footer { margin-top: 15px; font-size: 5px; }
+  .parentlens-monitor { margin-top: 16px; width: 90%; }
+  .parentlens-screen { padding: 12px 10px 18px; }
+  .parentlens-eye { width: 58px; height: 34px; }
+  .parentlens-screen strong { font-size: 18px; margin-top: 8px; }
+}
+@media (max-width: 759px) {
+  .scraper-window { width: 92%; margin-top: 22px; }
+  .scraper-window-top { padding: 13px 16px; font-size: 8px; }
+  .scraper-inputs { padding: 15px 16px 0; gap: 9px; }
+  .scraper-inputs > span { font-size: 8px; padding: 8px 10px; }
+  .scraper-pipeline { padding: 17px 16px; }
+  .scraper-pipeline > span { font-size: 10px; }
+  .scraper-files { padding: 12px 16px; }
+  .scraper-visual-footer { margin-top: 20px; font-size: 6px; }
+  .parentlens-monitor { margin-top: 24px; width: 85%; }
+  .parentlens-screen { padding: 16px 12px 24px; }
+  .parentlens-eye { width: 67px; height: 39px; }
+  .parentlens-screen strong { font-size: 20px; margin-top: 10px; }
+}
+@media (max-width: 389px) {
+  .scraper-window { width: 100%; }
+  .scraper-window-top { padding: 11px 13px; }
+  .scraper-inputs { padding: 12px 13px 0; }
+  .scraper-pipeline { padding: 15px 13px; }
+  .scraper-files { padding: 11px 13px; }
+  .scraper-visual-footer { margin-top: 15px; }
+  .parentlens-monitor { width: 94%; margin-top: 22px; }
+}
+
+/* Refinements: compact typography, a rounded portrait, and writing. */
+.wordmark > span:last-child { font-family: var(--display); font-size: 22px; font-weight: 700; line-height: 1.15; letter-spacing: -.02em; }
+.desktop-nav { gap: 24px; }
+.hero h1 { font-size: clamp(46px, 5.15vw, 72px); }
+.hero-intro { font-size: 16px; }
+h2 { font-size: clamp(34px, 3.5vw, 48px); }
+.featured-copy h3 { font-size: clamp(36px, 3.5vw, 48px); }
+.work-card-copy h3 { font-size: 27px; }
+.railway-copy h3 { font-size: 29px; }
+.about-copy h2 { font-size: clamp(34px, 3.4vw, 47px); }
+.contact-section h2 { font-size: clamp(46px, 6.1vw, 82px); }
+.case-title { font-size: 40px; }
+.hero-portrait { border-radius: 24px; background: #ebece2; border: 1px solid var(--line); }
+.portrait-top { border-radius: 23px 23px 0 0; }
+.portrait-footer { border-radius: 0 0 23px 23px; }
+.portrait-photo { width: calc(100% - 32px); height: auto; aspect-ratio: 1; border-radius: 50%; border: 7px solid #daddcc; margin: 16px auto; }
+.portrait-photo img { border-radius: 50%; }
+.toolkit-grid { grid-template-columns: repeat(3, minmax(0,1fr)); row-gap: 38px; }
+.private-repo-label { display: inline-block; font-size: 8px; font-weight: 400; letter-spacing: .03em; padding: 5px 8px; border: 1px solid #667767; color: var(--dark-muted); vertical-align: middle; margin-left: 7px; }
+.parentlens-screen strong { font-size: 20px; }
+.parentlens-visual-footer { text-align: center; margin-top: 15px; font-size: 7px; letter-spacing: .08em; color: #a3b6a2; }
+.blog-section { padding-block: 85px; }
+.blog-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 30px; }
+.blog-card { display: flex; flex-direction: column; border: 1px solid var(--line); padding: 31px; transition: border-color .2s, background .2s; }
+.blog-card:hover { border-color: #8eaa45; background: #eff1e4; }
+.blog-card > .micro { color: var(--muted); font-size: 9px; }
+.blog-card h3 { font-size: 23px; line-height: 1.35; letter-spacing: -.025em; margin-top: 20px; }
+.blog-card > p { font-size: 13px; line-height: 1.85; color: var(--muted); margin: 17px 0 27px; }
+.blog-read { display: flex; justify-content: space-between; align-items: center; gap: 15px; margin-top: auto; padding-top: 20px; border-top: 1px solid var(--line); font-size: 12px; }
+.blog-read .icon { width: 18px; height: 18px; }
+@media (max-width: 959px) {
+  .wordmark > span:last-child { font-size: 20px; }
+  .desktop-nav { gap: 17px; }
+  .hero h1 { font-size: clamp(43px, 5.4vw, 55px); }
+}
+@media (max-width: 759px) {
+  .wordmark > span:last-child { font-size: 20px; }
+  .hero h1 { font-size: clamp(42px, 8.6vw, 62px); }
+  .hero-intro { font-size: 15px; }
+  h2, .about-copy h2 { font-size: clamp(34px, 6.9vw, 45px); }
+  .featured-copy h3 { font-size: 43px; }
+  .work-card-copy h3 { font-size: 26px; }
+  .contact-section h2 { font-size: clamp(40px, 8.2vw, 58px); }
+  .case-title { font-size: 33px; }
+  .toolkit-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .blog-section { padding-block: 65px; }
+  .blog-grid { grid-template-columns: 1fr; gap: 24px; }
+  .blog-card { padding: 27px; }
+  .blog-card h3 { font-size: 22px; }
+}
+@media (max-width: 520px) {
+  .header-contact { display: none; }
+  .menu-toggle { margin-left: auto; }
+}
+@media (max-width: 389px) {
+  .hero h1 { font-size: clamp(35px, 11vw, 42px); }
+  .contact-section h2 { font-size: 38px; }
+  .featured-copy h3 { font-size: 39px; }
+  .wordmark > span:last-child { font-size: 19px; }
+  .private-repo-label { margin-left: 3px; font-size: 7px; }
+  .parentlens-visual-footer { font-size: 6px; margin-top: 10px; }
+}
+
+</style>
+  
 </head>
-
 <body>
+  <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 3v17m-6-6 6 6 6-6"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M15 8V3H3v13h5"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m5 5 14 14M5 19 19 5"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 20c-5 1-5-3-7-3m14 6v-4c0-1-.2-1.7-.7-2.3 3-.3 6-1.5 6-6a4.7 4.7 0 0 0-1.3-3.3c.2-.8.2-2.1-.4-3.4 0 0-1-.3-3.5 1.3a12 12 0 0 0-6.4 0C7.2 3.4 6.2 3.7 6.2 3.7c-.6 1.3-.6 2.6-.4 3.4a4.7 4.7 0 0 0-1.3 3.3c0 4.5 3 5.7 6 6-.4.5-.7 1.3-.7 2.3V23"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5z"/></symbol>
+  </svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-
-
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container d-flex justify-content-between align-items-center">
-    <!-- Navbar Toggler -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Search Input -->
-    <div class="d-flex align-items-center">
-      <div class="input-group">
-        <input type="text" class="form-control rounded-start" placeholder="Search..." aria-label="Search"
-          style="max-width: 250px; font-size: 0.85rem; outline: none;">
-        <button class="btn btn-primary" type="button" style="outline: none;">
-          <i class="bi bi-search text-white"></i>
-        </button>
-        <button class="btn btn-secondary" type="button" style="outline: none;">
-          <i class="bi bi-mic text-white"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- Social Links -->
-    <ul class="navbar-nav d-flex flex-row align-items-center">
-      <li class="nav-item">
-        <a class="nav-link" href="https://github.com/MohammadAtikurRahman" target="_blank" style="color: #000000;">
-          <i class="bi bi-github" style="font-size: 1.5rem;"></i>
-        </a>
-      </li>
-      <li class="nav-item ms-3">
-        <a class="nav-link" href="https://www.linkedin.com/in/md-atikur-rahman-4a755910b/" target="_blank"
-          style="color: #0a66c2;">
-          <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-
-
-  <header class="bg-success text-white text-center py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <img src="./assets/images/profile_image.jpg" alt="Profile Picture" class="img-fluid rounded-circle"
-            style="max-width: 50%; height: auto;">
-        </div>
-        <div class="col-lg-8 d-flex justify-content-center align-items-center">
-          <div class="text-center">
-            <h1>Atikur Rahman</h1>
-            <p class="lead">Software Engineer | Full Stack Developer</p>
-            <a href="mailto:contact.atikurrahman@gmail.com" class="btn btn-warning btn-md">
-              <i class="bi bi-envelope"></i> Contact With Me
-            </a>
-
-            <a href="Resume-Md.%20Atikur%20Rahman.pdf" class="btn btn-primary btn-md"
-              download="Resume-Md.-Atikur-Rahman.pdf">
-              <i class="bi bi-clipboard2-check-fill"></i> Connect with Linkedin
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="Atikur Rahman home"><span class="wordmark-icon">a<span>.</span></span><span class="wordmark-name">Atikur Rahman</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#experience">Experience <span>01</span></a><a href="#work">Projects <span>02</span></a><a href="#blog">Blog <span>03</span></a><a href="#toolkit">Toolkit <span>04</span></a><a href="#about">About <span>05</span></a>
+    </nav>
+    <a class="header-contact" href="#contact">Let’s talk <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden><a href="#experience">Company experience</a><a href="#work">Projects</a><a href="#blog">Blog</a><a href="#toolkit">Toolkit</a><a href="#about">About me</a><a href="#contact">Let’s talk</a></nav>
   </header>
 
-  <div class="d-flex" style="height: 100vh;">
-    <div style="width: 7%; background-color: #ffffff; padding: 10px; padding-top: 70px;">
-      <section>
-        <div class="sidebar-container d-flex flex-column"
-          style="width: 80px; padding: 50px 20px; background-color: #ffffff;">
-
-          <div class="sidebar d-flex flex-column align-items-center mt-auto"
-            style="padding-top: 40px; padding-bottom: 40px;">
-            <a href="#div1" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div1')">
-              <i class="bi bi-terminal-fill" style="font-size: 1.2rem;"></i>
-            </a>
-            <a href="#div2" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div2')">
-              <i class="bi bi-person-workspace" style="font-size: 1.2rem;"></i>
-            </a>
-            <a href="#div3" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div3')">
-              <i class="bi bi-view-list" style="font-size: 1.2rem;"></i>
-            </a>
-            <a href="#div4" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div4')">
-              <i class="bi bi-code-slash" style="font-size: 1.2rem;"></i>
-            </a>
-            <a href="#div5" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div5')">
-              <i class="bi bi-book" style="font-size: 1.2rem;"></i>
-            </a>
-            <a href="#div6" class="nav-link text-center" style="color: #6c757d;" onclick="showDiv('div6')">
-              <i class="bi bi-lightbulb-fill" style="font-size: 1.2rem;"></i>
-            </a>
-          </div>
+  <main id="main">
+    <section class="hero section-wrap" id="home" aria-labelledby="hero-title">
+      <div class="hero-topline"><span class="micro"><i class="status-dot"></i> FULL-STACK & AI ENGINEER</span><span class="micro hero-location">FULL-STACK DEVELOPMENT · AI SYSTEMS</span></div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1 id="hero-title">Complex ideas.<br><em>Useful</em> software<span class="accent-period">.</span></h1>
+          <p class="hero-intro">I’m <strong>Atikur Rahman.</strong> I build AI, web, and desktop products that take an idea all the way to something people can use.</p>
+          <div class="hero-actions"><a class="button button-dark" href="#experience">Explore my experience <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></a><a class="hero-secondary" href="#contact">Get in touch <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+          <div class="hero-current"><span class="current-line"></span><p>Currently working at <strong>Rumi</strong><small>Full-Stack AI Engineer · Remote, Canada</small></p></div>
         </div>
-      </section>
-    </div>
-    <div style="width: 93%; background-color: #ffffff; padding: 10px; z-index: -99999;">
-      <section class="d-flex">
-        <div class="main-content flex-grow-1 px-3">
-          <div id="div1" class="content-div" style="display: block;">
-
-
-            <section style="padding: 50px; background-color: #ffffff;">
-              <h3 class="text-center mb-3" style="color: #333; font-size: 1.5rem; font-weight: bold;">
-                Technology <span style="color: #198754;">Expertise</span>
-              </h3>
-              <div class="container">
-                <div class="row">
-                  <!-- Programming Skills Section -->
-                  <div class="col-12 col-lg-4 mb-3">
-                    <div class="p-3"
-                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);">
-                      <h4 class="text-center mb-4" style="font-size: 1.2rem; color: #333;">
-                        <i class="bi bi-code-slash" style="color: #007bff;"></i> Programming Skills
-                      </h4>
-                      <div class="mb-2">
-                        <div class="d-flex align-items-center mb-2">
-                          <i class="bi bi-file-code-fill" style="font-size: 1.2rem; color: #f7df1e;"></i>
-                          <span class="ms-2" style="font-size: 0.9rem; color: #333;">JavaScript</span>
-                          <span class="ms-auto" style="font-size: 0.8rem; color: #666;">80%</span>
-                        </div>
-                        <div class="progress" style="height: 8px;">
-                          <div class="progress-bar bg-warning" role="progressbar" style="width: 80%;" aria-valuenow="80"
-                            aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                      </div>
-                      <div class="mb-2">
-                        <div class="d-flex align-items-center mb-2">
-                          <i class="bi bi-back" style="font-size: 1.2rem; color: #68a063;"></i>
-                          <span class="ms-2" style="font-size: 0.9rem; color: #333;">Node.js</span>
-                          <span class="ms-auto" style="font-size: 0.8rem; color: #666;">75%</span>
-                        </div>
-                        <div class="progress" style="height: 8px;">
-                          <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75"
-                            aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                      </div>
-                      <div class="mb-2">
-                        <div class="d-flex align-items-center mb-2">
-                          <i class="bi bi-lightbulb-fill" style="font-size: 1.2rem; color: #61dafb;"></i>
-                          <span class="ms-2" style="font-size: 0.9rem; color: #333;">React.js</span>
-                          <span class="ms-auto" style="font-size: 0.8rem; color: #666;">85%</span>
-                        </div>
-                        <div class="progress" style="height: 8px;">
-                          <div class="progress-bar bg-info" role="progressbar" style="width: 85%;" aria-valuenow="85"
-                            aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                      </div>
-                      <div class="mb-2">
-                        <div class="d-flex align-items-center mb-2">
-                          <i class="bi bi-terminal-fill" style="font-size: 1.2rem; color: #333;"></i>
-                          <span class="ms-2" style="font-size: 0.9rem; color: #333;">Express.js</span>
-                          <span class="ms-auto" style="font-size: 0.8rem; color: #666;">70%</span>
-                        </div>
-                        <div class="progress" style="height: 8px;">
-                          <div class="progress-bar bg-secondary" role="progressbar" style="width: 70%;"
-                            aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                      </div>
-                      <div class="mb-2">
-                        <div class="d-flex align-items-center mb-2">
-                          <i class="bi bi-database-fill" style="font-size: 1.2rem; color: #4db33d;"></i>
-                          <span class="ms-2" style="font-size: 0.9rem; color: #333;">MongoDB</span>
-                          <span class="ms-auto" style="font-size: 0.8rem; color: #666;">70%</span>
-                        </div>
-                        <div class="progress" style="height: 8px;">
-                          <div class="progress-bar bg-success" role="progressbar" style="width: 70%;" aria-valuenow="70"
-                            aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                      </div>
-                      <div class="mb-4">
-                        <div class="d-flex align-items-center mb-2">
-                          <i class="bi bi-cup-hot-fill" style="font-size: 1.2rem; color: #0d6efd;"></i>
-                          <span class="ms-2" style="font-size: 0.9rem; color: #333;">MySQL</span>
-                          <span class="ms-auto" style="font-size: 0.8rem; color: #666;">70%</span>
-                        </div>
-                        <div class="progress" style="height: 8px;">
-                          <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;" aria-valuenow="70"
-                            aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Technology Expertise Section -->
-                  <div class="col-12 col-lg-8 desktop">
-                    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
-                      <div
-                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                        <i class="bi bi-code-slash" style="font-size: 2rem; color: #007bff;"></i>
-                        <div>
-                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Frontend Development</h4>
-                          <p style="font-size: 0.9rem; color: #666; margin: 0;">React, React Electron</p>
-                        </div>
-                      </div>
-                      <div
-                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                        <i class="bi bi-server" style="font-size: 2rem; color: #28a745;"></i>
-                        <div>
-                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Backend Development</h4>
-                          <p style="font-size: 0.9rem; color: #666; margin: 0;">Express (Node.js)</p>
-                        </div>
-                      </div>
-                      <div
-                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                        <i class="bi bi-shield-lock" style="font-size: 2rem; color: #e74c3c;"></i>
-                        <div>
-                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Authentication & Security</h4>
-                          <p style="font-size: 0.9rem; color: #666; margin: 0;">JWT, Passport</p>
-                        </div>
-                      </div>
-                      <div
-                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                        <i class="bi bi-git" style="font-size: 2rem; color: #f39c12;"></i>
-                        <div>
-                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Version Control & Tools</h4>
-                          <p style="font-size: 0.9rem; color: #666; margin: 0;">Git, GitHub, Docker</p>
-                        </div>
-                      </div>
-                      <div
-                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                        <i class="bi bi-clipboard-check" style="font-size: 2rem; color: #17a2b8;"></i>
-                        <div>
-                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Project Management</h4>
-                          <p style="font-size: 0.9rem; color: #666; margin: 0;">Clickup, Trello, Agile</p>
-                        </div>
-                      </div>
-                      <div
-                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                        <i class="bi bi-database-fill" style="font-size: 2rem; color: #9b59b6;"></i>
-                        <div>
-                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Database Knowledge</h4>
-                          <p style="font-size: 0.9rem; color: #666; margin: 0;">MongoDB, MySQL</p>
-                        </div>
-                      </div>
-                      <div
-                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                        <i class="bi bi-database-fill" style="font-size: 2rem; color: #9b59b6;"></i>
-                        <div>
-                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Database Knowledge</h4>
-                          <p style="font-size: 0.9rem; color: #666; margin: 0;">MongoDB, MySQL</p>
-                        </div>
-                      </div>
-                      <div
-                        style="flex: 1 1 calc(50% - 20px); background-color: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); display: flex; gap: 15px; align-items: center;">
-                        <i class="bi bi-clipboard-check" style="font-size: 2rem; color: #17a2b8;"></i>
-                        <div>
-                          <h4 style="font-size: 1rem; color: #333; margin: 0;">Project Management</h4>
-                          <p style="font-size: 0.9rem; color: #666; margin: 0;">Clickup, Trello, Agile</p>
-                        </div>
-                      </div>
-
-
-                      <!-- Add more cards here if needed -->
-                    </div>
-                  </div>
-
-
-                  <div class="mobile">
-                    <div id="skillsCarousel" class="carousel slide" data-bs-ride="carousel"
-                      style="max-width: 600px; margin: 20px auto;">
-                      <div class="carousel-inner"
-                        style="box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);  border-radius: 12px; overflow: hidden; position: relative;">
-                        <!-- Frontend Development -->
-                        <div class="carousel-item active">
-                          <div class="card text-center"
-                            style="border-radius: 12px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: auto; width: 100%;">
-                            <div class="card-header d-flex align-items-center justify-content-center"
-                              style="font-size: 0.85rem; background-color: #f8f9fa; font-weight: bold;">
-                              <i class="bi bi-laptop" style="font-size: 1.2rem; margin-right: 8px; color: #007bff;"></i>
-                              Frontend Development
-                            </div>
-                            <div class="card-body" style="font-size: 0.8rem; padding: 20px;">
-                              <p class="card-text">React, React Electron</p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- Backend Development -->
-                        <div class="carousel-item">
-                          <div class="card text-center"
-                            style="border-radius: 12px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: auto; width: 100%;">
-                            <div class="card-header d-flex align-items-center justify-content-center"
-                              style="font-size: 0.85rem; background-color: #f8f9fa; font-weight: bold;">
-                              <i class="bi bi-server" style="font-size: 1.2rem; margin-right: 8px; color: #28a745;"></i>
-                              Backend Development
-                            </div>
-                            <div class="card-body" style="font-size: 0.8rem; padding: 20px;">
-                              <p class="card-text">Express (Node.js)</p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- Authentication & Security -->
-                        <div class="carousel-item">
-                          <div class="card text-center"
-                            style="border-radius: 12px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: auto; width: 100%;">
-                            <div class="card-header d-flex align-items-center justify-content-center"
-                              style="font-size: 0.85rem; background-color: #f8f9fa; font-weight: bold;">
-                              <i class="bi bi-shield-lock"
-                                style="font-size: 1.2rem; margin-right: 8px; color: #dc3545;"></i>
-                              Authentication & Security
-                            </div>
-                            <div class="card-body" style="font-size: 0.8rem; padding: 20px;">
-                              <p class="card-text">JWT, Passport</p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- Version Control & Tools -->
-                        <div class="carousel-item">
-                          <div class="card text-center"
-                            style="border-radius: 12px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: auto; width: 100%;">
-                            <div class="card-header d-flex align-items-center justify-content-center"
-                              style="font-size: 0.85rem; background-color: #f8f9fa; font-weight: bold;">
-                              <i class="bi bi-tools" style="font-size: 1.2rem; margin-right: 8px; color: #f39c12;"></i>
-                              Version Control & Tools
-                            </div>
-                            <div class="card-body" style="font-size: 0.8rem; padding: 20px;">
-                              <p class="card-text">Git, GitHub, Docker</p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- Project Management -->
-                        <div class="carousel-item">
-                          <div class="card text-center"
-                            style="border-radius: 12px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: auto; width: 100%;">
-                            <div class="card-header d-flex align-items-center justify-content-center"
-                              style="font-size: 0.85rem; background-color: #f8f9fa; font-weight: bold;">
-                              <i class="bi bi-kanban" style="font-size: 1.2rem; margin-right: 8px; color: #17a2b8;"></i>
-                              Project Management
-                            </div>
-                            <div class="card-body" style="font-size: 0.8rem; padding: 20px;">
-                              <p class="card-text">Clickup, Trello, Agile</p>
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- Database Knowledge -->
-                        <div class="carousel-item">
-                          <div class="card text-center"
-                            style="border-radius: 12px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: auto; width: 100%;">
-                            <div class="card-header d-flex align-items-center justify-content-center"
-                              style="font-size: 0.85rem; background-color: #f8f9fa; font-weight: bold;">
-                              <i class="bi bi-database"
-                                style="font-size: 1.2rem; margin-right: 8px; color: #9b59b6;"></i>
-                              Database Knowledge
-                            </div>
-                            <div class="card-body" style="font-size: 0.8rem; padding: 20px;">
-                              <p class="card-text">MongoDB, MySQL</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-
-                    </div>
-                  </div>
-
-
-
-
-
-                </div>
-              </div>
-            </section>
-
-
-
-
-
-
-          </div>
-          <div id="div2" class="content-div" style="display: none;">
-            <section style="padding: 50px; background-color: #ffffff;">
-              <div class="container">
-                <h3 class="text-center mb-3" style="color: #333; font-size: 1.5rem; font-weight: bold;">
-                  Work <span style="color: #198754;">Experience</span>
-                </h3>
-                <div class="timeline position-relative" style="border-left: 3px solid #28a745; margin-left: 20px;">
-                  <div class="timeline-item mb-2 position-relative" style="padding-left: 40px;">
-                    <div
-                      style="position: absolute; top: 10px; left: -12px; width: 20px; height: 20px; background-color: #28a745; border: 3px solid #f9f9f9; border-radius: 50%;">
-                    </div>
-                    <h5 style="color: #333; font-weight: bold; margin: 0;">Nexdecade Technology (Pvt.) Ltd
-                      <hr> <small style="color: #888; float: right; font-size: 12px;">Oct 2023 - Present</small>
-                    </h5>
-                    <h6 style="font-size: 1.1rem; color: #198754; font-weight: bold; margin-top: 5px;">Software
-                      Developer
-                    </h6>
-                    <p style="margin-top: 10px; color: #555; font-size: 0.95rem;">
-                      Developed Vehicle Tracking Systems and Vehicle Management Systems with frontend, <br> backend,
-                      and mapping functionalities.
-                    </p>
-                  </div>
-                  <div class="timeline-item mb-2 position-relative" style="padding-left: 40px;">
-                    <div
-                      style="position: absolute; top: 10px; left: -12px; width: 20px; height: 20px; background-color: #007bff; border: 3px solid #f9f9f9; border-radius: 50%;">
-                    </div>
-                    <h5 style="color: #333; font-weight: bold; margin: 0;">Metamorphosis
-                      <hr> <small style="font-size: 12px; float: right; color: #888;">Oct
-                        2022 - Oct 2023</small>
-                    </h5>
-                    <h6 style="font-size: 1.1rem; color: #007bff; font-weight: bold; margin-top: 5px;">Software Engineer
-                    </h6>
-                    <p style="margin-top: 10px; color: #555; font-size: 0.95rem;">
-                      Led the development of admin panels, RESTful APIs, PC tracking application with <br> optimized
-                      security and performance.
-                    </p>
-                  </div>
-                  <div class="timeline-item position-relative" style="padding-left: 40px;">
-                    <div
-                      style="position: absolute; top: 10px; left: -12px; width: 20px; height: 20px; background-color: #f39c12; border: 3px solid #f9f9f9; border-radius: 50%;">
-                    </div>
-                    <h5 style="color: #333; font-weight: bold; margin: 0;">Tesseract Technologies
-                      <hr> <small style="color: #888; float: right; font-size: 12px;">Feb 2022 - Aug 2022</small>
-                    </h5>
-                    <h6 style="font-size: 1.1rem; color: #f39c12; font-weight: bold; margin-top: 5px;">Intern Software
-                      Engineer</h6>
-                    <p style="margin-top: 10px; color: #555; font-size: 0.95rem;">
-                      Delivered web applications focusing on Human-Centric Design while engaging with <br>
-                      for clients
-                      tailor-made solutions.
-                    </p>
-                  </div>
-
-                </div>
-              </div>
-            </section>
-          </div>
-          <div id="div3" class="content-div" style="display: none;">
-            <section style="padding: 48.5px; background-color: #ffffff;">
-              <div class="container">
-                <h3 class="text-center mb-3" style="color: #333; font-size: 1.5rem; font-weight: bold;">
-                  Personal <span style="color: #198754;">Project</span>
-                </h3>
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <div
-                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 140px;">
-                      <div class="d-flex align-items-center mb-1">
-                        <i class="bi bi-database" style="font-size: 1.5rem; color: #007bff;"></i>
-                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Portable-MongoDB</h5>
-                      </div>
-                      <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
-                        Without MongoDB installed and use a MongoDB database.
-                      </p>
-                      <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>ExpressJs,
-                          MongoDB-Binary</strong></small>
-                      <a href="#"
-                        style="color: #007bff; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
-                        <i class="bi bi-github"></i> GitHub
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div
-                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 140px;">
-                      <div class="d-flex align-items-center mb-1">
-                        <i class="bi bi-pc-display" style="font-size: 1.5rem; color: #28a745;"></i>
-                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Desktop Monitoring App
-                        </h5>
-                      </div>
-                      <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
-                        Desktop Usages and Video Tracking Application.
-                      </p>
-                      <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>React ElectronJs,
-                          NodeJs</strong></small>
-                      <a href="#"
-                        style="color: #007bff; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
-                        <i class="bi bi-github"></i> GitHub
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div
-                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 140px;">
-                      <div class="d-flex align-items-center mb-1">
-                        <i class="bi bi-server" style="font-size: 1.5rem; color: #17a2b8;"></i>
-                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Monitoring App Admin
-                        </h5>
-                      </div>
-                      <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
-                        PC Tracking Database for Admin Panel.
-                      </p>
-                      <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>ReactJs,
-                          MongoDB</strong></small>
-                      <a href="#"
-                        style="color: #007bff; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
-                        <i class="bi bi-github"></i> GitHub
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div
-                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 140px;">
-                      <div class="d-flex align-items-center mb-1">
-                        <i class="bi bi-robot" style="font-size: 1.5rem; color: #e74c3c;"></i>
-                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Custom ChatGPT BOT
-                        </h5>
-                      </div>
-                      <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
-                        OpenAI's language model with Custom Dataset.
-                      </p>
-                      <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>ReactJs,
-                          NodeJs</strong></small>
-                      <a href="#"
-                        style="color: #007bff; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
-                        <i class="bi bi-github"></i> GitHub
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div
-                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 140px;">
-                      <div class="d-flex align-items-center mb-1">
-                        <i class="bi bi-box-seam" style="font-size: 1.5rem; color: #9b59b6;"></i>
-                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Thrift Admin</h5>
-                      </div>
-                      <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
-                        Admin Panel for Thrift Mobile App.
-                      </p>
-                      <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>ReactJs,
-                          MongoDB</strong></small>
-                      <a href="#"
-                        style="color: #007bff; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
-                        <i class="bi bi-github"></i> GitHub
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div
-                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 140px;">
-                      <div class="d-flex align-items-center mb-1">
-                        <i class="bi bi-train-front" style="font-size: 1.5rem; color: #28a745;"></i>
-                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Smart Train Tracking
-                        </h5>
-                      </div>
-                      <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
-                        Train Monitoring and Tracking System.
-                      </p>
-                      <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>ReactJs,
-                          NodeJs</strong></small>
-                      <a href="#"
-                        style="color: #007bff; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
-                        <i class="bi bi-github"></i> GitHub
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-          <div id="div4" class="content-div" style="display: none;">
-            <section style="padding: 50px; background-color: #ffffff;">
-              <div class="container">
-                <h3 class="text-center mb-3" style="color: #333; font-size: 1.5rem; font-weight: bold;">
-                  NPM <span style="color: #198754;">Packages</span>
-                </h3>
-                <div class="row g-3 ">
-                  <div class="col-md-6">
-                    <div
-                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 145px;">
-                      <div class="d-flex align-items-center mb-1">
-                        <i class="bi bi-box-seam" style="font-size: 1.5rem; color: #007bff;"></i>
-                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Portable MongoDB: <i
-                            style="color: #007bff;">npm install portable-mongodb</i></h5>
-                      </div>
-                      <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
-                        Use MongoDB without installation.
-                      </p>
-                      <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>MongoDB-Binary,
-                          Node-Binary</strong></small>
-                      <a href="https://www.npmjs.com/package/portable-mongodb" target="_blank"
-                        style="color: #28a745; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
-                        <i class="bi bi-box-arrow-up-right"></i> View on NPM
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div
-                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 145px;">
-                      <div class="d-flex align-items-center mb-1">
-                        <i class="bi bi-browser-chrome" style="font-size: 1.5rem; color: #e67e22;"></i>
-
-
-                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">BrowserTab: <i
-                            style="color: #007bff;">npm install browsertab</i>
-
-                        </h5>
-
-
-
-
-
-                      </div>
-                      <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
-                        Manage browser tabs using Node.js.
-                      </p>
-                      <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>NodeJs, Child
-                          Process</strong></small>
-                      <a href="https://www.npmjs.com/package/browsertab" target="_blank"
-                        style="color: #28a745; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
-                        <i class="bi bi-box-arrow-up-right"></i> View on NPM
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div
-                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 145px;">
-                      <div class="d-flex align-items-center mb-1">
-                        <i class="bi bi-lightning" style="font-size: 1.5rem; color: #28a745;"></i>
-                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Railway Geolocation:
-                          <i style="color: #007bff;">npm install railway-geolocation</i>
-                        </h5>
-                      </div>
-                      <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
-                        Geolocation for all country.
-                      </p>
-                      <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>OpenRailway-API,
-                          Overpass</strong></small>
-                      <a href="https://www.npmjs.com/package/railway-geolocation" target="_blank"
-                        style="color: #28a745; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px;">
-                        <i class="bi bi-box-arrow-up-right"></i> View on NPM
-                      </a>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div
-                      style="background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 10px; height: 145px;">
-                      <div class="d-flex align-items-center mb-1">
-                        <i class="bi bi-train-front" style="font-size: 1.5rem; color: #17a2b8;"></i>
-                        <h5 class="ms-2" style="color: #333; font-size: 1rem; font-weight: bold;">Reverse Geocoding: <i
-                            style="color: #007bff;">npm install rev-geocoding</i></h5>
-                      </div>
-                      <p style="color: #666; font-size: 0.8rem; margin: 5px 0;">
-                        GPS coordinates wise location.
-                      </p>
-                      <small style="font-size: 0.75rem; color: #777;">Technologies: <strong>nominatim api,
-                          OpenRailway-API</strong></small>
-
-
-                      <a href="https://www.npmjs.com/package/rev-geocoding" target="_blank"
-                        style="color: #28a745; text-decoration: none; display: block; font-size: 0.85rem; margin-top: 5px; z-index: 1000;">
-                        <i class="bi bi-box-arrow-up-right"></i> View on NPM
-                      </a>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-          <div id="div5" class="content-div" style="display: none;">
-            <section style="padding: 50px; background-color: #ffffff;">
-              <div class="container">
-                <h3 class="text-center mb-3" style="color: #333; font-size: 1.5rem; font-weight: bold;">
-                  Education <span style="color: #198754;">& Achievements </span>
-                </h3>
-                <div class="mb-4">
-                  <div class="d-flex align-items-start mb-3">
-                    <i class="bi bi-mortarboard-fill" style="font-size: 2rem; color: #007bff; margin-right: 15px;"></i>
-                    <div>
-                      <h5 style="font-size: 1.2rem; color: #333; font-weight: bold; margin: 0;">Bachelor of Science:
-                        Computer Science and Engineering (CSE)</h5>
-                      <hr>
-                      <p style="color: #555; margin: 0;">United International University, Dhaka, Bangladesh</p>
-                      <small style="color: #888;">Year of Passing: 2019</small>
-                    </div>
-                  </div>
-                </div>
-                <div class="mb-4">
-                  <div class="d-flex align-items-start mb-2">
-                    <i class="bi bi-trophy-fill" style="font-size: 2rem; color: #ffc107; margin-right: 15px;"></i>
-                    <div>
-                      <h5 style="font-size: 1.2rem; color: #333; font-weight: bold; margin: 0;">Achievements</h5>
-                      <hr>
-                      <ul style="padding-left: 1.5rem; margin-top: 10px;">
-                        <li style="color: #555; font-size: 1rem;">Champion - UIU CSE Fest Project Competition 2017</li>
-                        <li style="color: #555; font-size: 1rem;">Runner-Up - UIU Intra University Project Competition
-                          2017
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="mb-4">
-                  <div class="d-flex align-items-start mb-3">
-                    <i class="bi bi-award-fill" style="font-size: 2rem; color: #17a2b8; margin-right: 15px;"></i>
-                    <div>
-                      <h5 style="font-size: 1.2rem; color: #333; font-weight: bold; margin: 0;">Certification</h5>
-                      <hr>
-                      <p style="color: #555; margin: 0;">Six-Month Full Stack Web Development with MERN</p>
-                      <small style="color: #888;">Center for Development of IT Professionals (CDIP), United
-                        International
-                        University</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-          <div id="div6" class="content-div" style="display: none;">
-            <section style="padding: 50px; background-color: #ffffff;">
-              <div class="container">
-                <h3 class="text-center mb-4" style="color: #333; font-size: 1.5rem; font-weight: bold;">
-                  Extracurricular <span style="color: #198754;">Activity</span>
-                </h3>
-                <div class="row g-3 d-flex">
-                  <div class="col-md-6 d-flex align-items-stretch">
-                    <div class="d-flex align-items-center p-3 w-100"
-                      style="border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                      <i class="bi bi-lightbulb-fill" style="font-size: 2rem; color: #ffc107;"></i>
-                      <div class="ms-3">
-                        <h5 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: bold;">Internet of Things
-                        </h5>
-                        <p style="margin: 0; font-size: 0.9rem; color: #555;">Champion UIU Cse Fest Project Competition
-                          2017</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6 d-flex align-items-stretch">
-                    <div class="d-flex align-items-center p-3 w-100"
-                      style="border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                      <i class="bi bi-brush-fill" style="font-size: 2rem; color: #28a745;"></i>
-                      <div class="ms-3">
-                        <h5 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: bold;">Painting</h5>
-                        <p style="margin: 0; font-size: 0.9rem; color: #555;">Champion in School and College levels
-                          (2010, 2011, 2012)</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 d-flex align-items-stretch">
-                    <div class="d-flex align-items-center p-3 w-100"
-                      style="border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                      <i class="bi bi-pencil-fill" style="font-size: 2rem; color: #17a2b8;"></i>
-                      <div class="ms-3">
-                        <h5 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: bold;">Writing</h5>
-                        <p style="margin: 0; font-size: 0.9rem; color: #555;">Published a book in Ishwardi Upazila
-                          Ekushey Boi Mela 2010</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 d-flex align-items-stretch">
-                    <div class="d-flex align-items-center p-3 w-100"
-                      style="border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                      <i class="bi bi-camera-reels-fill" style="font-size: 2rem; color: #e74c3c;"></i>
-                      <div class="ms-3">
-                        <h5 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: bold;">Short Film Making</h5>
-                        <p style="margin: 0; font-size: 0.9rem; color: #555;">Attended 9th International Children Film
-                          Festival Bangladesh 2015</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 d-flex align-items-stretch">
-                    <div class="d-flex align-items-center p-3 w-100"
-                      style="border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                      <i class="bi bi-balloon" style="font-size: 2rem; color: #2717b8;"></i>
-                      <div class="ms-3">
-                        <h5 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: bold;">Sports</h5>
-                        <p style="margin: 0; font-size: 0.9rem; color: #555;">Attended Many sports events</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 d-flex align-items-stretch">
-                    <div class="d-flex align-items-center p-3 w-100"
-                      style="border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                      <i class="bi bi-controller" style="font-size: 2rem; color: #7e3ce7;"></i>
-                      <div class="ms-3">
-                        <h5 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: bold;">Console Gaming</h5>
-                        <p style="margin: 0; font-size: 0.9rem; color: #555;">I play in my spare time if I have time.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 d-flex align-items-stretch">
-                    <div class="d-flex align-items-center p-3 w-100"
-                      style="border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                      <i class="bi bi-strava" style="font-size: 2rem; color: #24b817;"></i>
-                      <div class="ms-3">
-                        <h5 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: bold;">Traveling</h5>
-                        <p style="margin: 0; font-size: 0.9rem; color: #555;">I adore taking trips. I enjoy traveling to
-                          different places.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 d-flex align-items-stretch">
-                    <div class="d-flex align-items-center p-3 w-100"
-                      style="border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                      <i class="bi bi-camera" style="font-size: 2rem; color: #e73c9a;"></i>
-                      <div class="ms-3">
-                        <h5 style="margin: 0; font-size: 1.1rem; color: #333; font-weight: bold;">Photography</h5>
-                        <p style="margin: 0; font-size: 0.9rem; color: #555;">Enjoy photographing the natural world.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-          <div id="div7" class="content-div" style="display: none;">
-            <h3>Content for Div 7</h3>
-            <p>This is the content for Div 7.</p>
-          </div>
+        <div class="hero-portrait" data-reveal>
+          <div class="portrait-top"><span class="micro">THE PERSON BEHIND THE CODE</span><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg></div>
+          <div class="portrait-photo"><img src="./assets/images/profile_image.jpg" alt="Atikur Rahman wearing a suit" width="616" height="669" fetchpriority="high"></div>
+          <div class="portrait-footer"><span>BUILD. LEARN.<br>MAKE IT USEFUL.</span><span class="portrait-footer-arrow">↗</span></div>
+          <div class="portrait-note"><span class="note-number">20<span>+</span></span><span>custom AI tools<br>built at Rumi</span></div>
         </div>
-      </section>
-    </div>
-  </div>
-
-  
-  <section id="hide-on-mobile" class="d-flex justify-content-center align-items-center" 
-  style="height: 100vh; background-color: #ffffff;">
-  <div class="navbar d-flex justify-content-center align-items-center"
-    style="width: 30%; height: 70px; background-color: #ffffff; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); border-radius: 12px;">
-    <a href="#" class="text-center mx-4 nav-icon" data-target="div10" style="color: #6c757d; text-decoration: none;">
-      <i class="bi bi-house-fill" style="font-size: 1.2rem;"></i>
-    </a>
-    <a href="#" class="text-center mx-4 nav-icon" data-target="div11" style="color: #6c757d; text-decoration: none;">
-      <i class="bi bi-person-circle" style="font-size: 1.2rem;"></i>
-    </a>
-    <a href="#" class="text-center mx-4 nav-icon" data-target="div12" style="color: #6c757d; text-decoration: none;">
-      <i class="bi bi-envelope-fill" style="font-size: 1.2rem;"></i>
-    </a>
-    <a href="#" class="text-center mx-4 nav-icon" data-target="div13" style="color: #6c757d; text-decoration: none;">
-      <i class="bi bi-briefcase-fill" style="font-size: 1.2rem;"></i>
-    </a>
-    <a href="#" class="text-center mx-4 nav-icon" data-target="div14" style="color: #6c757d; text-decoration: none;">
-      <i class="bi bi-lightbulb-fill" style="font-size: 1.2rem;"></i>
-    </a>
-  </div>
-</section>
-
-
-
-
-  <section id="bottom-panel" style=" background-color: #ffffff; padding: 20px; ">
-
-    <div class="container">
-      <div id="div10" class="content" style="display: block;"> <!-- Default Visible -->
       </div>
-      <div id="div11" class="content" style="display: none;">
-        <!-- <h4>Profile Section</h4>
-        <p>This is your profile section.</p> -->
+      <div class="hero-bottom"><a href="#experience" class="micro scroll-note">SCROLL TO EXPLORE <svg class="icon" aria-hidden="true"><use href="#i-down"/></svg></a><p><strong>3+</strong> years of hands-on engineering</p><div><a href="https://github.com/MohammadAtikurRahman" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/md-atikur-rahman-4a755910b/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div>
+    </section>
+
+    <div class="stack-strip" aria-label="Core technologies"><span class="micro">MY BUILDING BLOCKS</span><p>React <b>↗</b> Next.js <b>↗</b> Node.js <b>↗</b> Electron <b>↗</b> MongoDB <b>↗</b> RAG & AI</p></div>
+
+    <section class="experience-section section-wrap" id="experience" aria-labelledby="experience-title">
+      <div class="section-title"><span class="micro">01 / COMPANY EXPERIENCE</span><div><h2 id="experience-title">Built in practice.<br><em>Grown</em> through work.</h2><p>From desktop products and vehicle systems<br>to financial AI engineering.</p></div></div>
+      <div class="career-list">
+        <details class="career-item" open data-reveal><summary><span class="career-number">01</span><div><h3>Rumi</h3><p>Full-Stack AI Engineer</p></div><div class="career-meta"><strong>MAR 2026 — PRESENT</strong><span>Remote · Canada</span></div><span class="career-expand" aria-hidden="true"></span></summary><div class="career-details"><p>Building the product across AI agents, retrieval, application interfaces, and production infrastructure.</p><ul><li>Built financial AI agents and 20+ custom tools with Next.js, Node.js, and OpenAI/Claude model routing.</li><li>Designed RAG pipelines with Qdrant and MongoDB for financial context.</li><li>Integrated Stripe, Resend, PostHog, market APIs, and scheduled background jobs.</li><li>Containerized deployment with Docker and GitHub Actions CI/CD to OVH VPS.</li></ul></div></details>
+        <details class="career-item" data-reveal><summary><span class="career-number">02</span><div><h3>NexDecade <span>Technology (Pvt.) Ltd.</span></h3><p>Software Developer</p></div><div class="career-meta"><strong>OCT 2023 — JAN 2025</strong></div><span class="career-expand" aria-hidden="true"></span></summary><div class="career-details"><p>Full-stack work on Vehicle Tracking and Vehicle Management Systems.</p><ul><li>Improved reverse geocoding, location precision, map behavior, and UI reliability.</li><li>Built features with React, PHP, Angular, and Node.js.</li><li>Implemented a distributed dashboard for better scale and helped resolve complex VTS issues with cross-functional teams.</li></ul></div></details>
+        <details class="career-item" data-reveal><summary><span class="career-number">03</span><div><h3>Metamorphosis <span>Ltd.</span></h3><p>Software Engineer</p></div><div class="career-meta"><strong>OCT 2022 — OCT 2023</strong></div><span class="career-expand" aria-hidden="true"></span></summary><div class="career-details"><p>Desktop applications, AI-assisted customer support, admin products, and commerce integrations.</p><ul><li>Developed the React Electron desktop application for D-Lab, with tracking and offline functionality.</li><li>Built a customer service helpline solution with LangChain.js and ChatGPT, plus two web admin panels.</li><li>Integrated Odoo 15 and VUA Storefront 2 through GraphQL APIs for synchronized product data.</li></ul></div></details>
       </div>
-      <div id="div12" class="content" style="display: none;">
-        <!-- <h4>Messages Section</h4>
-        <p>Here are your messages.</p> -->
+    </section>
+
+    <section class="work-section section-dark" id="work" aria-labelledby="work-title">
+      <div class="section-wrap">
+        <div class="section-title"><span class="micro">02 / SELECTED PROJECTS</span><div><h2 id="work-title">Ideas into<br><em>working software.</em></h2><p>Developer tools, railway maps, research workspaces,<br>and desktop software.</p></div></div>
+
+        <article class="featured-project" data-reveal>
+          <div class="featured-copy"><span class="project-index micro">01 — DEVELOPER TOOL / OPEN SOURCE</span><h3>Portable<br>MongoDB<span>↗</span></h3><p>A database that travels with your project. An installation-free MongoDB package for Windows development, with the binaries bundled in.</p><ul class="tags"><li>Node.js</li><li>MongoDB Binary</li><li>Windows</li></ul><div class="project-actions"><button class="text-action" data-case="portable" aria-haspopup="dialog">Explore the project <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button><a class="project-repo" href="https://github.com/MohammadAtikurRahman/Portable-MongoDB" target="_blank" rel="noopener noreferrer" aria-label="Portable MongoDB GitHub repository"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></div></div>
+          <div class="portable-visual" aria-label="Portable MongoDB usage example">
+            <div class="terminal-top"><span><i></i><i></i><i></i></span><span>portable-mongodb / quick start</span><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg></div>
+            <div class="terminal-body"><p class="terminal-comment"># No system-wide installation.</p><div class="terminal-command"><code><span>$</span> npm install portable-mongodb mongoose</code><button class="copy-command" aria-label="Copy install command" data-copy="npm install portable-mongodb mongoose"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg></button></div><pre><code><span class="code-purple">const</span> portableMongo = <span class="code-blue">require</span>(
+  <span class="code-green">'portable-mongodb'</span>
+);
+
+<span class="code-purple">await</span> portableMongo.<span class="code-blue">connectToDatabase</span>(
+  <span class="code-green">'my-project-database'</span>
+);</code></pre><div class="terminal-ready"><span class="status-dot"></span>Ready for your Mongoose models.</div></div>
+            <div class="portable-sticker"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg><span>SMALL PACKAGE.<br>LESS FRICTION.</span></div>
+          </div>
+        </article>
+
+        <article class="railway-card" data-reveal>
+          <div class="railway-copy"><span class="project-index micro">02 — OPEN SOURCE / MAPS</span><h3>Railway Network</h3><p>A React package for exploring railway routes and stations using OpenRailway and Overpass data, including the Bangladesh railway network.</p><ul class="tags"><li>React</li><li>OpenRailway</li><li>Overpass</li></ul><button class="text-action" data-case="railway" aria-haspopup="dialog">Follow the route <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+          <div class="railway-map" aria-label="Illustrative railway route diagram"><span class="map-label micro">A DIFFERENT WAY TO EXPLORE</span><svg viewBox="0 0 480 260" aria-hidden="true"><defs><pattern id="map-grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#566657" opacity=".4"/></pattern></defs><rect width="480" height="260" fill="url(#map-grid)"/><path class="rail-route route-back" d="M10 210H120Q160 210 180 165L220 80Q238 45 280 45H470"/><path class="rail-route route-front" d="M32 248V200Q32 180 55 180H156Q180 180 190 154L234 65Q243 45 267 45H445"/><path class="rail-route route-branch" d="M190 154Q213 185 250 185H368Q402 185 402 218V255"/><g class="rail-nodes"><circle cx="56" cy="180" r="7"/><circle cx="156" cy="180" r="7"/><circle cx="224" cy="86" r="7"/><circle cx="315" cy="45" r="7"/><circle cx="370" cy="185" r="7"/><circle cx="445" cy="45" r="7"/></g><g class="rail-labels"><text x="56" y="160">STATIONS</text><text x="237" y="115">CONNECTIONS</text><text x="338" y="216">ROUTES</text></g></svg><span class="map-foot micro">ROUTE SCHEMATIC · NOT A GEOGRAPHIC MAP</span></div>
+        </article>
+
+        <div class="work-duo">
+          <article class="work-card" data-reveal>
+            <div class="scraper-visual project-visual" role="img" aria-label="Illustrative Info-Scraper-v2 discovery, extraction and export workflow">
+              <div class="visual-caption"><span class="micro">INFO-SCRAPER-V2 / WORKFLOW</span><span class="scraper-badge">RESEARCH</span></div>
+              <div class="scraper-window" aria-hidden="true">
+                <div class="scraper-window-top"><span>Research workspace</span><span>v2 ↗</span></div>
+                <div class="scraper-inputs"><span>Entity + aliases</span><span>Date range</span></div>
+                <div class="scraper-pipeline"><span><small>01</small>Discover</span><b>→</b><span><small>02</small>Extract</span><b>→</b><span><small>03</small>Export</span></div>
+                <div class="scraper-files"><span><b>[]</b> CSV dataset</span><span><b>{}</b> JSON dataset</span></div>
+              </div>
+              <div class="scraper-visual-footer">SOURCES · COVERAGE · REVIEW</div>
+            </div>
+            <div class="work-card-copy"><span class="project-index micro">03 — RESEARCH / WEB APPLICATION</span><h3>Info-Scraper-v2</h3><p>A local research workspace for discovering newspaper coverage, extracting article text, and exporting auditable CSV and JSON datasets.</p><ul class="tags"><li>React</li><li>Node.js</li><li>Express</li><li>Puppeteer</li></ul><button class="text-action" data-case="info" aria-haspopup="dialog">Explore Info-Scraper <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+          </article>
+          <article class="work-card" data-reveal>
+            <div class="parentlens-visual project-visual" role="img" aria-label="Illustrative Parent Lens parental control monitor">
+              <div class="visual-caption"><span class="micro">PARENT LENS / PARENTAL CONTROLS</span><span class="parentlens-badge">DESKTOP</span></div>
+              <div class="parentlens-monitor" aria-hidden="true"><div class="parentlens-monitor-top"><span></span><span></span><span></span></div><div class="parentlens-screen"><svg viewBox="0 0 100 56" class="parentlens-eye"><path d="M5 28Q50 -13 95 28Q50 69 5 28Z"/><circle cx="50" cy="28" r="13"/><circle cx="50" cy="28" r="4"/></svg><strong>Parent Lens</strong><span>Parental control software</span></div></div><div class="parentlens-monitor-base" aria-hidden="true"></div><div class="parentlens-visual-footer">LIVE VIEW · SCREENSHOTS · WEBSITE CONTROLS</div>
+            </div>
+            <div class="work-card-copy"><span class="project-index micro">04 — DESKTOP / PARENTAL CONTROLS</span><h3>Parent Lens <span class="private-repo-label">Private repo</span></h3><p>A parental control application for viewing a child’s computer activity live, taking screenshots, reviewing website use, and blocking inappropriate websites.</p><ul class="tags"><li>Parental Controls</li><li>Live View</li><li>Website Blocking</li></ul><button class="text-action" data-case="parentlens" aria-haspopup="dialog">Explore Parent Lens <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+          </article>
+        </div>
+        <a class="all-projects text-action" href="https://github.com/MohammadAtikurRahman" target="_blank" rel="noopener noreferrer">More work on GitHub <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </div>
-      <div id="div13" class="content" style="display: none;">
-        <!-- <h4>Work Section</h4>
-        <p>This is the work section.</p> -->
-      </div>
-      <div id="div14" class="content" style="display: none;">
-        <!-- <h4>Ideas Section</h4>
-        <p>Brainstorm your ideas here.</p> -->
-      </div>
-    </div>
-  </section>
+    </section>
 
 
-  <style>
-    @media (max-width: 768px) {
-      #hide-on-mobile {
-        display: none !important; /* Ensure it overrides any other conflicting styles */
-      }
+
+    <section class="blog-section section-wrap" id="blog" aria-labelledby="blog-title">
+      <div class="section-title"><span class="micro">03 / FROM THE BLOG</span><div><h2 id="blog-title">Notes from<br><em>building things.</em></h2><p>Practical articles about tools I’ve built<br>and the ideas behind them.</p></div></div>
+      <div class="blog-grid">
+        <a class="blog-card" href="https://medium.com/@contact.atikurrahman/portable-mongodb-a-self-contained-mongodb-solution-b1ac95ad65ad" target="_blank" rel="noopener noreferrer"><span class="micro">DEVELOPER TOOLS / MEDIUM</span><h3>Portable MongoDB: A Self-Contained MongoDB Solution</h3><p>MongoDB without installation in a portable way. A perfect solution for lightweight development.</p><span class="blog-read">Read the article <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+        <a class="blog-card" href="https://medium.com/@contact.atikurrahman/introducing-railway-geolocation-a-node-js-package-for-global-railway-data-1a626af6e122" target="_blank" rel="noopener noreferrer"><span class="micro">MAPPING / MEDIUM</span><h3>Railway Geolocation: Exploring Railway Network</h3><p>Discover how to access and utilize railway API data for tracking, scheduling, and more in modern applications.</p><span class="blog-read">Read the article <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a>
+      </div>
+    </section>
+
+    <section class="toolkit-section" id="toolkit" aria-labelledby="toolkit-title"><div class="section-wrap">
+      <div class="toolkit-header"><div><span class="micro">04 / HOW I BUILD</span><h2 id="toolkit-title">The right tools.<br><em>Connected</em> thoughtfully.</h2></div><p>I work across the stack, choosing tools for the problem and carrying the details through to deployment.</p></div>
+      <div class="toolkit-grid">
+        <article><span class="toolkit-number">01 /</span><h3>Interfaces</h3><p>Clear, responsive experiences.</p><ul><li>React.js</li><li>Next.js</li><li>React Electron</li><li>Tailwind CSS</li><li>Material UI</li></ul></article>
+        <article><span class="toolkit-number">02 /</span><h3>Systems</h3><p>The logic behind the experience.</p><ul><li>Node.js</li><li>TypeScript</li><li>Express.js</li><li>REST APIs</li><li>JavaScript</li><li>Laravel</li></ul></article>
+        <article><span class="toolkit-number">03 /</span><h3>Data & AI</h3><p>Useful context, retrieved well.</p><ul><li>MongoDB</li><li>MySQL</li><li>Qdrant</li><li>RAG pipelines</li><li>OpenAI / Claude</li><li>Data modeling</li><li>ORM</li></ul></article>
+        <article><span class="toolkit-number">04 /</span><h3>Delivery</h3><p>From a local idea to a live product.</p><ul><li>Git & GitHub</li><li>Docker</li><li>GitHub Actions</li><li>Postman</li><li>Vercel</li><li>AI-assisted workflows</li></ul></article>
+        <article><span class="toolkit-number">05 /</span><h3>Creative Tools</h3><p>Node-based visual workflows.</p><ul><li>ComfyUI</li><li>Image generation workflows</li></ul></article>
+        <article><span class="toolkit-number">06 /</span><h3>Map Making</h3><p>Building scenes in Unreal Engine.</p><ul><li>Unreal Engine · Map Making</li><li>Map layout & scene composition</li></ul></article>
+      </div>
+    </div></section>
+
+    <section class="about-section section-wrap" id="about" aria-labelledby="about-title">
+      <div class="about-grid">
+        <div class="about-copy"><span class="micro">05 / A LITTLE ABOUT ME</span><h2 id="about-title">An engineer.<br>A curious <em>human.</em></h2><p class="about-lead">I like the part where a complicated problem becomes something simple to use.</p><p>I’m a software engineer with over three years of hands-on experience. I work across frontend, backend, desktop, and AI — taking features from concept to deployment with attention to performance, stability, and clean code.</p><p>I enjoy owning work end to end, collaborating closely, and learning as the problem changes.</p><a class="text-action dark-action" href="https://www.linkedin.com/in/md-atikur-rahman-4a755910b/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+        <div class="about-records"><span class="record-heading micro">FOUNDATIONS & MILESTONES</span><article><span class="record-mark">↗</span><div><h3>B.Sc. in Computer Science & Engineering</h3><p>United International University</p><span class="micro">FEB 2016 — FEB 2021</span></div></article><article><span class="record-mark">✳</span><div><h3>Champion</h3><p>UIU CSE Fest Project Competition</p><span class="micro">2017</span></div></article><article><span class="record-mark">↗</span><div><h3>Runner-Up</h3><p>UIU Intra-University Project Competition</p><span class="micro">2017</span></div></article><article><span class="record-mark">⌘</span><div><h3>Full Stack Web Development · MERN</h3><p>Six-month certification · CDIP, UIU</p></div></article><div class="about-note"><svg class="icon" aria-hidden="true"><use href="#i-spark"/></svg><p>Always learning.<br>Always making something.</p></div></div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="section-wrap">
+      <div class="contact-topline"><span class="micro"><i class="status-dot"></i> HAVE AN IDEA, A ROLE, OR A GOOD QUESTION?</span></div>
+      <h2 id="contact-title">Let’s make<br>something <em>useful.</em><svg class="contact-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></h2>
+      <div class="contact-bottom"><div><span class="micro">START A CONVERSATION</span><a class="email-link" href="mailto:info@atikurrahman.net">info@atikurrahman.net</a><button class="copy-email" data-copy="info@atikurrahman.net"><svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg> Copy email</button></div><div class="contact-links"><a href="https://github.com/MohammadAtikurRahman" target="_blank" rel="noopener noreferrer">GitHub <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a><a href="https://www.linkedin.com/in/md-atikur-rahman-4a755910b/" target="_blank" rel="noopener noreferrer">LinkedIn <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></div></div>
+    </div></section>
+  </main>
+
+  <footer class="site-footer section-wrap"><a class="footer-name" href="#home">ATIKUR RAHMAN<span>.</span></a><p>© <span id="year">2026</span> · Built with care.</p><a class="back-top" href="#home">BACK TO TOP <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a></footer>
+  <dialog class="case-dialog" id="case-dialog" aria-labelledby="case-title"><div class="case-dialog-top"><span class="micro" id="case-kicker"></span><button class="dialog-close" aria-label="Close project details"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button></div><div id="case-content"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+/* Small, accessible interactions. All primary content works without JavaScript. */
+(() => {
+  'use strict';
+
+  const menuButton = document.querySelector('.menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeMenu = () => {
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', 'Open menu');
+    mobileMenu.hidden = true;
+  };
+  menuButton.addEventListener('click', () => {
+    const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', String(!isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
+    mobileMenu.hidden = isOpen;
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !mobileMenu.hidden) {
+      closeMenu();
+      menuButton.focus();
     }
+  });
+  const mobileQuery = window.matchMedia('(max-width: 759px)');
+  mobileQuery.addEventListener('change', event => { if (!event.matches) closeMenu(); });
+  document.addEventListener('click', event => {
+    if (!mobileMenu.hidden && !event.target.closest('.site-header')) closeMenu();
+  });
 
-    @media (max-width: 768px) {
-      #bottom-panel {
-        display: none !important; /* Ensure it overrides any other conflicting styles */
-      }
+  const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if ('IntersectionObserver' in window) {
+    if (!motionQuery.matches) {
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('[data-reveal]').forEach(element => {
+        element.classList.add('reveal-ready');
+        revealObserver.observe(element);
+      });
     }
-  </style>
+    const navLinks = [...document.querySelectorAll('.desktop-nav a')];
+    const navObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            if (link.getAttribute('href') === '#' + entry.target.id) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+          });
+        }
+      });
+    }, { rootMargin: '-15% 0px -60% 0px' });
+    document.querySelectorAll('#home, #experience, #work, #blog, #toolkit, #about, #contact').forEach(section => navObserver.observe(section));
+  }
 
+  const progress = document.querySelector('.scroll-progress');
+  let scrollQueued = false;
+  const updateProgress = () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const ratio = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+    progress.style.transform = `scaleX(${ratio})`;
+    scrollQueued = false;
+  };
+  const queueProgress = () => {
+    if (!scrollQueued) {
+      scrollQueued = true;
+      window.requestAnimationFrame(updateProgress);
+    }
+  };
+  window.addEventListener('scroll', queueProgress, { passive: true });
+  window.addEventListener('resize', queueProgress, { passive: true });
+  updateProgress();
 
+  const toast = document.getElementById('toast');
+  let toastTimer;
+  function notify(message) {
+    clearTimeout(toastTimer);
+    toast.textContent = message;
+    toast.classList.add('is-visible');
+    toastTimer = setTimeout(() => toast.classList.remove('is-visible'), 3000);
+  }
+  document.querySelectorAll('[data-copy]').forEach(button => {
+    button.addEventListener('click', async () => {
+      const text = button.dataset.copy;
+      try {
+        if (!navigator.clipboard || !window.isSecureContext) throw new Error('clipboard-unavailable');
+        await navigator.clipboard.writeText(text);
+        notify(text.includes('@') ? 'Email copied. Let’s talk!' : 'Install command copied.');
+      } catch {
+        // Leave the exact text available for manual copying when permissions are denied.
+        notify('Select and copy: ' + text);
+        toast.style.userSelect = 'text';
+        toast.style.pointerEvents = 'auto';
+      }
+    });
+  });
 
-  <section class="pb-5" style="background-color: #ffffff;">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="p-4 d-flex align-items-start "
-            style="background-color: #ffffff; border-radius: 20px; height: 100%; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
-            <div class="me-3">
-              <a href="https://medium.com/@contact.atikurrahman/portable-mongodb-a-self-contained-mongodb-solution-b1ac95ad65ad"
-                target="_blank">
-                <i class="bi bi-medium" style="font-size: 3rem; color: #1e201f;"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="fw-bold mb-2" style="color: #333;">Portable MongoDB: A Self-Contained MongoDB Solution</h5>
-              <p class="text-muted mb-3" style="font-size: 0.9rem;">
-                MongoDB without installation in a portable way. A perfect solution for lightweight development.
-              </p>
-              <a href="https://medium.com/@contact.atikurrahman/portable-mongodb-a-self-contained-mongodb-solution-b1ac95ad65ad"
-                class="btn btn-outline-success btn-sm px-4" target="_blank"
-                style="border-radius: 12px; font-size: 0.9rem;">
-                <i class="bi bi-arrow-right"></i> Read on Medium
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="p-4 d-flex align-items-start"
-            style="background-color: #ffffff; border-radius: 20px; height: 100%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-            <div class="me-3">
-              <a href="https://medium.com/@contact.atikurrahman/introducing-railway-geolocation-a-node-js-package-for-global-railway-data-1a626af6e122"
-                target="_blank">
-                <i class="bi bi-medium" style="font-size: 3rem; color: #1e201f;"></i>
-              </a>
-            </div>
-            <div>
-              <h5 class="fw-bold mb-2" style="color: #333;">Railway Geolocation: Exploring Railway Network</h5>
-              <p class="text-muted mb-3" style="font-size: 0.9rem;">
-                Discover how to access and utilize railway API data for tracking, scheduling, and more in modern
-                applications.
-              </p>
-              <a href="https://medium.com/@contact.atikurrahman/introducing-railway-geolocation-a-node-js-package-for-global-railway-data-1a626af6e122"
-                class="btn btn-outline-success btn-sm px-4" target="_blank"
-                style="border-radius: 12px; font-size: 0.9rem;">
-                <i class="bi bi-arrow-right"></i> Read on Medium
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  const arrow = '<svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>';
+  const external = (url, label) => `<a class="button" href="${url}" target="_blank" rel="noopener noreferrer">${label}${arrow}</a>`;
+  const tags = list => '<ul class="tags case-tags">' + list.map(tag => `<li>${tag}</li>`).join('') + '</ul>';
+  const projects = {
+    portable: {
+      kicker: '01 / OPEN SOURCE · DEVELOPER TOOL',
+      title: 'Portable MongoDB',
+      subtitle: 'A self-contained MongoDB setup for Windows-based Node.js applications. Start a database from your project, with the MongoDB binaries already bundled.',
+      tags: ['Node.js', 'MongoDB', 'Mongoose', 'Windows'],
+      details: `<div class="case-columns"><div><h3>The idea</h3><p>Local development can become harder when every machine needs a separate database installation. Portable MongoDB brings the required binaries into the package and connects your application to a named database.</p></div><div><h3>What it supports</h3><ul><li>MongoDB binaries bundled with the package.</li><li>Persistent data between application runs.</li><li>A documented connection flow using Mongoose.</li><li>Windows support, without a separate system installation.</li></ul></div></div>
+      <div class="case-code"><pre><code>npm install portable-mongodb mongoose
 
-  <section class="py-5" style="background-color: #ffffff;">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h4 class="fw-bold display-7" style="color: #333;">Get In <span style="color: #198754;">Touch</span></h4>
-        <p class="text-muted">I would love to hear from you! Please fill out the form below, and i'll respond as soon as
-          possible.</p>
-      </div>
-      <div class="row g-4 justify-content-center mb-5">
-        <div class="col-md-4">
-          <div class="p-3 text-center "
-            style="border-radius: 12px !important; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);  background-color: #ffffff;">
-            <i class="bi bi-geo-alt-fill" style="font-size: 1.5rem; color: #198754;"></i>
-            <p class="fw-bold mt-2 mb-0" style="color: #333;">Section#2, Mirpur , Dhaka-1216</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="p-3 text-center "
-            style="border-radius: 12px !important; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); background-color:  #198754; color: #ffffff;">
-            <i class="bi bi-telephone-fill" style="font-size: 1.5rem;"></i>
-            <p class="fw-bold mt-2 mb-0">+8801772392237</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="p-3 text-center "
-            style="border-radius: 12px !important; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); background-color: #ffffff;">
-            <i class="bi bi-envelope-fill" style="font-size: 1.5rem; color: #198754;"></i>
-            <p class="fw-bold mt-2 mb-0" style="color: #333;">contact.atikurrahman@gmail.com</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+const portableMongo = require('portable-mongodb');
+const mongoose = require('mongoose');
 
-  <footer class="bg-dark text-white py-4" style="border-top: 4px solid #198754;">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
-          <h5 class="fw-bold" style="color: #198754;">Atikur Rahman</h5>
-          <p class="small mb-0 text-muted">Full Stack Developer | Passionate about coding and technology.</p>
-        </div>
-        <div class="col-md-4 text-center mb-3 mb-md-0">
-          <a href="#" class="text-white mx-2" style="font-size: 1.2rem; display: inline-block; vertical-align: middle;">
-            <i class="bi bi-facebook"></i>
-          </a>
-          <a href="#" class="text-white mx-2" style="font-size: 1.2rem; display: inline-block; vertical-align: middle;">
-            <i class="bi bi-twitter"></i>
-          </a>
-          <a href="#" class="text-white mx-2" style="font-size: 1.2rem; display: inline-block; vertical-align: middle;">
-            <i class="bi bi-linkedin"></i>
-          </a>
-          <a href="#" class="text-white mx-2" style="font-size: 1.2rem; display: inline-block; vertical-align: middle;">
-            <i class="bi bi-github"></i>
-          </a>
-        </div>
-        <div class="col-md-4 text-center text-md-end">
-          <p class="small mb-0">&copy; 2024 <span style="color: #198754;">Atikur Rahman</span>. All rights reserved.</p>
-        </div>
-      </div>
-    </div>
-  </footer>
+async function main() {
+  await portableMongo.connectToDatabase('my-database');
 
+  const Message = mongoose.model(
+    'Message',
+    new mongoose.Schema({ message: String })
+  );
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <script src="index.js"></script>
+  await new Message({ message: 'Hello World' }).save();
+}
 
+main().catch(console.error);</code></pre></div>
+      <p class="case-note">The package documents Windows support. Read the repository setup notes before using it in your own project.</p>`,
+      links: [['https://github.com/MohammadAtikurRahman/Portable-MongoDB', 'View source'], ['https://www.npmjs.com/package/portable-mongodb', 'Package on npm']]
+    },
+    railway: {
+      kicker: '02 / MAPS · OPEN SOURCE · REACT',
+      title: 'Railway Network',
+      subtitle: 'A React package for exploring railway routes and stations, including my work with the Bangladesh railway network.',
+      tags: ['React', 'OpenRailway', 'Overpass API', 'Mapping'],
+      details: `<div class="case-columns"><div><h3>Routes & stations</h3><p>The Railway Network package displays railway routes and station data for a selected country. It uses Overpass and OpenRailway data and supports custom station icons.</p></div><div><h3>A related utility</h3><p>Railway Geolocation is a companion Node.js package for country-based station and location data, including nearby cities. Both packages are available on npm with their source on GitHub.</p></div></div>
+      <p class="case-note">The illustration on this page is a route schematic, not a geographic map or a representation of actual station locations.</p>`,
+      links: [['https://github.com/MohammadAtikurRahman/railway-network', 'View source'], ['https://www.npmjs.com/package/railway-network', 'React package'], ['https://www.npmjs.com/package/railway-geolocation', 'Geolocation utility']]
+    },
+    info: {
+      kicker: '03 / RESEARCH WORKSPACE · WEB APPLICATION',
+      title: 'Info-Scraper-v2',
+      subtitle: 'A local research workspace for discovering newspaper coverage over a date range, extracting article text, and exporting a dataset with its research audit trail.',
+      tags: ['React', 'Node.js', 'Express', 'Puppeteer', 'CSV / JSON'],
+      details: `<div class="case-columns"><div><h3>Discovery & extraction</h3><ul><li>Date-filtered news discovery with yearly or monthly slices.</li><li>Bangladesh Bangla, Bangladesh English, and global English editions.</li><li>Entity aliases, context matching, and exclusion terms.</li><li>Article extraction with structured metadata, Readability, and browser rendering when needed.</li></ul></div><div><h3>A reviewable dataset</h3><ul><li>Durable background research jobs and checkpoints.</li><li>Canonical URL and content de-duplication.</li><li>Source, year, and provider coverage tables.</li><li>Relevance and confidence scores, failure logs, and CSV/JSON exports.</li></ul></div></div>`,
+      links: [['https://github.com/MohammadAtikurRahman/Info-Scraper-v2', 'View source on GitHub']]
+    },
+    parentlens: {
+      kicker: '04 / PARENTAL CONTROLS · PRIVATE REPOSITORY',
+      title: 'Parent Lens',
+      subtitle: 'A parental control application that helps parents understand their child’s computer use and manage their browsing.',
+      tags: ['Parental Controls', 'Live View', 'Screenshots', 'Website Activity', 'Website Blocking'],
+      details: `<div class="case-columns"><div><h3>Visibility for parents</h3><ul><li>View what a child is doing on their computer live.</li><li>Capture screenshots of computer activity.</li><li>Review which websites are being used.</li></ul></div><div><h3>Browsing controls</h3><ul><li>Block inappropriate websites.</li></ul><h3>Project access</h3><p>The project is maintained in a private repository. Get in touch for a feature walkthrough.</p></div></div>`,
+      links: [['mailto:info@atikurrahman.net?subject=Parent%20Lens%20project%20enquiry', 'Discuss Parent Lens']]
+    }
+  };
+
+  const dialog = document.getElementById('case-dialog');
+  const content = document.getElementById('case-content');
+  let lastTrigger;
+  document.querySelectorAll('[data-case]').forEach(trigger => {
+    trigger.addEventListener('click', event => {
+      const project = projects[trigger.dataset.case];
+      if (!project || typeof dialog.showModal !== 'function') return;
+      event.preventDefault();
+      lastTrigger = trigger;
+      document.getElementById('case-kicker').textContent = project.kicker;
+      content.innerHTML = `<h2 id="case-title" class="case-title">${project.title}</h2><p class="case-subtitle">${project.subtitle}</p>${tags(project.tags)}${project.details}<div class="case-links">${project.links.map(link => external(...link)).join('')}</div>`;
+      dialog.showModal();
+      dialog.scrollTop = 0;
+      document.body.classList.add('dialog-open');
+      dialog.querySelector('.dialog-close').focus();
+    });
+  });
+  dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => {
+    const rect = dialog.getBoundingClientRect();
+    if (event.target === dialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) dialog.close();
+  });
+  dialog.addEventListener('close', () => {
+    document.body.classList.remove('dialog-open');
+    if (lastTrigger) lastTrigger.focus({ preventScroll: true });
+  });
+
+  document.getElementById('year').textContent = String(new Date().getFullYear());
+})();
+
+</script>
 </body>
-
 </html>
+
