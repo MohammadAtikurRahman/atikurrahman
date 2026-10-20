@@ -17,8 +17,8 @@
   <meta name="twitter:card" content="summary">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preload" href="assets/fonts/roboto-variable.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/style.css?v=20261020-dark2">
-  <script src="assets/site.js?v=20261020-dark2" defer></script>
+  <link rel="stylesheet" href="assets/style.css?v=20261020-profile3">
+  <script src="assets/site.js?v=20261020-profile3" defer></script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -66,33 +66,26 @@
 
   <main id="main">
     <section id="home" class="hero container" aria-labelledby="hero-title">
+      <figure class="hero-portrait">
+        <img src="assets/images/profile.webp" width="760" height="863" alt="Atikur Rahman outdoors" fetchpriority="high">
+        <figcaption><span>ATIKUR RAHMAN</span><span>Bangladesh</span></figcaption>
+      </figure>
       <div class="hero-copy">
-        <p class="hero-label"><span class="status-dot"></span> ATIKUR RAHMAN / SOFTWARE ENGINEER</p>
-        <h1 id="hero-title">Behind the interface.<br><span>Through the whole stack.</span></h1>
-        <p class="hero-intro">I build the systems that make useful software possible — from portable databases and SDKs to desktop tools and web applications.</p>
-        <p class="founder-line">Founder & Software Engineer at <a href="https://bsonlite.com/" target="_blank" rel="noopener noreferrer">BsonLite <span aria-hidden="true">↗</span></a></p>
+        <p class="hero-label">HELLO, I’M</p>
+        <h1 id="hero-title">Atikur Rahman<span>.</span></h1>
+        <p class="founder-line">Software Engineer & Founder of <a href="https://bsonlite.com/" target="_blank" rel="noopener noreferrer">BsonLite <span aria-hidden="true">↗</span></a></p>
+        <p class="hero-intro">I’m a software engineer based in Bangladesh. I build web applications, desktop software, and database tools — from architecture and implementation through documentation and release.</p>
+        <p class="hero-intro hero-personal">I enjoy solving practical problems and turning complicated setup into software that feels simple to use.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#projects">Explore the work <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
-          <a class="text-link" href="https://github.com/MohammadAtikurRahman" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#github"/></svg> GitHub</a>
+          <a class="button button-primary" href="#experience">Work experience <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
+          <a class="text-link" href="#projects">View projects <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
         </div>
+        <div class="hero-profiles"><a href="https://github.com/MohammadAtikurRahman" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#github"/></svg> GitHub</a><a href="https://www.linkedin.com/in/md-atikur-rahman-4a755910b/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
       </div>
-      <div class="hero-product">
-        <div class="product-orbit" aria-hidden="true"></div>
-        <figure class="hero-console">
-          <div class="window-bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span><b>BsonLite</b> / Console</span><span class="preview-label">PREVIEW</span></div>
-          <img src="assets/images/console-preview.webp" width="1440" height="950" alt="BsonLite Console desktop workspace showing collections, documents, and a query console with demo data" fetchpriority="high">
-          <figcaption>My database workspace. GUI + terminal, built together.</figcaption>
-        </figure>
-        <div class="floating-terminal" aria-label="Example BsonLite terminal query">
-          <div><svg class="icon" aria-hidden="true"><use href="#terminal"/></svg><span>CLI / EXAMPLE QUERY</span><span class="terminal-dot" aria-hidden="true"></span></div>
-          <code><span>$</span> bsonlite --eval<br><span class="terminal-query">"db.notes.find({}).limit(5)"</span></code>
-        </div>
-      </div>
-      <div class="hero-foot"><span>ENGINEERING ACROSS</span><ul><li>Database systems</li><li>SDKs & packages</li><li>Desktop tools</li><li>Web applications</li></ul></div>
     </section>
 
     <section id="experience" class="section container" aria-labelledby="experience-title">
-      <div class="section-heading"><div><p class="eyebrow">01 / EXPERIENCE</p><h2 id="experience-title">The work behind the software.</h2></div><p>From owning a product to getting the details right.<br>Here’s where I’ve put that into practice.</p></div>
+      <div class="section-heading"><div><p class="eyebrow">01 / EXPERIENCE</p><h2 id="experience-title">Work Experience</h2></div><p>My current work at BsonLite<br>and the teams I’ve worked with.</p></div>
       <div class="career-list">
         <article class="career career-current">
           <div class="career-heading">
@@ -136,7 +129,7 @@
 
     <section id="projects" class="projects-section" aria-labelledby="projects-title">
       <div class="container">
-        <div class="section-heading"><div><p class="eyebrow">02 / SELECTED PROJECTS</p><h2 id="projects-title">One ecosystem. A wider body of work.</h2></div><p>Database infrastructure, developer tools,<br>desktop products, and research software.</p></div>
+        <div class="section-heading"><div><p class="eyebrow">02 / PROJECTS</p><h2 id="projects-title">Selected Projects</h2></div><p>Database infrastructure, developer tools,<br>desktop products, and research software.</p></div>
         <article class="project-feature" id="project-bsonlite">
           <div class="feature-heading"><div><p class="project-type">FOUNDER’S PROJECT / DATABASE ECOSYSTEM</p><h3>BsonLite<span class="brand-dot" aria-hidden="true">.</span></h3></div><a class="text-link" href="https://bsonlite.com/" target="_blank" rel="noopener noreferrer">bsonlite.com <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></div>
           <div class="showcase-tabs" aria-label="Explore the BsonLite ecosystem" hidden>
@@ -272,7 +265,7 @@ main().catch(console.error);</code></pre>
 
     <section id="about" class="section about-section" aria-labelledby="about-title">
       <div class="container about-grid">
-        <div><p class="eyebrow">04 / ABOUT ME</p><div class="profile-intro"><img src="assets/images/profile.webp" width="760" height="863" alt="Atikur Rahman outdoors" loading="lazy"><div><strong>Atikur Rahman</strong><span>Software Engineer · Bangladesh</span><a href="https://bsonlite.com/" target="_blank" rel="noopener noreferrer">Building BsonLite ↗</a></div></div><h2 id="about-title">I like solving<br>the whole problem.</h2><p class="about-lead">The interface matters. So do the startup flow, the data, the edge cases, and the person using it.</p><p>I’m a software engineer based in Bangladesh and the founder of BsonLite. My work spans web applications, desktop products, local database systems, and research tools.</p><p>I enjoy turning complicated setup into a clear experience, and taking a product from architecture through implementation, documentation, and release.</p><a class="text-link" href="https://www.linkedin.com/in/md-atikur-rahman-4a755910b/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></div>
+        <div><p class="eyebrow">04 / ABOUT ME</p><h2 id="about-title">I like solving<br>the whole problem.</h2><p class="about-lead">The interface matters. So do the startup flow, the data, the edge cases, and the person using it.</p><p>I’m a software engineer based in Bangladesh and the founder of BsonLite. My work spans web applications, desktop products, local database systems, and research tools.</p><p>I enjoy turning complicated setup into a clear experience, and taking a product from architecture through implementation, documentation, and release.</p><a class="text-link" href="https://www.linkedin.com/in/md-atikur-rahman-4a755910b/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></div>
         <div class="background-records"><p class="eyebrow">EDUCATION & MILESTONES</p><article><span aria-hidden="true">↗</span><div><h3>B.Sc. in Computer Science & Engineering</h3><p>United International University</p><small>Feb 2016 — Feb 2021</small></div></article><article><span aria-hidden="true">✳</span><div><h3>Champion · UIU CSE Fest</h3><p>Project Competition, 2017</p></div></article><article><span aria-hidden="true">↗</span><div><h3>Runner-up · UIU Project Competition</h3><p>Intra-University Project Competition, 2017</p></div></article><article><span aria-hidden="true">⌘</span><div><h3>Full Stack Web Development · MERN</h3><p>Six-month certification · CDIP, UIU</p></div></article></div>
       </div>
       <div class="container writing"><h3>Notes from building</h3><a href="https://medium.com/@contact.atikurrahman/portable-mongodb-a-self-contained-mongodb-solution-b1ac95ad65ad" target="_blank" rel="noopener noreferrer">Portable MongoDB: a self-contained database solution <span aria-hidden="true">↗</span></a><a href="https://medium.com/@contact.atikurrahman/introducing-railway-geolocation-a-node-js-package-for-global-railway-data-1a626af6e122" target="_blank" rel="noopener noreferrer">Railway Geolocation: a Node.js package for railway data <span aria-hidden="true">↗</span></a></div>

@@ -35,7 +35,7 @@ The web document root must contain **index.html and the complete assets director
 - Crawler URLs: robots.txt and sitemap.xml
 - Portrait and Console preview: assets/images/
 
-The design uses a black canvas, dark product panels, a layered Console/CLI hero, a tabbed BsonLite showcase, and an asymmetric project grid. BsonLite retains its mint accent. Toolkit descriptions use 16px type on desktop and 15px on mobile.
+The page starts with Atikur’s photograph, name, role, and personal introduction, followed immediately by Work Experience and then Selected Projects. The portrait appears before the introduction on phones and beside it on desktop. The black canvas, dark project panels, tabbed BsonLite showcase, and mint BsonLite accent continue throughout. Toolkit descriptions use 16px type on desktop and 15px on mobile.
 
 Navigation, experience details, project information, and outbound links remain available without JavaScript. The Database, SDK, and Console panels all remain visible until JavaScript enables their accessible tabs. Tabs support click, Left/Right arrows, Home, and End. JavaScript also adds a collapsible mobile menu and clipboard actions with a selectable-text fallback.
 
