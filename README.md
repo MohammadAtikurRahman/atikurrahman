@@ -11,7 +11,7 @@ Personal portfolio of Md. Atikur Rahman, software engineer and founder of [BsonL
 3. Projects: BsonLite, BsonLite SDK, Console with CLI and GUI, Digital Lab Access, Info Scraper v2, and Portable MongoDB.
 4. Toolkit, BsonLite community, background, education, writing, and contact.
 
-The visual design is inspired by the official Laravel Livewire website: a navy canvas, steel-blue buttons (#586F7C), rounded shapes, fine borders, and clear typography. Hover text uses #2F4550 on a light grey surface for readability. The centered grayscale portrait and introduction come before every work or project section. BsonLite retains its green brand accent. Roboto is served locally; Toolkit descriptions use 16px on desktop and 15px on phones.
+The visual design is inspired by the official Laravel Livewire website, with the existing navy canvas and a consistent steel-blue accent palette based on #586F7C. Buttons, icons, borders, section markers, and BsonLite headings use this palette, with white or lighter steel text for readability. Text links gain an underline and lighter text on hover without a background highlight; buttons use a darker steel fill. The centered grayscale portrait and introduction come before every work or project section. Roboto is served locally; Toolkit descriptions use 16px on desktop and 15px on phones.
 
 This is a static HTML/CSS/JavaScript portfolio. The design does not require a Laravel or Livewire installation, a PHP runtime, an npm install, or a build step.
 
