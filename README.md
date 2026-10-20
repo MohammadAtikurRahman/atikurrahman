@@ -30,12 +30,14 @@ The web document root must contain **index.html and the complete assets director
 ## Edit
 
 - Content, links, and structured metadata: index.html
-- Responsive layout and self-hosted Roboto font: assets/style.css
-- Mobile navigation and clipboard controls: assets/site.js
+- Black/charcoal responsive layout and self-hosted Roboto font: assets/style.css
+- Mobile navigation, accessible project tabs, and clipboard controls: assets/site.js
 - Crawler URLs: robots.txt and sitemap.xml
 - Portrait and Console preview: assets/images/
 
-Navigation, experience details, project information, and outbound links remain available without JavaScript. JavaScript adds a collapsible mobile menu and clipboard actions with a selectable-text fallback.
+The design uses a black canvas, dark product panels, a layered Console/CLI hero, a tabbed BsonLite showcase, and an asymmetric project grid. BsonLite retains its mint accent. Toolkit descriptions use 16px type on desktop and 15px on mobile.
+
+Navigation, experience details, project information, and outbound links remain available without JavaScript. The Database, SDK, and Console panels all remain visible until JavaScript enables their accessible tabs. Tabs support click, Left/Right arrows, Home, and End. JavaScript also adds a collapsible mobile menu and clipboard actions with a selectable-text fallback.
 
 The BsonLite start month follows the requested six-month interval after NexDecade ended in January 2025. Console download links identify the current v0.2.0 preview; update them when a new release is available.
 
