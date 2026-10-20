@@ -39,44 +39,6 @@
     }
   }
 
-  const showcase = document.querySelector('.showcase-tabs');
-  if (showcase) {
-    const tabs = Array.from(showcase.querySelectorAll('[data-showcase]'));
-    const panels = tabs.map(tab => document.getElementById(tab.getAttribute('aria-controls')));
-    // Keep every panel available when JavaScript is unavailable.
-    if (tabs.length && panels.every(Boolean)) {
-      showcase.setAttribute('role', 'tablist');
-      showcase.hidden = false;
-      const activate = (index, focus = false) => {
-        tabs.forEach((tab, i) => {
-          const selected = i === index;
-          tab.setAttribute('role', 'tab');
-          tab.setAttribute('aria-selected', String(selected));
-          tab.tabIndex = selected ? 0 : -1;
-          panels[i].setAttribute('role', 'tabpanel');
-          panels[i].setAttribute('aria-labelledby', tab.id);
-          panels[i].hidden = !selected;
-        });
-        if (focus) tabs[index].focus();
-      };
-      tabs.forEach((tab, index) => {
-        tab.addEventListener('click', () => activate(index));
-        tab.addEventListener('keydown', event => {
-          let next;
-          if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
-          if (event.key === 'ArrowLeft') next = (index + tabs.length - 1) % tabs.length;
-          if (event.key === 'Home') next = 0;
-          if (event.key === 'End') next = tabs.length - 1;
-          if (next !== undefined) {
-            event.preventDefault();
-            activate(next, true);
-          }
-        });
-      });
-      activate(0);
-    }
-  }
-
   const year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
 

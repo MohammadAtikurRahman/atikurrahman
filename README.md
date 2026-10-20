@@ -4,18 +4,20 @@ Personal portfolio of Md. Atikur Rahman, software engineer and founder of [BsonL
 
 **Website:** https://www.atikurrahman.net/
 
-## Site contents
+## Page structure
 
-- Experience: BsonLite (August 2025–present), NexDecade, and Metamorphosis.
-- Projects: BsonLite, BsonLite SDK, Console with CLI and GUI, Digital Lab Access, Info Scraper v2, and Portable MongoDB.
-- Earlier work, education, milestones, technical toolkit, writing, and contact links.
-- BsonLite website, public source repositories, npm package, downloads, and [Discord community](https://discord.gg/vSRMRPYqs).
+1. Photograph, name, role, personal introduction, and profile links.
+2. Work Experience: BsonLite, NexDecade, and Metamorphosis.
+3. Projects: BsonLite, BsonLite SDK, Console with CLI and GUI, Digital Lab Access, Info Scraper v2, and Portable MongoDB.
+4. Toolkit, BsonLite community, background, education, writing, and contact.
+
+The visual design is inspired by the official Laravel Livewire website: a navy canvas, pink accents, rounded buttons, fine borders, and clear typography. The centered portrait and introduction come before every work or project section. BsonLite retains its green brand accent. Roboto is served locally; Toolkit descriptions use 16px on desktop and 15px on phones.
+
+This is a static HTML/CSS/JavaScript portfolio. The design does not require a Laravel or Livewire installation, a PHP runtime, an npm install, or a build step.
 
 ## Run and deploy
 
-This is a static website. No npm install or build step is needed.
-
-To preview locally, serve the repository root with a static HTTP server, for example:
+Serve the repository root with a static HTTP server, for example:
 
     python -m http.server 8000
 
@@ -25,24 +27,22 @@ On the existing hosting checkout:
 
     git pull --ff-only origin main
 
-The web document root must contain **index.html and the complete assets directory**, plus robots.txt and sitemap.xml. Keep the existing domain and HTTPS configuration. If your hosting workflow copies files to another public directory, copy these files after pulling.
+The web document root must contain index.html, the complete assets directory, robots.txt, and sitemap.xml. Keep the existing domain and HTTPS configuration. If the hosting workflow copies files into another public directory, copy these files after pulling. Updated CSS/JS URLs include a version to prevent older cached assets from being reused.
 
 ## Edit
 
 - Content, links, and structured metadata: index.html
-- Black/charcoal responsive layout and self-hosted Roboto font: assets/style.css
-- Mobile navigation, accessible project tabs, and clipboard controls: assets/site.js
+- Responsive layout and self-hosted Roboto: assets/style.css
+- Mobile navigation and clipboard controls: assets/site.js
 - Crawler URLs: robots.txt and sitemap.xml
 - Portrait and Console preview: assets/images/
 
-The page starts with Atikur’s photograph, name, role, and personal introduction, followed immediately by Work Experience and then Selected Projects. The portrait appears before the introduction on phones and beside it on desktop. The black canvas, dark project panels, tabbed BsonLite showcase, and mint BsonLite accent continue throughout. Toolkit descriptions use 16px type on desktop and 15px on mobile.
+Content, links, and native experience/project details work without JavaScript. JavaScript adds the mobile navigation toggle and clipboard actions, with a selectable-text fallback when clipboard access is unavailable.
 
-Navigation, experience details, project information, and outbound links remain available without JavaScript. The Database, SDK, and Console panels all remain visible until JavaScript enables their accessible tabs. Tabs support click, Left/Right arrows, Home, and End. JavaScript also adds a collapsible mobile menu and clipboard actions with a selectable-text fallback.
-
-The BsonLite start month follows the requested six-month interval after NexDecade ended in January 2025. Console download links identify the current v0.2.0 preview; update them when a new release is available.
+The BsonLite start month follows the requested six-month interval after NexDecade ended in January 2025. Console download links identify the v0.2.0 preview.
 
 ## Assets
 
-The existing profile photograph is retained, with an optimized WebP used by the page. The Console preview shows demo data from the BsonLite project.
+The existing photograph is retained, with its optimized WebP used in the introduction. The Console preview contains demo data and appears only in Projects.
 
-Roboto is served locally. Its SIL Open Font License is included in assets/fonts/OFL.txt. The site uses no external font service, analytics script, or JavaScript framework.
+Roboto's SIL Open Font License is included in assets/fonts/OFL.txt. No external font service, analytics script, or JavaScript framework is loaded.
