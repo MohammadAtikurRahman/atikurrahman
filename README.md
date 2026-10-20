@@ -11,7 +11,7 @@ Personal portfolio of Md. Atikur Rahman, software engineer and founder of [BsonL
 3. Projects: BsonLite, BsonLite SDK, Console with CLI and GUI, Digital Lab Access, Info Scraper v2, and Portable MongoDB.
 4. Toolkit, BsonLite community, background, education, writing, and contact.
 
-The visual design is inspired by the official Laravel Livewire website: a navy canvas, pink accents, rounded buttons, fine borders, and clear typography. The centered portrait and introduction come before every work or project section. BsonLite retains its green brand accent. Roboto is served locally; Toolkit descriptions use 16px on desktop and 15px on phones.
+The visual design is inspired by the official Laravel Livewire website: a navy canvas, steel-blue buttons (#586F7C), rounded shapes, fine borders, and clear typography. Hover text uses #2F4550 on a light grey surface for readability. The centered grayscale portrait and introduction come before every work or project section. BsonLite retains its green brand accent. Roboto is served locally; Toolkit descriptions use 16px on desktop and 15px on phones.
 
 This is a static HTML/CSS/JavaScript portfolio. The design does not require a Laravel or Livewire installation, a PHP runtime, an npm install, or a build step.
 
@@ -39,10 +39,10 @@ The web document root must contain index.html, the complete assets directory, ro
 
 Content, links, and native experience/project details work without JavaScript. JavaScript adds the mobile navigation toggle and clipboard actions, with a selectable-text fallback when clipboard access is unavailable.
 
-The BsonLite start month follows the requested six-month interval after NexDecade ended in January 2025. Console download links identify the v0.2.0 preview.
+The BsonLite start month follows the requested six-month interval after NexDecade ended in January 2025. NexDecade includes work across three VTS teams, including GP VTS and Robi VTS. Metamorphosis includes the Nemericy and Dexterity projects. Console download links identify the v0.2.0 preview.
 
 ## Assets
 
-The existing photograph is retained, with its optimized WebP used in the introduction. The Console preview contains demo data and appears only in Projects.
+The existing photograph is retained, with its optimized WebP displayed in grayscale through CSS in the introduction. The Console preview contains demo data and appears only in Projects.
 
 Roboto's SIL Open Font License is included in assets/fonts/OFL.txt. No external font service, analytics script, or JavaScript framework is loaded.
